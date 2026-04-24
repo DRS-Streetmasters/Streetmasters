@@ -1,0 +1,30 @@
+home:
+  serviceTypes:
+    - Ceramische Coating
+    - Exclusieve Wrapping
+    - Lakcorrectie
+
+  services:
+    - title: Ceramische Coating
+      description: Duurzame bescherming en extreme glans.
+      image: https://lh3.googleusercontent.com/aida-public/AB6AXuC0gZdPDWm5myQv-0qMRqhksNZeAZNmqsDO_SFOWLZV-QyL56lQ2KP2ar8AljMuCxk50AaN8tbvey9qfQCYGstiN_aXnW8NJhgUUnP_Uggn-yE-7YufBcQpBmhMvbmPsEZUQU_3CDbnOmzSgWqp9UDqoh58hF-P_Fd4gBwvnSi_31P9cmhXAC_oSzhxWvETNqMbDJSsrL5QUGXXg5cXPHKjBhoYGZ9wMQW2xTWO4xWR27MG4k53dWeH_itqbNHrsxvv8DBIxfDKwIc
+    - title: Exclusieve Wrapping
+      description: Transformeer uw auto met premium vinyl.
+      image: https://lh3.googleusercontent.com/aida-public/AB6AXuCDjk2JzNW8OYT86C0f06Zx42i4wjgd3Zvhr5JqeAHlT8mS_y8WfTGd5WFeQmjYXvammHywR-AJgOOiqttBjYIWsSuxOVN8Z_dYdmGv0Qr-YjJ53eC3PQO7Pp780F6w9OgZNsgbAIiZKmIwa7KT0GGlJXGyQyAIQZVyPIbNxrjDMJRSA3eyolFqQ5VfCMLCxi7iLL4L87D2Jj8juEwJcIBQ3SKT0vKWuy11Bg-asMgvprRGCRRA2ABW-odM9JEZTpykSIsnRFlk6rY
+    - title: Interieur Detailing
+      description: Dieptereiniging en lederverzorging.
+      image: https://lh3.googleusercontent.com/aida-public/AB6AXuCqReSEe_A20hI2nxmJbnrkU_9gc8yDQ3BXAnAuK737nd2pwlRYJaB2jxKV_A_AuE9TfnWpVtjqVcasdJQr27crIn6j7_kcD_v7qVAb00QBJUwCM713-8cfMkL4mx6tDfJ15rsnxWfrRifXUzCrYockPR-cozzTanmdXS8r8PAlsCu6AtQif-uGe7T8WXSVbnc1AvQWkcsXWa5vcoPiEaxRdIosjKIcuzjA8It6_fcKB7G-At1oKGQxTap636o84vgNkjEqGtlVlTE
+    - title: Motorruimte
+      description: Showroom-waardige performance look.
+      image: https://lh3.googleusercontent.com/aida-public/AB6AXuBt8Px_TxLTHtF3cvaX8MA6_5bIEaJvM6K8TI99gHGMvv8OH_0kAht65fIagUtAa48h89OaYbx3mWnVh94kZRf4cKEmhIE1f7CkrDTxuJ_Wd-BrKIzftixYMtEPas0PcNk9LCoTC7iU8xyWjAOXwAtXlbNi57mPFrRCxHuNhx35viesFY3RwoSy45YbquOia1NnYO69x0-Vms4ipCJIVVKYZLw5cpGSnQ1WlIhgKax2gq8F1K_phmN5ruW6lfMIggGf5AU-rCWzGis
+
+  aboutCards:
+    - quote: Het niveau van perfectie is ongeevenaard. Mijn GT3 ziet er beter uit dan nieuw.
+      name: Julian Vance
+      featured: false
+    - quote: Wetenschappelijke benadering. De keramische coating is praktisch onverwoestbaar.
+      name: Sarah West
+      featured: true
+    - quote: Hun op maat gemaakte vinylwerk is een kunstwerk. Obsessieve aandacht.
+      name: Marcus Thorne
+      featured: false
