@@ -1,13 +1,21 @@
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import MainHeader from '../components/layout/MainHeader.vue'
 import CustomProjectSection from '../components/services/CustomProjectSection.vue'
 import ExteriorSection from '../components/services/ExteriorSection.vue'
 import InteriorSection from '../components/services/InteriorSection.vue'
 import ServicesCtaSection from '../components/services/ServicesCtaSection.vue'
-import ServicesFooter from '../components/services/ServicesFooter.vue'
+import MainFooter from '../components/layout/MainFooter.vue'
 import ServicesPageHeader from '../components/services/ServicesPageHeader.vue'
 import WrappingSection from '../components/services/WrappingSection.vue'
-import { exteriorServices, interiorFeatures, wrappingServices } from '../data/servicesCatalog'
+import { getExteriorServices, getInteriorFeatures, getWrappingServices } from '../data/servicesCatalog'
+
+const { locale } = useI18n()
+
+const exteriorServices = computed(() => getExteriorServices(locale.value))
+const wrappingServices = computed(() => getWrappingServices(locale.value))
+const interiorFeatures = computed(() => getInteriorFeatures(locale.value))
 </script>
 
 <template>
@@ -23,6 +31,6 @@ import { exteriorServices, interiorFeatures, wrappingServices } from '../data/se
       <ServicesCtaSection />
     </main>
 
-    <ServicesFooter />
+    <MainFooter />
   </div>
 </template>

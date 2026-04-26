@@ -1,5 +1,6 @@
 <script setup>
 import { computed, reactive, ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import AppButton from '../ui/AppButton.vue'
 
 const props = defineProps({
@@ -8,6 +9,8 @@ const props = defineProps({
     required: true,
   },
 })
+
+const { t } = useI18n()
 
 const serviceSearch = ref('')
 const selectedServices = ref([])
@@ -20,11 +23,22 @@ const form = reactive({
   brandModel: '',
   year: '',
   preferredDate: '',
-  preferredTime: 'Ochtend (09:00 - 12:00)',
+  preferredTime: 'morning',
   name: '',
   email: '',
   message: '',
 })
+
+const preferredTimeOptions = computed(() => [
+  {
+    value: 'morning',
+    label: t('offerPage.form.morning'),
+  },
+  {
+    value: 'afternoon',
+    label: t('offerPage.form.afternoon'),
+  },
+])
 
 const filteredCategories = computed(() => {
   const query = serviceSearch.value.trim().toLowerCase()
@@ -59,7 +73,7 @@ const resetForm = () => {
   form.brandModel = ''
   form.year = ''
   form.preferredDate = ''
-  form.preferredTime = 'Ochtend (09:00 - 12:00)'
+  form.preferredTime = 'morning'
   form.name = ''
   form.email = ''
   form.message = ''
@@ -74,12 +88,12 @@ const submitForm = async () => {
   const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT
 
   if (!endpoint || endpoint.includes('your-form-id')) {
-    submitError.value = 'Formspree endpoint ontbreekt. Stel VITE_FORMSPREE_ENDPOINT in.'
+    submitError.value = t('offerPage.form.errors.missingEndpoint')
     return
   }
 
   if (!form.name || !form.email || !form.brandModel) {
-    submitError.value = 'Vul minimaal naam, e-mail en merk/model in.'
+    submitError.value = t('offerPage.form.errors.requiredFields')
     return
   }
 
@@ -89,7 +103,7 @@ const submitForm = async () => {
     today.setHours(0, 0, 0, 0)
 
     if (selectedDate <= today) {
-      submitError.value = 'Kies een datum die in de toekomst ligt.'
+      submitError.value = t('offerPage.form.errors.futureDate')
       return
     }
   }
@@ -111,23 +125,23 @@ const submitForm = async () => {
         brand_model: form.brandModel,
         year: form.year,
         preferred_date: form.preferredDate,
-        preferred_time: form.preferredTime,
+        preferred_time: preferredTimeOptions.value.find((option) => option.value === form.preferredTime)?.label,
         services: selectedServices.value,
         message: form.message,
-        _subject: `Nieuwe offerte aanvraag voor ${recipientEmail} - ${form.brandModel}`,
+        _subject: `${t('offerPage.form.subject')} ${recipientEmail} - ${form.brandModel}`,
       }),
     })
 
     if (!response.ok) {
       const payload = await response.json().catch(() => ({}))
       const firstError = payload?.errors?.[0]?.message
-      throw new Error(firstError || 'Kon formulier niet verzenden. Probeer opnieuw.')
+      throw new Error(firstError || t('offerPage.form.errors.sendFailed'))
     }
 
-    submitSuccess.value = 'Dank je, je offerteaanvraag is verzonden. We nemen snel contact op.'
+    submitSuccess.value = t('offerPage.form.success')
     resetForm()
   } catch (error) {
-    submitError.value = error instanceof Error ? error.message : 'Er ging iets mis bij verzenden.'
+    submitError.value = error instanceof Error ? error.message : t('offerPage.form.errors.generic')
   } finally {
     isSubmitting.value = false
   }
@@ -142,27 +156,27 @@ const submitForm = async () => {
       </div>
       <div class="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
         <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">01</span>
-        <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">Voertuig Details</h2>
+        <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step1') }}</h2>
       </div>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
         <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">Merk & Model</label>
+          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.brandModel') }}</label>
           <input
             v-model="form.brandModel"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="brand_model"
-            placeholder="bijv. Porsche 911 GT3"
+            :placeholder="t('offerPage.form.modelPlaceholder')"
             required
             type="text"
           />
         </div>
         <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">Bouwjaar</label>
+          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.buildYear') }}</label>
           <input
             v-model="form.year"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="year"
-            placeholder="bijv. 2023"
+            :placeholder="t('offerPage.form.yearPlaceholder')"
             type="text"
           />
         </div>
@@ -177,7 +191,7 @@ const submitForm = async () => {
       <div class="sticky top-0 z-10 bg-surface-container-low/95 pb-5 backdrop-blur-sm">
         <div class="mb-5 flex items-center gap-3 md:gap-4">
           <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">02</span>
-          <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">Service Selectie</h2>
+          <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step2') }}</h2>
         </div>
 
         <div class="relative w-full md:max-w-sm">
@@ -186,7 +200,7 @@ const submitForm = async () => {
             id="service-search"
             v-model="serviceSearch"
             class="w-full rounded-xl border border-outline-variant bg-surface-container-highest/50 py-2 pr-4 pl-9 text-xs transition-all placeholder:text-stone-600 focus:border-primary focus:ring-1 focus:ring-primary md:text-sm"
-            placeholder="Zoek een service..."
+            :placeholder="t('offerPage.form.searchPlaceholder')"
             type="text"
           />
         </div>
@@ -219,7 +233,7 @@ const submitForm = async () => {
           </div>
         </div>
       </div>
-      <p class="mt-5 text-xs leading-relaxed text-on-surface-variant italic">Zoek via het veld hierboven of vermeld overige wensen bij stap 04.</p>
+      <p class="mt-5 text-xs leading-relaxed text-on-surface-variant italic">{{ t('offerPage.form.searchHint') }}</p>
     </section>
 
     <section class="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface-container-low/85 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:rounded-[2rem] md:p-10">
@@ -228,11 +242,11 @@ const submitForm = async () => {
       </div>
       <div class="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
         <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">03</span>
-        <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">Gewenste Periode</h2>
+        <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step3') }}</h2>
       </div>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
         <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">Datum</label>
+          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.date') }}</label>
           <input
             v-model="form.preferredDate"
             :min="tomorrowDate"
@@ -242,14 +256,20 @@ const submitForm = async () => {
           />
         </div>
         <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">Tijdstip</label>
+          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.time') }}</label>
           <select
             v-model="form.preferredTime"
             class="w-full appearance-none border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="preferred_time"
           >
-            <option class="bg-surface text-on-surface">Ochtend (09:00 - 12:00)</option>
-            <option class="bg-surface text-on-surface">Middag (13:00 - 17:00)</option>
+            <option
+              v-for="option in preferredTimeOptions"
+              :key="option.value"
+              :value="option.value"
+              class="bg-surface text-on-surface"
+            >
+              {{ option.label }}
+            </option>
           </select>
         </div>
       </div>
@@ -261,38 +281,38 @@ const submitForm = async () => {
       </div>
       <div class="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
         <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">04</span>
-        <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">Contact Informatie</h2>
+        <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step4') }}</h2>
       </div>
       <div class="mb-8 grid grid-cols-1 gap-6 md:mb-12 md:grid-cols-2 md:gap-8">
         <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">Naam</label>
+          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.name') }}</label>
           <input
             v-model="form.name"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="name"
-            placeholder="Uw volledige naam"
+            :placeholder="t('offerPage.form.namePlaceholder')"
             required
             type="text"
           />
         </div>
         <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">E-mail</label>
+          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.email') }}</label>
           <input
             v-model="form.email"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="email"
-            placeholder="naam@voorbeeld.nl"
+            :placeholder="t('offerPage.form.emailPlaceholder')"
             required
             type="email"
           />
         </div>
         <div class="space-y-2 md:col-span-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">Bericht (Optioneel)</label>
+          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.message') }}</label>
           <textarea
             v-model="form.message"
             class="w-full resize-none border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="message"
-            placeholder="Speciale wensen of opmerkingen..."
+            :placeholder="t('offerPage.form.messagePlaceholder')"
             rows="2"
           ></textarea>
         </div>
@@ -300,7 +320,7 @@ const submitForm = async () => {
 
       <div class="flex flex-col gap-4">
         <AppButton class="w-full md:w-auto md:px-12 md:text-lg hover:shadow-[0_0_30px_rgba(255,179,178,0.3)] active:scale-[0.97]" :disabled="isSubmitting" size="lg" type="submit">
-          {{ isSubmitting ? 'Bezig met verzenden...' : 'Offerte aanvragen' }}
+          {{ isSubmitting ? t('offerPage.form.submitting') : t('offerPage.form.submit') }}
         </AppButton>
 
         <p v-if="submitSuccess" class="text-sm text-primary">{{ submitSuccess }}</p>

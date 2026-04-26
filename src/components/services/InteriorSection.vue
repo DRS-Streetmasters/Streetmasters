@@ -1,4 +1,5 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
 defineProps({
@@ -7,13 +8,15 @@ defineProps({
     required: true,
   },
 })
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section id="interior" class="scroll-mt-section bg-surface-container-low px-6 py-20 md:px-8 md:py-32">
     <div class="mx-auto max-w-screen-2xl">
       <div class="mb-12 flex items-center gap-4 md:mb-16 md:gap-6">
-        <h2 class="font-headline text-2xl font-bold tracking-tight whitespace-nowrap md:text-4xl">Interior Care</h2>
+        <h2 class="font-headline text-2xl font-bold tracking-tight whitespace-nowrap md:text-4xl">{{ t('servicesPage.sections.interior') }}</h2>
         <div class="h-px flex-1 bg-white/10"></div>
       </div>
 
@@ -29,9 +32,9 @@ defineProps({
 
         <div class="flex flex-col justify-center space-y-10 md:space-y-12">
           <div>
-            <h3 class="mb-4 font-headline text-2xl font-bold md:mb-6 md:text-4xl">Deep Cleaning & Restoration</h3>
+            <h3 class="mb-4 font-headline text-2xl font-bold md:mb-6 md:text-4xl">{{ t('servicesPage.interior.title') }}</h3>
             <p class="mb-6 text-base leading-relaxed text-on-surface-variant md:mb-8 md:text-lg">
-              Wij herstellen de ambiance van uw cabine door elk oppervlak minutieus te reinigen. Van stoomreiniging van tapijten tot de fijnste details van uw dashboard.
+              {{ t('servicesPage.interior.text') }}
             </p>
             <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4">
               <li v-for="feature in features" :key="feature" class="flex items-center gap-3 text-sm">
@@ -41,16 +44,16 @@ defineProps({
           </div>
 
           <div class="rounded-2xl border border-white/5 bg-surface-container p-6 md:p-8">
-            <h3 class="mb-3 font-headline text-xl font-bold md:mb-4 md:text-2xl">Leather Conditioning & Protection</h3>
+            <h3 class="mb-3 font-headline text-xl font-bold md:mb-4 md:text-2xl">{{ t('servicesPage.interior.cardTitle') }}</h3>
             <p class="mb-6 text-sm text-on-surface-variant">
-              Behoud de soepelheid van uw leder met premium conditioners en keramische interieurcoatings die vlekken en UV-verkleuring voorkomen.
+              {{ t('servicesPage.interior.cardText') }}
             </p>
             <div class="flex flex-col gap-3 sm:flex-row md:gap-4">
               <AppLinkButton class="flex-1 active:scale-[0.98]" size="sm" to="/offerte">
-                Offerte aanvragen
+                {{ t('common.cta.requestQuote') }}
               </AppLinkButton>
               <AppLinkButton class="flex-1 active:scale-[0.98]" size="sm" to="/offerte" variant="glass">
-                Bekijk Pakketten
+                {{ t('servicesPage.interior.viewPackages') }}
               </AppLinkButton>
             </div>
           </div>

@@ -1,4 +1,5 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
 defineProps({
@@ -7,13 +8,15 @@ defineProps({
     required: true,
   },
 })
+
+const { t } = useI18n()
 </script>
 
 <template>
   <section id="wrapping" class="scroll-mt-section px-6 py-20 md:px-8 md:py-32">
     <div class="mx-auto max-w-screen-2xl">
       <div class="mb-12 flex items-center gap-4 md:mb-16 md:gap-6">
-        <h2 class="font-headline text-2xl font-bold tracking-tight whitespace-nowrap md:text-4xl">Wrapping & Styling</h2>
+        <h2 class="font-headline text-2xl font-bold tracking-tight whitespace-nowrap md:text-4xl">{{ t('servicesPage.sections.wrapping') }}</h2>
         <div class="h-px flex-1 bg-white/10"></div>
       </div>
 
@@ -33,7 +36,7 @@ defineProps({
             <h3 class="mb-2 font-headline text-2xl font-bold md:text-3xl">{{ service.title }}</h3>
             <p class="mb-6 max-w-xs text-xs text-stone-300 md:text-sm">{{ service.description }}</p>
             <AppLinkButton size="sm" to="/offerte" variant="white">
-              Offerte aanvragen
+              {{ t('common.cta.requestQuote') }}
             </AppLinkButton>
           </div>
         </article>

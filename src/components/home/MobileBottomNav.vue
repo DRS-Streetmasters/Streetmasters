@@ -8,7 +8,7 @@ import { RouterLink } from 'vue-router'
       <span class="material-symbols-outlined fill-star">home</span>
       <span class="mt-1 text-[9px] font-bold uppercase">Home</span>
     </RouterLink>
-    <RouterLink class="flex flex-col items-center justify-center px-4 py-2 text-neutral-400 transition-transform active:scale-90" :to="{ path: '/diensten', hash: '#wrapping' }">
+    <RouterLink class="flex flex-col items-center justify-center px-4 py-2 text-neutral-400 transition-transform active:scale-90" to="/portfolio">
       <span class="material-symbols-outlined">photo_library</span>
       <span class="mt-1 text-[9px] font-bold uppercase">Portfolio</span>
     </RouterLink>

@@ -2,10 +2,11 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
 import HomeView from '../views/HomeView.vue'
 import OfferView from '../views/OfferView.vue'
+import PortfolioView from '../views/PortfolioView.vue'
 import ServicesView from '../views/ServicesView.vue'
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
@@ -33,6 +34,11 @@ const router = createRouter({
       component: ServicesView,
     },
     {
+      path: '/portfolio',
+      name: 'portfolio',
+      component: PortfolioView,
+    },
+    {
       path: '/offerte',
       name: 'offerte',
       component: OfferView,
@@ -41,6 +47,10 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: AboutView,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/',
     },
   ],
 })

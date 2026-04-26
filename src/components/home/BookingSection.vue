@@ -1,4 +1,5 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
 defineProps({
@@ -7,6 +8,8 @@ defineProps({
     required: true,
   },
 })
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -15,19 +18,19 @@ defineProps({
       <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2 md:gap-24">
         <div id="about">
           <h2 class="mb-6 font-headline text-4xl font-black tracking-tighter text-white italic uppercase md:mb-8 md:text-5xl">
-            Vraag een <br class="hidden md:block" /> Offerte Aan
+            {{ t('home.booking.title') }}
           </h2>
           <p class="mb-8 text-base leading-relaxed text-on-surface-variant md:mb-12 md:text-lg">
-            Ontvang een op maat gemaakte prijsopgave voor uw voertuig. Wij nemen binnen 24 uur contact met u op.
+            {{ t('home.booking.subtitle') }}
           </p>
           <div class="space-y-4 md:space-y-6">
             <div class="flex items-center gap-4">
               <span class="material-symbols-outlined text-primary">location_on</span>
-              <p class="font-headline text-xs font-bold text-white md:text-sm">HET LAB HQ, BAY AREA</p>
+              <p class="font-headline text-xs font-bold text-white md:text-sm">{{ t('home.booking.location') }}</p>
             </div>
             <div class="flex items-center gap-4">
               <span class="material-symbols-outlined text-primary">contact_support</span>
-              <p class="font-headline text-xs font-bold text-white md:text-sm">+1 (555) STREET-M</p>
+              <p class="font-headline text-xs font-bold text-white md:text-sm">{{ t('home.booking.phone') }}</p>
             </div>
           </div>
         </div>
@@ -35,17 +38,17 @@ defineProps({
           <form class="space-y-6 md:space-y-8">
             <div>
               <label class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
-                Voertuig Model
+                {{ t('home.booking.model') }}
               </label>
               <input
                 class="w-full border-b border-outline-variant/30 bg-transparent pb-2 font-headline text-base text-white outline-none focus:border-primary md:pb-1 md:text-lg"
-                placeholder="bijv. Porsche 911 GT3"
+                :placeholder="t('home.booking.modelPlaceholder')"
                 type="text"
               />
             </div>
             <div>
               <label class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
-                Type Dienst
+                {{ t('home.booking.serviceType') }}
               </label>
               <select
                 class="w-full appearance-none border-b border-outline-variant/30 bg-transparent pb-2 font-headline text-base text-white outline-none focus:border-primary md:pb-1 md:text-lg"
@@ -60,7 +63,7 @@ defineProps({
               </select>
             </div>
             <AppLinkButton class="text-base md:text-lg" full-width size="lg" to="/offerte">
-              AANVRAAG VERSTUREN
+              {{ t('home.booking.submit') }}
             </AppLinkButton>
           </form>
         </div>

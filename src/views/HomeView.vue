@@ -1,13 +1,20 @@
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import BookingSection from '../components/home/BookingSection.vue'
 import HeroSection from '../components/home/HeroSection.vue'
-import MobileBottomNav from '../components/home/MobileBottomNav.vue'
 import ServicesSection from '../components/home/ServicesSection.vue'
 import ShowcaseSection from '../components/home/ShowcaseSection.vue'
-import SiteFooter from '../components/home/SiteFooter.vue'
-import TestimonialsSection from '../components/home/TestimonialsSection.vue'
+import MainFooter from '../components/layout/MainFooter.vue'
 import MainHeader from '../components/layout/MainHeader.vue'
-import { aboutCards, serviceTypes, services } from '../data/content'
+import { getAllServicesWithMockImages, getHomeServiceTypes } from '../data/servicesCatalog'
+import { getOfferBenefits } from '../data/offerContent'
+
+const { locale } = useI18n()
+
+const services = computed(() => getAllServicesWithMockImages(locale.value))
+const serviceTypes = computed(() => getHomeServiceTypes(locale.value))
+const offerBenefits = computed(() => getOfferBenefits(locale.value))
 </script>
 
 <template>
@@ -16,13 +23,11 @@ import { aboutCards, serviceTypes, services } from '../data/content'
 
     <main>
       <HeroSection />
-      <ServicesSection :services="services" />
+      <ServicesSection :services="services" :offer-benefits="offerBenefits" />
       <ShowcaseSection />
-      <TestimonialsSection :testimonials="aboutCards" />
       <BookingSection :service-types="serviceTypes" />
     </main>
 
-    <SiteFooter />
-    <MobileBottomNav />
+    <MainFooter />
   </div>
 </template>

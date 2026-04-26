@@ -1,11 +1,18 @@
 <script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import MainHeader from '../components/layout/MainHeader.vue'
-import OfferFooter from '../components/offer/OfferFooter.vue'
+import MainFooter from '../components/layout/MainFooter.vue'
 import OfferPageHeader from '../components/offer/OfferPageHeader.vue'
 import OfferRequestForm from '../components/offer/OfferRequestForm.vue'
 import OfferSidebar from '../components/offer/OfferSidebar.vue'
-import { offerServiceCategories } from '../data/servicesCatalog'
-import { offerBenefits } from '../data/offerContent'
+import { getOfferServiceCategories } from '../data/servicesCatalog'
+import { getOfferBenefits } from '../data/offerContent'
+
+const { locale } = useI18n()
+
+const offerServiceCategories = computed(() => getOfferServiceCategories(locale.value))
+const offerBenefits = computed(() => getOfferBenefits(locale.value))
 </script>
 
 <template>
@@ -30,6 +37,6 @@ import { offerBenefits } from '../data/offerContent'
       </div>
     </main>
 
-    <OfferFooter />
+    <MainFooter />
   </div>
 </template>

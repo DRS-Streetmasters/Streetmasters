@@ -1,5 +1,8 @@
 <script setup>
+import { useI18n } from 'vue-i18n'
 import AppLinkButton from '../ui/AppLinkButton.vue'
+
+const { t } = useI18n()
 </script>
 
 <template>
@@ -15,14 +18,14 @@ import AppLinkButton from '../ui/AppLinkButton.vue'
       </div>
 
       <div class="relative z-10 max-w-2xl text-center md:text-left">
-        <h2 class="mb-6 font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:mb-8 md:text-7xl">Niet zeker wat u nodig heeft?</h2>
-        <p class="mb-10 text-base text-on-surface-variant md:mb-12 md:text-xl">Onze specialisten adviseren u graag over de beste combinatie van diensten voor uw specifieke voertuig.</p>
+        <h2 class="mb-6 font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:mb-8 md:text-7xl">{{ t('servicesPage.cta.title') }}</h2>
+        <p class="mb-10 text-base text-on-surface-variant md:mb-12 md:text-xl">{{ t('servicesPage.cta.text') }}</p>
         <div class="flex flex-col justify-center gap-4 sm:flex-row md:justify-start md:gap-6">
           <AppLinkButton class="shadow-xl shadow-primary/30" size="md" to="/offerte">
-            Vraag Advies Aan
+            {{ t('servicesPage.cta.askAdvice') }}
           </AppLinkButton>
-          <AppLinkButton :to="{ path: '/diensten', hash: '#wrapping' }" size="md" variant="glass">
-            Bekijk Portfolio
+          <AppLinkButton size="md" to="/portfolio" variant="glass">
+            {{ t('servicesPage.cta.viewPortfolio') }}
           </AppLinkButton>
         </div>
       </div>

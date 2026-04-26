@@ -1,14 +1,26 @@
-export const offerBenefits = [
+const localized = (nl, en) => ({ nl, en })
+
+const offerBenefits = [
   {
-    title: 'Gecertificeerde Experts',
-    description: 'Officieel erkend installateur van premium coatings.',
+    title: localized('Gecertificeerde Experts', 'Certified Experts'),
+    description: localized('Officieel erkend installateur van premium coatings.', 'Officially certified installer of premium coatings.'),
   },
   {
-    title: 'Studio Condities',
-    description: 'Stofvrije, geconditioneerde omgeving.',
+    title: localized('Studio Condities', 'Studio Conditions'),
+    description: localized('Stofvrije, geconditioneerde omgeving.', 'Dust-free, climate-controlled environment.'),
   },
   {
-    title: 'Lange Garantie',
-    description: 'Op geselecteerde behandelingen volledige zekerheid.',
+    title: localized('Lange Garantie', 'Extended Warranty'),
+    description: localized('Op geselecteerde behandelingen volledige zekerheid.', 'Full peace of mind on selected treatments.'),
   },
 ]
+
+const getText = (value, locale) => value?.[locale] ?? value?.nl ?? ''
+
+export const getOfferBenefits = (locale = 'nl') =>
+  offerBenefits.map((benefit) => ({
+    title: getText(benefit.title, locale),
+    description: getText(benefit.description, locale),
+  }))
+
+export { offerBenefits }
