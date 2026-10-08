@@ -1,7 +1,20 @@
 <script setup>
+import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
+const position = ref(50)
+
+function moveSlider(event) {
+  if (event.type === 'pointermove' && !event.currentTarget.hasPointerCapture(event.pointerId)) return
+  if (event.type === 'pointerdown') {
+    if (event.button !== 0) return
+    event.currentTarget.setPointerCapture(event.pointerId)
+    event.currentTarget.focus()
+  }
+  const bounds = event.currentTarget.getBoundingClientRect()
+  position.value = Math.round(Math.max(0, Math.min(100, ((event.clientX - bounds.left) / bounds.width) * 100)))
+}
 </script>
 
 <template>
@@ -15,37 +28,55 @@ const { t } = useI18n()
           {{ t('home.showcase.title') }}
         </h2>
       </div>
-      <div class="relative aspect-video w-full overflow-hidden rounded-xl bg-neutral-900 shadow-2xl md:aspect-[21/9]">
-        <div class="grid h-full w-full grid-cols-1 gap-2 md:grid-cols-2">
-          <div class="relative h-full w-full overflow-hidden">
-            <img
-              alt="Interieur Voor"
-              class="h-full w-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I"
-            />
-            <div class="absolute top-4 left-4 z-10 border border-white/10 bg-black/80 px-4 py-1.5 font-headline text-[10px] font-black tracking-widest text-white shadow-lg uppercase">
-              {{ t('home.showcase.before') }}
-            </div>
-            <div class="pointer-events-none absolute bottom-6 left-6 z-20">
-              <p class="font-label text-[10px] tracking-widest text-white/60 uppercase">{{ t('home.showcase.beforeCaption') }}</p>
-            </div>
-          </div>
-          <div class="relative h-full w-full overflow-hidden">
-            <img
-              alt="Interieur Na"
-              class="h-full w-full object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYo5W-Ndus4pay4YZZL8K_OoO0RoC1eXjZ79xpx6S7ZDJceDBIR1_CtNraUzc6pjt4KFtKylz2s1VBFm-jtCCFLKKmC57XnwbcPYgpV41lv-ZnPAwQKwQA7DQ32ZQvM7TK5AcKT7fgZ60mtA3egrjBO2OmYpMC5o9Fq55xuQoFH9NpukJReipWMfVnUAjKNYd0yjgbAEz9ZbADHi7KRGdJEue-AMxxUakCwkHqiAdogzruUUR47LPNLAcZTPQJqxJddgJOXIhiw"
-            />
-            <div class="absolute top-4 right-4 z-10 bg-primary/90 px-4 py-1.5 font-headline text-[10px] font-black tracking-widest text-on-primary-fixed shadow-lg uppercase">
-              {{ t('home.showcase.after') }}
-            </div>
-            <div class="pointer-events-none absolute bottom-6 left-6 z-20">
-              <h4 class="font-headline text-lg font-black text-white italic drop-shadow-lg uppercase md:text-2xl">EXECUTIVE DETAIL</h4>
-              <p class="font-label text-[10px] tracking-widest text-primary drop-shadow-md uppercase">Deep clean & restoration</p>
-            </div>
+      <div class="comparison relative mx-auto aspect-[4/3] w-full max-w-5xl overflow-hidden rounded-xl bg-surface-container shadow-2xl">
+        <img
+          :alt="t('home.showcase.after')"
+          class="absolute inset-0 h-full w-full object-cover"
+          src="/image00013.jpeg"
+          loading="lazy"
+          draggable="false"
+        />
+        <div class="absolute inset-0" :style="{ clipPath: `inset(0 ${100 - position}% 0 0)` }">
+          <img
+            :alt="t('home.showcase.before')"
+            class="h-full w-full object-cover"
+            src="/image00011.jpeg"
+            loading="lazy"
+            draggable="false"
+          />
+        </div>
+        <div class="pointer-events-none absolute top-4 left-4 rounded-lg bg-black/75 px-4 py-2 font-headline text-xs font-bold tracking-widest text-white">
+          {{ t('home.showcase.before') }}
+        </div>
+        <div class="pointer-events-none absolute top-4 right-4 rounded-lg bg-primary-container px-4 py-2 font-headline text-xs font-bold tracking-widest text-white">
+          {{ t('home.showcase.after') }}
+        </div>
+        <div class="pointer-events-none absolute inset-y-0 w-0.5 -translate-x-1/2 bg-white shadow-lg" :style="{ left: `${position}%` }">
+          <div class="absolute top-1/2 left-1/2 flex h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white bg-primary-container text-white shadow-xl">
+            <span class="material-symbols-outlined" aria-hidden="true">chevron_left</span>
+            <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
           </div>
         </div>
+        <input
+          v-model.number="position"
+          type="range"
+          min="0"
+          max="100"
+          :aria-label="t('home.showcase.sliderLabel')"
+          class="absolute inset-0 z-30 m-0 h-full w-full cursor-ew-resize opacity-0"
+          style="touch-action: pan-y"
+          @pointerdown.prevent="moveSlider"
+          @pointermove="moveSlider"
+        />
       </div>
+      <p class="mt-4 text-center text-sm text-on-surface-variant">{{ t('home.showcase.sliderHint') }}</p>
     </div>
   </section>
 </template>
+
+<style scoped>
+.comparison:focus-within {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+}
+</style>

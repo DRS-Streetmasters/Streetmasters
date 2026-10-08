@@ -22,7 +22,7 @@ const props = defineProps({
 
 const variantClasses = {
   primary:
-    'bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed shadow-lg shadow-primary/20 hover:opacity-95 active:scale-95',
+    'bg-gradient-to-br from-primary-container to-inverse-primary text-on-primary-container shadow-lg shadow-primary/20 hover:opacity-95 active:scale-95',
   surface:
     'bg-surface-container-highest text-on-surface hover:bg-primary hover:text-on-primary active:scale-95',
   glass:

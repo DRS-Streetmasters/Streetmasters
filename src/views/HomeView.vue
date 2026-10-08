@@ -7,12 +7,12 @@ import ServicesSection from '../components/home/ServicesSection.vue'
 import ShowcaseSection from '../components/home/ShowcaseSection.vue'
 import MainFooter from '../components/layout/MainFooter.vue'
 import MainHeader from '../components/layout/MainHeader.vue'
-import { getAllServicesWithMockImages, getHomeServiceTypes } from '../data/servicesCatalog'
+import { getAllServices, getHomeServiceTypes } from '../data/servicesCatalog'
 import { getOfferBenefits } from '../data/offerContent'
 
 const { locale } = useI18n()
 
-const services = computed(() => getAllServicesWithMockImages(locale.value))
+const services = computed(() => getAllServices(locale.value))
 const serviceTypes = computed(() => getHomeServiceTypes(locale.value))
 const offerBenefits = computed(() => getOfferBenefits(locale.value))
 </script>

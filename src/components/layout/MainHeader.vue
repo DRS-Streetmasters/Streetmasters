@@ -5,6 +5,7 @@ import { useI18n } from 'vue-i18n'
 import { syncLocale } from '../../i18n'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
+const logoUrl = `${import.meta.env.BASE_URL}logo.png`
 const route = useRoute()
 const mobileMenuOpen = ref(false)
 const { t, locale } = useI18n()
@@ -98,7 +99,9 @@ const handleDocumentClick = (event) => {
 <template>
   <nav class="fixed top-0 z-[100] w-full border-b border-white/5 bg-stone-950/60 backdrop-blur-xl">
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 py-4 md:px-8 md:py-6">
-      <RouterLink to="/" class="font-headline text-xl font-bold tracking-tighter text-white md:text-2xl">{{ t('common.brand') }}</RouterLink>
+      <RouterLink to="/" class="relative block h-12 w-48 shrink-0 overflow-hidden md:h-14 md:w-60">
+        <img :src="logoUrl" :alt="t('common.brand')" width="1920" height="1080" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
+      </RouterLink>
 
       <div class="hidden items-center gap-8 lg:flex">
         <RouterLink :class="navLinkClass(isHome)" to="/">{{ t('common.nav.home') }}</RouterLink>
@@ -154,8 +157,8 @@ const handleDocumentClick = (event) => {
   >
     <div class="flex h-full flex-col px-6 py-6 md:px-8">
       <div class="mb-8 flex items-center justify-between md:mb-12">
-        <RouterLink to="/" class="font-headline text-xl font-bold tracking-tighter text-white md:text-2xl" @click="mobileMenuOpen = false">
-          {{ t('common.brand') }}
+        <RouterLink to="/" class="relative block h-12 w-48 shrink-0 overflow-hidden md:h-14 md:w-60" @click="mobileMenuOpen = false">
+          <img :src="logoUrl" :alt="t('common.brand')" width="1920" height="1080" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
         </RouterLink>
         <button class="p-2 text-white" @click="mobileMenuOpen = false">
           <span class="material-symbols-outlined text-3xl">close</span>

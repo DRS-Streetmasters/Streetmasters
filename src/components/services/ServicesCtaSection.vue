@@ -1,4 +1,5 @@
 <script setup>
+import { servicePhotos } from '../../data/servicePhotos'
 import { useI18n } from 'vue-i18n'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
@@ -11,9 +12,10 @@ const { t } = useI18n()
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 z-10 bg-gradient-to-b from-stone-900 via-stone-900/80 to-transparent md:bg-gradient-to-r"></div>
         <img
-          alt="Workshop Background"
+          alt="Auto in de werkplaats"
           class="h-full w-full object-cover opacity-30 md:opacity-20"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLwiPctXpMUgVzcd7UIfMdGRhw8oZVMwtp9ZqJC4Teqat0HZx6Atsu75FzEMNGBVIx2S9AszjMdrCPzc1s1PIDs0jUJHUOPzu_oy3hRn_FMeygzFwXvZoq6N1NLMN4gTM71Y-nSAfHDoP38OZ1ijWbc6BLqW44vtN42rdC3EJd8lrm1jd9WjJjLUnf8cMfn_Mrnnx0J-WGGZIkrRIXlhvqIlS8qokH6K2d_H2rRWvHdfvdkSVB0p5bpP6vzqJfAxNfBh7LnxmgCnM"
+          :src="servicePhotos['workshop']"
+          loading="lazy"
         />
       </div>
 

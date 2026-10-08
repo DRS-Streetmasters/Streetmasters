@@ -5,53 +5,53 @@
   --font-body: 'Manrope', sans-serif;
   --font-label: 'Manrope', sans-serif;
 
-  --color-secondary-fixed: #ffdbcc;
-  --color-surface-container-high: #2a2a2a;
-  --color-on-secondary-fixed: #351000;
-  --color-on-secondary-fixed-variant: #7a3000;
-  --color-on-background: #e5e2e1;
-  --color-outline-variant: #5f3e3e;
-  --color-on-primary-fixed: #410008;
+  --color-secondary-fixed: #eedcff;
+  --color-surface-container-high: #2c2732;
+  --color-on-secondary-fixed: #28113b;
+  --color-on-secondary-fixed-variant: #634078;
+  --color-on-background: #e9e2ee;
+  --color-outline-variant: #4e3f60;
+  --color-on-primary-fixed: #260044;
   --color-on-tertiary-fixed: #002020;
   --color-on-error: #690005;
-  --color-on-primary: #680012;
-  --color-surface-variant: #353534;
-  --color-surface-tint: #ffb3b2;
-  --color-on-surface-variant: #e9bcba;
-  --color-surface: #131313;
-  --color-primary-fixed-dim: #ffb3b2;
-  --color-on-secondary-container: #572000;
+  --color-on-primary: #390066;
+  --color-surface-variant: #37303f;
+  --color-surface-tint: #d5b3ff;
+  --color-on-surface-variant: #cec0dc;
+  --color-surface: #141117;
+  --color-primary-fixed-dim: #d5b3ff;
+  --color-on-secondary-container: #f4e7ff;
   --color-tertiary-fixed-dim: #6cd7d8;
-  --color-primary: #ffb3b2;
-  --color-inverse-surface: #e5e2e1;
-  --color-surface-container-highest: #353534;
-  --color-inverse-primary: #bf002a;
-  --color-primary-container: #ff525c;
-  --color-on-primary-fixed-variant: #92001e;
+  --color-primary: #d5b3ff;
+  --color-inverse-surface: #e9e2ee;
+  --color-surface-container-highest: #37303f;
+  --color-inverse-primary: #7104d8;
+  --color-primary-container: #7104d8;
+  --color-on-primary-fixed-variant: #5800ab;
   --color-tertiary: #6cd7d8;
   --color-error: #ffb4ab;
-  --color-inverse-on-surface: #313030;
-  --color-primary-fixed: #ffdad8;
-  --color-surface-container-lowest: #0e0e0e;
-  --color-on-secondary: #561f00;
-  --color-surface-container: #201f1f;
+  --color-inverse-on-surface: #332b3b;
+  --color-primary-fixed: #efdbff;
+  --color-surface-container-lowest: #0f0c12;
+  --color-on-secondary: #3e2251;
+  --color-surface-container: #211b28;
   --color-on-tertiary: #003738;
-  --color-background: #131313;
+  --color-background: #141117;
   --color-on-tertiary-fixed-variant: #004f51;
-  --color-on-primary-container: #5b000f;
-  --color-outline: #af8786;
+  --color-on-primary-container: #ffffff;
+  --color-outline: #9e8cac;
   --color-error-container: #93000a;
-  --color-secondary-container: #fe6b00;
-  --color-secondary: #ffb693;
-  --color-surface-bright: #3a3939;
-  --color-surface-dim: #131313;
+  --color-secondary-container: #785394;
+  --color-secondary: #d9b8ef;
+  --color-surface-bright: #3c3444;
+  --color-surface-dim: #141117;
   --color-on-error-container: #ffdad6;
   --color-on-tertiary-container: #002f30;
   --color-tertiary-fixed: #8af3f5;
-  --color-on-surface: #e5e2e1;
-  --color-secondary-fixed-dim: #ffb693;
+  --color-on-surface: #e9e2ee;
+  --color-secondary-fixed-dim: #d9b8ef;
   --color-tertiary-container: #2aa0a2;
-  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-low: #1b1621;
 }
 
 @layer base {
@@ -75,16 +75,16 @@
 }
 
 .ghost-border {
-  border: 1px solid rgb(95 62 62 / 15%);
+  border: 1px solid rgb(158 140 172 / 15%);
 }
 
 .glass-panel {
-  background: rgb(32 31 31 / 60%);
+  background: rgb(33 27 40 / 60%);
   backdrop-filter: blur(20px);
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, rgb(146 0 30 / 10%) 0%, rgb(19 19 19 / 0%) 100%);
+  background: linear-gradient(135deg, rgb(113 4 216 / 10%) 0%, rgb(20 17 23 / 0%) 100%);
 }
 
 .scroll-mt-section {
@@ -110,12 +110,12 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgb(255 179 178 / 20%);
+  background: rgb(213 179 255 / 20%);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgb(255 179 178 / 40%);
+  background: rgb(213 179 255 / 40%);
 }
 
 #mobile-menu-overlay {
@@ -141,16 +141,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0e0e0e;
+  background: #0f0c12;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #353534;
+  background: #37303f;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff525c;
+  background: #7104d8;
 }
 
 @media (max-width: 768px) {

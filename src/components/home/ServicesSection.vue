@@ -1,4 +1,5 @@
 <script setup>
+import { servicePhotos } from '../../data/servicePhotos'
 import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
@@ -14,15 +15,11 @@ defineProps({
 })
 
 const { t } = useI18n()
-const customMockImage =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYo5W-Ndus4pay4YZZL8K_OoO0RoC1eXjZ79xpx6S7ZDJceDBIR1_CtNraUzc6pjt4KFtKylz2s1VBFm-jtCCFLKKmC57XnwbcPYgpV41lv-ZnPAwQKwQA7DQ32ZQvM7TK5AcKT7fgZ60mtA3egrjBO2OmYpMC5o9Fq55xuQoFH9NpukJReipWMfVnUAjKNYd0yjgbAEz9ZbADHi7KRGdJEue-AMxxUakCwkHqiAdogzruUUR47LPNLAcZTPQJqxJddgJOXIhiw'
-const fallbackMockImage =
-  'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE'
-
 const onImageError = (event) => {
-  if (event?.target?.src !== fallbackMockImage) {
-    event.target.src = fallbackMockImage
-  }
+  const image = event.target
+  if (image.dataset.fallbackApplied) return
+  image.dataset.fallbackApplied = 'true'
+  image.src = servicePhotos.custom
 }
 </script>
 
@@ -64,6 +61,7 @@ const onImageError = (event) => {
             :src="service.image"
             :alt="service.title"
             class="absolute inset-0 h-full w-full object-cover opacity-50 transition-all duration-700 group-hover:scale-110 group-hover:opacity-70"
+            loading="lazy"
             @error="onImageError"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent"></div>
@@ -79,9 +77,10 @@ const onImageError = (event) => {
           class="group relative flex h-[22rem] w-[16rem] shrink-0 flex-col items-center justify-center overflow-hidden rounded-xl border border-primary/20 bg-surface-container p-6 text-center md:h-[24rem] md:w-[18rem] md:p-8"
         >
           <img
-            :src="customMockImage"
-            alt="Maatwerk service mock foto"
+            :src="servicePhotos.custom"
+            alt="Streetmasters maatwerk"
             class="absolute inset-0 h-full w-full object-cover opacity-40 transition-all duration-700 group-hover:scale-105 group-hover:opacity-55"
+            loading="lazy"
             @error="onImageError"
           />
           <div class="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>

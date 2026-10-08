@@ -1,7 +1,8 @@
 <script setup>
-import { computed, reactive, ref } from 'vue'
+import { computed, nextTick, reactive, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppButton from '../ui/AppButton.vue'
+import AppLinkButton from '../ui/AppLinkButton.vue'
 
 const props = defineProps({
   categories: {
@@ -16,7 +17,8 @@ const serviceSearch = ref('')
 const selectedServices = ref([])
 const isSubmitting = ref(false)
 const submitError = ref('')
-const submitSuccess = ref('')
+const submitted = ref(false)
+const successPanel = ref(null)
 const recipientEmail = 'dries@streetmasters.be'
 
 const form = reactive({
@@ -83,7 +85,7 @@ const resetForm = () => {
 
 const submitForm = async () => {
   submitError.value = ''
-  submitSuccess.value = ''
+  if (isSubmitting.value || submitted.value) return
 
   const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT
 
@@ -138,8 +140,11 @@ const submitForm = async () => {
       throw new Error(firstError || t('offerPage.form.errors.sendFailed'))
     }
 
-    submitSuccess.value = t('offerPage.form.success')
+    submitted.value = true
     resetForm()
+    await nextTick()
+    successPanel.value?.focus({ preventScroll: true })
+    successPanel.value?.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start' })
   } catch (error) {
     submitError.value = error instanceof Error ? error.message : t('offerPage.form.errors.generic')
   } finally {
@@ -149,7 +154,25 @@ const submitForm = async () => {
 </script>
 
 <template>
-  <form class="space-y-6 md:space-y-10" @submit.prevent="submitForm">
+  <section
+    v-if="submitted"
+    ref="successPanel"
+    tabindex="-1"
+    aria-labelledby="offer-success-title"
+    class="scroll-mt-32 rounded-[2rem] border border-primary/30 bg-surface-container-low/95 px-6 py-14 text-center shadow-xl focus:outline-none md:px-12 md:py-20"
+  >
+    <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-primary-container/20 text-primary">
+      <span class="material-symbols-outlined text-5xl" aria-hidden="true">check_circle</span>
+    </div>
+    <h2 id="offer-success-title" class="font-headline text-3xl font-bold text-white md:text-4xl">
+      {{ t('offerPage.form.successTitle') }}
+    </h2>
+    <p class="mx-auto mt-5 max-w-lg text-base leading-relaxed text-on-surface-variant md:text-lg">
+      {{ t('offerPage.form.success') }}
+    </p>
+    <AppLinkButton class="mt-8" to="/">{{ t('offerPage.form.backHome') }}</AppLinkButton>
+  </section>
+  <form v-else class="space-y-6 md:space-y-10" @submit.prevent="submitForm">
     <section class="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface-container-low/85 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:rounded-[2rem] md:p-10">
       <div class="pointer-events-none absolute top-0 right-0 p-8 opacity-5 transition-opacity group-hover:opacity-20 md:opacity-10">
         <span class="material-symbols-outlined text-7xl md:text-8xl">directions_car</span>
@@ -323,8 +346,7 @@ const submitForm = async () => {
           {{ isSubmitting ? t('offerPage.form.submitting') : t('offerPage.form.submit') }}
         </AppButton>
 
-        <p v-if="submitSuccess" class="text-sm text-primary">{{ submitSuccess }}</p>
-        <p v-if="submitError" class="text-sm text-error">{{ submitError }}</p>
+        <p v-if="submitError" role="alert" class="text-sm text-error">{{ submitError }}</p>
       </div>
     </section>
   </form>

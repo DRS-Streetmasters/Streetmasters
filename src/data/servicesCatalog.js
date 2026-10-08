@@ -1,3 +1,5 @@
+import { servicePhotos } from './servicePhotos'
+
 const localized = (nl, en) => ({ nl, en })
 
 const getText = (value, locale) => {
@@ -21,8 +23,7 @@ const serviceCategories = [
           'Extreme gloss and molecular protection against UV, oxidation and chemical contamination.'
         ),
         offerDescription: localized('Duurzame bescherming', 'Durable protection'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuAtm2fVavx9cG5ys_2VtqbtX-jIs9v51ElBYY01dHR2kz7LhL4fOgVdxTyhApJc3w59CmfQ28iq7G9sfj04OluPgrOYtpXWqhZk--ClEjax44coMvuYZKa6xW7Q45DkkJ9KjDYQe4FNPJQ_ufGb_5OsnHgIBMcfd3bIpHRUeii84YCedNfJ7at4ijHdhL6ImrPgz9QOrHdtnM7UWSFzRAYwUJNzpn3ULz6jvBAqrqqmahs6IXOmmy1DGbhH-EcpjFno45tvyTqOtuU',
+        image: servicePhotos['ceramic-coating'],
         icon: 'diamond',
         keywords: localized('ceramic coating glans bescherming', 'ceramic coating gloss protection'),
         showOnServicesPage: true,
@@ -36,8 +37,7 @@ const serviceCategories = [
           'Invisible self-healing film that protects your paint from stone chips and scratches.'
         ),
         offerDescription: localized('Onzichtbare schild', 'Invisible shield'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE',
+        image: servicePhotos['ppf'],
         icon: 'layers',
         keywords: localized('ppf paint protection film folie onzichtbaar schild', 'ppf paint protection film invisible shield'),
         showOnServicesPage: true,
@@ -51,8 +51,7 @@ const serviceCategories = [
           'Remove swirls and deep scratches for a mirror-like finish and maximum reflection.'
         ),
         offerDescription: localized('Herstel van glans', 'Gloss restoration'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
+        image: servicePhotos['paint-correction'],
         icon: 'palette',
         keywords: localized('paint correction polijsten herstel glans krasjes', 'paint correction polish restore gloss scratches'),
         showOnServicesPage: true,
@@ -66,8 +65,7 @@ const serviceCategories = [
           'Thorough cleaning of wheels, arches and paintwork for a showroom finish.'
         ),
         offerDescription: localized('Volledige exterieurreiniging', 'Complete exterior cleaning'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYo5W-Ndus4pay4YZZL8K_OoO0RoC1eXjZ79xpx6S7ZDJceDBIR1_CtNraUzc6pjt4KFtKylz2s1VBFm-jtCCFLKKmC57XnwbcPYgpV41lv-ZnPAwQKwQA7DQ32ZQvM7TK5AcKT7fgZ60mtA3egrjBO2OmYpMC5o9Fq55xuQoFH9NpukJReipWMfVnUAjKNYd0yjgbAEz9ZbADHi7KRGdJEue-AMxxUakCwkHqiAdogzruUUR47LPNLAcZTPQJqxJddgJOXIhiw',
+        image: servicePhotos['general-detailing'],
         icon: 'local_car_wash',
         keywords: localized('general detailing exterieur reiniging', 'general detailing exterior cleaning'),
         showOnServicesPage: true,
@@ -78,8 +76,7 @@ const serviceCategories = [
         name: localized('Glass Coating', 'Glass Coating'),
         cardDescription: localized('Hydrofobe coating voor verbeterd zicht en langdurige bescherming.', 'Hydrophobic coating for better visibility and long-term protection.'),
         offerDescription: localized('Optimale regenasvoer', 'Optimized rain runoff'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE',
+        image: servicePhotos['glass-coating'],
         icon: 'visibility',
         keywords: localized('glass coating ruiten coating zicht regen', 'glass coating windows visibility rain'),
         showOnServicesPage: false,
@@ -90,8 +87,7 @@ const serviceCategories = [
         name: localized('Wheel Coating', 'Wheel Coating'),
         cardDescription: localized('Bescherming tegen remstof en vuil voor eenvoudiger onderhoud.', 'Protection against brake dust and dirt for easier maintenance.'),
         offerDescription: localized('Makkelijker schoonmaken', 'Easier cleaning'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuAtm2fVavx9cG5ys_2VtqbtX-jIs9v51ElBYY01dHR2kz7LhL4fOgVdxTyhApJc3w59CmfQ28iq7G9sfj04OluPgrOYtpXWqhZk--ClEjax44coMvuYZKa6xW7Q45DkkJ9KjDYQe4FNPJQ_ufGb_5OsnHgIBMcfd3bIpHRUeii84YCedNfJ7at4ijHdhL6ImrPgz9QOrHdtnM7UWSFzRAYwUJNzpn3ULz6jvBAqrqqmahs6IXOmmy1DGbhH-EcpjFno45tvyTqOtuU',
+        image: servicePhotos['wheel-coating'],
         icon: 'toys',
         keywords: localized('wheel coating velgen coating remstof', 'wheel coating rims brake dust'),
         showOnServicesPage: false,
@@ -108,8 +104,7 @@ const serviceCategories = [
         name: localized('Deep Cleaning', 'Deep Cleaning'),
         cardDescription: localized('Dieptereiniging van bekleding, panelen en details voor een frisse cabine.', 'Deep cleaning of upholstery, panels and details for a fresh cabin.'),
         offerDescription: localized('Grondige reiniging', 'Deep cleaning'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
+        image: servicePhotos['deep-cleaning'],
         icon: 'cleaning_services',
         keywords: localized('deep cleaning interieur reiniging stomen', 'deep cleaning interior steam cleaning'),
         showOnServicesPage: false,
@@ -120,8 +115,7 @@ const serviceCategories = [
         name: localized('Leather Treatment', 'Leather Treatment'),
         cardDescription: localized('Voeding en bescherming van leder voor langdurige soepelheid.', 'Nourishment and protection for leather to keep it supple long-term.'),
         offerDescription: localized('Behoud van souplesse', 'Maintains suppleness'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
+        image: servicePhotos['leather-treatment'],
         icon: 'texture',
         keywords: localized('leather treatment leer behandeling voeden', 'leather treatment nourish protect'),
         showOnServicesPage: false,
@@ -132,8 +126,7 @@ const serviceCategories = [
         name: localized('Alcantara Care', 'Alcantara Care'),
         cardDescription: localized('Gespecialiseerde behandeling voor alcantara en delicate stoffen.', 'Specialized treatment for alcantara and delicate fabrics.'),
         offerDescription: localized('Specialistische zorg', 'Specialized care'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
+        image: servicePhotos['alcantara-care'],
         icon: 'dry_cleaning',
         keywords: localized('alcantara care suede reiniging', 'alcantara care suede cleaning'),
         showOnServicesPage: false,
@@ -144,8 +137,7 @@ const serviceCategories = [
         name: localized('Odor Removal', 'Odor Removal'),
         cardDescription: localized('Doeltreffende geurverwijdering voor een fris interieur.', 'Effective odor removal for a fresh interior.'),
         offerDescription: localized('Fris en reukloos', 'Fresh and odor-free'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
+        image: servicePhotos['odor-removal'],
         icon: 'air',
         keywords: localized('odor removal geur verwijderen ozon roken', 'odor removal ozone smoke'),
         showOnServicesPage: false,
@@ -165,8 +157,7 @@ const serviceCategories = [
           'Complete color transformation with premium vinyl from 3M or Avery Dennison.'
         ),
         offerDescription: localized('Volledige transformatie', 'Full transformation'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYo5W-Ndus4pay4YZZL8K_OoO0RoC1eXjZ79xpx6S7ZDJceDBIR1_CtNraUzc6pjt4KFtKylz2s1VBFm-jtCCFLKKmC57XnwbcPYgpV41lv-ZnPAwQKwQA7DQ32ZQvM7TK5AcKT7fgZ60mtA3egrjBO2OmYpMC5o9Fq55xuQoFH9NpukJReipWMfVnUAjKNYd0yjgbAEz9ZbADHi7KRGdJEue-AMxxUakCwkHqiAdogzruUUR47LPNLAcZTPQJqxJddgJOXIhiw',
+        image: servicePhotos['full-wrap'],
         icon: 'format_paint',
         keywords: localized('full wrap kleur wrappen wrap', 'full wrap color wrap'),
         showOnServicesPage: true,
@@ -180,8 +171,7 @@ const serviceCategories = [
           'Chrome delete, roof wrapping or mirror caps for subtle upgrades.'
         ),
         offerDescription: localized('Subtiele upgrades', 'Subtle upgrades'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE',
+        image: servicePhotos['accent-wraps'],
         icon: 'remove_circle_outline',
         keywords: localized('accent wraps chrome delete ontchromen zwart', 'accent wraps chrome delete black trim'),
         showOnServicesPage: true,
@@ -195,8 +185,7 @@ const serviceCategories = [
           'From custom badges to painted brake calipers. The finishing touches for your unique look.'
         ),
         offerDescription: localized('Unieke details', 'Unique details'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuAtm2fVavx9cG5ys_2VtqbtX-jIs9v51ElBYY01dHR2kz7LhL4fOgVdxTyhApJc3w59CmfQ28iq7G9sfj04OluPgrOYtpXWqhZk--ClEjax44coMvuYZKa6xW7Q45DkkJ9KjDYQe4FNPJQ_ufGb_5OsnHgIBMcfd3bIpHRUeii84YCedNfJ7at4ijHdhL6ImrPgz9QOrHdtnM7UWSFzRAYwUJNzpn3ULz6jvBAqrqqmahs6IXOmmy1DGbhH-EcpjFno45tvyTqOtuU',
+        image: servicePhotos['aesthetic-upgrades'],
         icon: 'token',
         keywords: localized('aesthetic upgrades custom badging emblemen logo', 'aesthetic upgrades custom badging emblem logo'),
         showOnServicesPage: true,
@@ -207,8 +196,7 @@ const serviceCategories = [
         name: localized('Tinting', 'Tinting'),
         cardDescription: localized('Ramentinting voor privacy en een strakke afwerking.', 'Window tinting for privacy and a clean finish.'),
         offerDescription: localized('Privacy en stijl', 'Privacy and style'),
-        image:
-          'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE',
+        image: servicePhotos['tinting'],
         icon: 'tonality',
         keywords: localized('tinting ramen blinderen', 'tinting windows'),
         showOnServicesPage: false,
@@ -288,30 +276,10 @@ export const getHomeServices = (locale = 'nl') =>
       image: service.image,
     }))
 
-const serviceMockImages = {
-  'ceramic-coating':
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuAtm2fVavx9cG5ys_2VtqbtX-jIs9v51ElBYY01dHR2kz7LhL4fOgVdxTyhApJc3w59CmfQ28iq7G9sfj04OluPgrOYtpXWqhZk--ClEjax44coMvuYZKa6xW7Q45DkkJ9KjDYQe4FNPJQ_ufGb_5OsnHgIBMcfd3bIpHRUeii84YCedNfJ7at4ijHdhL6ImrPgz9QOrHdtnM7UWSFzRAYwUJNzpn3ULz6jvBAqrqqmahs6IXOmmy1DGbhH-EcpjFno45tvyTqOtuU',
-  ppf: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE',
-  'paint-correction': 'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
-  'general-detailing':
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuAtm2fVavx9cG5ys_2VtqbtX-jIs9v51ElBYY01dHR2kz7LhL4fOgVdxTyhApJc3w59CmfQ28iq7G9sfj04OluPgrOYtpXWqhZk--ClEjax44coMvuYZKa6xW7Q45DkkJ9KjDYQe4FNPJQ_ufGb_5OsnHgIBMcfd3bIpHRUeii84YCedNfJ7at4ijHdhL6ImrPgz9QOrHdtnM7UWSFzRAYwUJNzpn3ULz6jvBAqrqqmahs6IXOmmy1DGbhH-EcpjFno45tvyTqOtuU',
-  'glass-coating': 'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE',
-  'wheel-coating':
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuAtm2fVavx9cG5ys_2VtqbtX-jIs9v51ElBYY01dHR2kz7LhL4fOgVdxTyhApJc3w59CmfQ28iq7G9sfj04OluPgrOYtpXWqhZk--ClEjax44coMvuYZKa6xW7Q45DkkJ9KjDYQe4FNPJQ_ufGb_5OsnHgIBMcfd3bIpHRUeii84YCedNfJ7at4ijHdhL6ImrPgz9QOrHdtnM7UWSFzRAYwUJNzpn3ULz6jvBAqrqqmahs6IXOmmy1DGbhH-EcpjFno45tvyTqOtuU',
-  'deep-cleaning': 'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
-  'leather-treatment': 'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
-  'alcantara-care': 'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
-  'odor-removal': 'https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I',
-  'full-wrap': 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYo5W-Ndus4pay4YZZL8K_OoO0RoC1eXjZ79xpx6S7ZDJceDBIR1_CtNraUzc6pjt4KFtKylz2s1VBFm-jtCCFLKKmC57XnwbcPYgpV41lv-ZnPAwQKwQA7DQ32ZQvM7TK5AcKT7fgZ60mtA3egrjBO2OmYpMC5o9Fq55xuQoFH9NpukJReipWMfVnUAjKNYd0yjgbAEz9ZbADHi7KRGdJEue-AMxxUakCwkHqiAdogzruUUR47LPNLAcZTPQJqxJddgJOXIhiw',
-  'accent-wraps': 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYo5W-Ndus4pay4YZZL8K_OoO0RoC1eXjZ79xpx6S7ZDJceDBIR1_CtNraUzc6pjt4KFtKylz2s1VBFm-jtCCFLKKmC57XnwbcPYgpV41lv-ZnPAwQKwQA7DQ32ZQvM7TK5AcKT7fgZ60mtA3egrjBO2OmYpMC5o9Fq55xuQoFH9NpukJReipWMfVnUAjKNYd0yjgbAEz9ZbADHi7KRGdJEue-AMxxUakCwkHqiAdogzruUUR47LPNLAcZTPQJqxJddgJOXIhiw',
-  'aesthetic-upgrades': 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6qYo5W-Ndus4pay4YZZL8K_OoO0RoC1eXjZ79xpx6S7ZDJceDBIR1_CtNraUzc6pjt4KFtKylz2s1VBFm-jtCCFLKKmC57XnwbcPYgpV41lv-ZnPAwQKwQA7DQ32ZQvM7TK5AcKT7fgZ60mtA3egrjBO2OmYpMC5o9Fq55xuQoFH9NpukJReipWMfVnUAjKNYd0yjgbAEz9ZbADHi7KRGdJEue-AMxxUakCwkHqiAdogzruUUR47LPNLAcZTPQJqxJddgJOXIhiw',
-  tinting: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDYOhSHdpASyPJUptoQg53mOGzluhW-91r7cupBl63yEoC0D3k6egngAw3cxwyehGyE37KcBGISO47a3vCMEkB78WOtTGrTk1KOxZFyi7P7HpSoT0TeD5IguhqxgNzBzTN-j4PA6gpEhUCjBKQRtyBtaKzrrA4r2IfqQ0fRcOMZH-Mm5VPWy9oBxp3gJZtxz_2lo-dmVKL41SjAnzoHmMmUyNX-PtcTtZq0XoR2sNvhvwHHtX2YIPBEe3nMneIHTv3yGuzqQ_XBPKE',
-}
-
-export const getAllServicesWithMockImages = (locale = 'nl') =>
+export const getAllServices = (locale = 'nl') =>
   allServices.map((service) => ({
     id: service.id,
     title: getText(service.name, locale),
     description: getText(service.cardDescription, locale),
-    image: serviceMockImages[service.id] ?? service.image,
+    image: service.image,
   }))

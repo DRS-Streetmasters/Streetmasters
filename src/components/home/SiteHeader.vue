@@ -14,7 +14,7 @@ defineEmits(['open-menu'])
       </div>
 
       <div class="hidden items-center gap-8 font-headline text-sm font-bold tracking-tighter lg:flex">
-        <a class="border-b-2 border-[#FF003C] pb-1 text-[#FF003C]" href="#">Home</a>
+        <a class="border-b-2 border-primary pb-1 text-primary" href="#">Home</a>
         <RouterLink class="text-neutral-400 transition-colors duration-300 hover:text-white" to="/diensten">Diensten</RouterLink>
         <a class="text-neutral-400 transition-colors duration-300 hover:text-white" href="#showcase">Portfolio</a>
         <a class="text-neutral-400 transition-colors duration-300 hover:text-white" href="#about">Over Ons</a>

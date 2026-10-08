@@ -1,4 +1,5 @@
 <script setup>
+import { servicePhotos } from '../../data/servicePhotos'
 import { useI18n } from 'vue-i18n'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
@@ -23,9 +24,10 @@ const { t } = useI18n()
       <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 md:gap-12">
         <div class="relative aspect-[4/3] overflow-hidden rounded-3xl sm:aspect-video lg:aspect-auto">
           <img
-            alt="Luxury Interior"
+            alt="Interieur na reiniging"
             class="h-full w-full object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-WLMboQH4byxLxyKcl8AVxXFPseG3I8VWNO19fr6rv4JNV_KGNeCtVtlakju5xDFo9dsUZzmj7ckfaFMjDg2S1YyesSbRuaG_WlHW2OBQoQPP3ge1_GsWLQFWrmsyiya3YU_t3RmpIdz5eLolrxrqbLk42rRQg2eTStFUuE4Eyfnob74wxcxl0BLQLTS8ihUBeOMlCk01UcRyEMB3kUssv_piG3Pg1ueavU9chaK4xgEdfPWC_aVxLjOqm8nnmP4rkZmUZElzt7I"
+            :src="servicePhotos['deep-cleaning']"
+          loading="lazy"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 to-transparent"></div>
         </div>

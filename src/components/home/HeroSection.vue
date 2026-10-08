@@ -10,7 +10,7 @@ const { t } = useI18n()
     <div class="absolute inset-0 z-0">
       <img
         class="h-full w-full object-cover brightness-50"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtm2fVavx9cG5ys_2VtqbtX-jIs9v51ElBYY01dHR2kz7LhL4fOgVdxTyhApJc3w59CmfQ28iq7G9sfj04OluPgrOYtpXWqhZk--ClEjax44coMvuYZKa6xW7Q45DkkJ9KjDYQe4FNPJQ_ufGb_5OsnHgIBMcfd3bIpHRUeii84YCedNfJ7at4ijHdhL6ImrPgz9QOrHdtnM7UWSFzRAYwUJNzpn3ULz6jvBAqrqqmahs6IXOmmy1DGbhH-EcpjFno45tvyTqOtuU"
+        src="/image00001.jpeg"
         alt="Streetmasters hero foto"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
