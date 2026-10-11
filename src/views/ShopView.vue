@@ -14,18 +14,27 @@ const route = useRoute()
 const router = useRouter()
 const search = ref(String(route.query.q || ''))
 const collection = ref(String(route.query.collection || ''))
-const sort = ref(String(route.query.sort || 'featured'))
+// Collections can't be grouped by category, so they keep Shopify's featured order.
+const defaultSort = () => collection.value ? 'featured' : 'category'
+const sort = ref(String(route.query.sort || defaultSort()))
 const available = ref(route.query.stock === '1')
 const collectionOptions = computed(() => [{ value: '', label: t('shop.all') }, ...collections.value.map(item => ({ value: item.handle, label: item.title }))])
-const sortOptions = computed(() => ['featured', 'newest', 'priceAsc', 'priceDesc', 'title'].map(value => ({ value, label: t(`shop.${value === 'title' ? 'titleSort' : value}`) })))
+const sortOptions = computed(() => [...(collection.value ? [] : ['category']), 'featured', 'newest', 'priceAsc', 'priceDesc', 'title'].map(value => ({ value, label: t(`shop.${value === 'title' ? 'titleSort' : value}`) })))
 const products = ref([])
+// Shopify can't sort by its product category, so the full catalog is ordered here.
+const sortedProducts = computed(() => {
+  if (sort.value !== 'category' || collection.value) return products.value
+  const name = product => product.category?.name
+  // Uncategorized products go last; titles keep Shopify's A–Z order within a category.
+  return [...products.value].sort((a, b) => !name(a) - !name(b) || (name(a) || '').localeCompare(name(b) || '', locale.value))
+})
 const collections = ref([])
 const pageInfo = ref({})
 const loading = ref(true)
 const error = ref(false)
 const filterDialog = ref(null)
 const filtersOpen = ref(false)
-const activeFilters = computed(() => Number(!!collection.value) + Number(available.value) + Number(sort.value !== 'featured'))
+const activeFilters = computed(() => Number(!!collection.value) + Number(available.value) + Number(sort.value !== defaultSort()))
 let previousOverflow = ''
 let desktopMedia
 function openFilters() {
@@ -37,8 +46,8 @@ function openFilters() {
 function closeFilters() { filterDialog.value?.close() }
 function onFiltersClosed() { filtersOpen.value = false; document.body.style.overflow = previousOverflow }
 function onBreakpoint(event) { if (event.matches && filtersOpen.value) closeFilters() }
-function resetFilters() { collection.value = ''; sort.value = 'featured'; available.value = false; filter() }
-function setCollection(value) { collection.value = value; search.value = ''; filter() }
+function resetFilters() { collection.value = ''; sort.value = defaultSort(); available.value = false; filter() }
+function setCollection(value) { collection.value = value; search.value = ''; if (sort.value === 'category' || sort.value === 'featured') sort.value = defaultSort(); filter() }
 function setSort(value) { sort.value = value; filter() }
 function setAvailable(value) { available.value = value; filter() }
 let request = 0
@@ -57,13 +66,13 @@ async function load(more = false) {
 }
 
 function filter() {
-  router.replace({ query: { ...(search.value.trim() ? { q: search.value.trim() } : {}), ...(collection.value ? { collection: collection.value } : {}), ...(sort.value !== 'featured' ? { sort: sort.value } : {}), ...(available.value ? { stock: '1' } : {}) } })
+  router.replace({ query: { ...(search.value.trim() ? { q: search.value.trim() } : {}), ...(collection.value ? { collection: collection.value } : {}), ...(sort.value !== defaultSort() ? { sort: sort.value } : {}), ...(available.value ? { stock: '1' } : {}) } })
 }
 function searchProducts() { collection.value = ''; filter() }
 watch(() => route.query, () => {
   search.value = String(route.query.q || '')
   collection.value = String(route.query.collection || '')
-  sort.value = String(route.query.sort || 'featured')
+  sort.value = String(route.query.sort || defaultSort())
   available.value = route.query.stock === '1'
   load()
 })
@@ -103,7 +112,7 @@ onUnmounted(() => {
           <div v-if="error" role="alert" class="rounded-2xl border border-error/30 p-8 text-center"><p>{{ t('shop.errors.connection') }}</p><AppButton class="mt-4" @click="load()">{{ t('shop.retry') }}</AppButton></div>
           <p v-if="loading" role="status" class="mb-5 text-primary">{{ t('shop.loading') }}</p>
           <div v-if="!error" class="grid grid-cols-1 gap-5 min-[400px]:grid-cols-2 xl:grid-cols-3" :aria-busy="loading">
-            <ProductCard v-for="product in products" :key="product.id" :product="product" />
+            <ProductCard v-for="product in sortedProducts" :key="product.id" :product="product" />
           </div>
           <div v-if="!loading && !error && !products.length" class="py-16 text-center"><h3 class="text-2xl font-bold">{{ t('shop.empty') }}</h3><p class="mt-3 text-on-surface-variant">{{ t('shop.emptyHint') }}</p></div>
           <div v-if="pageInfo.hasNextPage && !error" class="mt-10 text-center"><AppButton :disabled="loading" variant="glass" @click="load(true)">{{ t('shop.more') }}</AppButton></div>

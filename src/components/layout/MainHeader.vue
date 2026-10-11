@@ -206,16 +206,16 @@ const handleDocumentClick = (event) => {
       </div>
 
       <div class="flex flex-1 flex-col items-center justify-center gap-5 overflow-y-auto text-center md:gap-6">
-        <RouterLink :class="mobileNavClass(isShop)" to="/shop" @click="mobileMenuOpen = false">{{ t('shop.shop') }}</RouterLink>
-        <RouterLink :class="mobileNavClass(route.path === '/account')" to="/account" @click="mobileMenuOpen = false">{{ t('shop.account') }}</RouterLink>
         <RouterLink :class="mobileNavClass(isHome)" to="/" @click="mobileMenuOpen = false">{{ t('common.nav.home') }}</RouterLink>
         <RouterLink :class="mobileNavClass(isServices)" to="/diensten" @click="mobileMenuOpen = false">{{ t('common.nav.services') }}</RouterLink>
+        <RouterLink :class="mobileNavClass(isShop)" to="/shop" @click="mobileMenuOpen = false">{{ t('shop.shop') }}</RouterLink>
         <RouterLink :class="mobileNavClass(isPortfolio)" to="/portfolio" @click="mobileMenuOpen = false">
           {{ t('common.nav.portfolio') }}
         </RouterLink>
         <RouterLink :class="mobileNavClass(isAbout)" to="/about" @click="mobileMenuOpen = false">
           {{ t('common.nav.about') }}
         </RouterLink>
+        <RouterLink :class="mobileNavClass(route.path === '/account')" to="/account" @click="mobileMenuOpen = false">{{ t('shop.account') }}</RouterLink>
       </div>
 
       <div class="mt-auto pb-8 md:pb-12">

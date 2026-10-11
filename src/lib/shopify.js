@@ -31,30 +31,31 @@ export function safeShopifyUrl(value) {
 }
 
 export const productCardFields = `
-  id handle title vendor availableForSale
+  id handle title vendor availableForSale category { name }
   featuredImage { url altText width height }
   priceRange { minVariantPrice { amount currencyCode } }
   compareAtPriceRange { minVariantPrice { amount currencyCode } }
 `
 
 export async function getCatalog({ search = '', sort = 'featured', collection = '', after = null, language = 'NL', available = false }, signal) {
-  const sorting = { featured: ['RELEVANCE', false], newest: ['CREATED_AT', true], priceAsc: ['PRICE', false], priceDesc: ['PRICE', true], title: ['TITLE', false] }
+  const sorting = { featured: ['RELEVANCE', false], newest: ['CREATED_AT', true], priceAsc: ['PRICE', false], priceDesc: ['PRICE', true], title: ['TITLE', false], category: ['TITLE', false] }
   const [sortKey, reverse] = sorting[sort] || sorting.featured
   // Quote user input so Shopify search operators aren't interpreted as filters.
   const query = [search.trim() ? `title:${JSON.stringify(`*${search.trim()}*`)}` : '', available ? 'available_for_sale:true' : ''].filter(Boolean).join(' AND ')
+  // Collections can't sort by category, so 'category' falls back to the collection's own order.
   if (collection) {
     const data = await storefront(`query Catalog($handle: String!, $after: String, $sort: ProductCollectionSortKeys!, $reverse: Boolean!, $filters: [ProductFilter!], $language: LanguageCode!) @inContext(language: $language, country: BE) {
       collection(handle: $handle) { products(first: 24, after: $after, sortKey: $sort, reverse: $reverse, filters: $filters) {
         nodes { ${productCardFields} } pageInfo { hasNextPage endCursor }
       } }
-    }`, { handle: collection, after, sort: sort === 'featured' ? 'MANUAL' : sort === 'newest' ? 'CREATED' : sortKey, reverse, filters: available ? [{ available: true }] : [], language }, signal)
+    }`, { handle: collection, after, sort: sort === 'featured' || sort === 'category' ? 'MANUAL' : sort === 'newest' ? 'CREATED' : sortKey, reverse, filters: available ? [{ available: true }] : [], language }, signal)
     return data.collection?.products || { nodes: [], pageInfo: { hasNextPage: false } }
   }
-  const data = await storefront(`query Catalog($query: String, $after: String, $sort: ProductSortKeys!, $reverse: Boolean!, $language: LanguageCode!) @inContext(language: $language, country: BE) {
-    products(first: 24, after: $after, query: $query, sortKey: $sort, reverse: $reverse) {
+  const data = await storefront(`query Catalog($query: String, $after: String, $first: Int!, $sort: ProductSortKeys!, $reverse: Boolean!, $language: LanguageCode!) @inContext(language: $language, country: BE) {
+    products(first: $first, after: $after, query: $query, sortKey: $sort, reverse: $reverse) {
       nodes { ${productCardFields} } pageInfo { hasNextPage endCursor }
     }
-  }`, { query, after, sort: sortKey, reverse, language }, signal)
+  }`, { query, after, first: sort === 'category' ? 250 : 24, sort: sortKey, reverse, language }, signal)
   return data.products
 }
 

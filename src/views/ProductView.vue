@@ -78,7 +78,7 @@ watch([() => route.params.handle, locale], load, { immediate: true })
         <div>
           <p class="text-xs font-bold tracking-widest text-primary uppercase">{{ product.vendor }}</p>
           <h1 class="mt-4 font-headline text-4xl leading-tight font-bold text-white md:text-5xl">{{ product.title }}</h1>
-          <div class="mt-6 flex items-center gap-4"><p class="text-3xl font-bold text-white">{{ money(variant?.price, locale) }}</p><del v-if="Number(variant?.compareAtPrice?.amount) > Number(variant?.price?.amount)" class="text-lg text-outline">{{ money(variant.compareAtPrice, locale) }}</del></div>
+          <div class="mt-6 flex items-center gap-4"><p class="text-3xl font-bold text-white">{{ money(variant?.price, locale) }}</p><del v-if="Number(variant?.compareAtPrice?.amount) > Number(variant?.price?.amount)" class="text-lg text-outline"><span class="sr-only">{{ t('shop.originalPrice') }} </span>{{ money(variant.compareAtPrice, locale) }}</del></div>
           <form class="mt-8 space-y-5 border-t border-white/10 pt-7" @submit.prevent="add">
             <AppSelect v-if="product.variants.nodes.length > 1" id="product-variant" v-model="variantId" :label="t('shop.variant')" :options="variantOptions" @change="changeVariant" />
             <div class="max-w-28"><label class="mb-2" for="product-quantity">{{ t('shop.quantity') }}</label><input id="product-quantity" v-model.number="quantity" type="number" min="1" max="99" step="1" required /></div>
