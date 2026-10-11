@@ -3,10 +3,12 @@ import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { syncLocale } from '../../i18n'
+import { useCartStore } from '../../stores/cart'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
 const logoUrl = `${import.meta.env.BASE_URL}logo.png`
 const route = useRoute()
+const cart = useCartStore()
 const mobileMenuOpen = ref(false)
 const { t, locale } = useI18n()
 const desktopLanguageMenuRef = ref(null)
@@ -34,16 +36,18 @@ onUnmounted(() => {
 
 onMounted(() => {
   document.addEventListener('click', handleDocumentClick)
+  cart.initialize()
 })
 
 const isHome = computed(() => route.path === '/')
 const isServices = computed(() => route.path === '/diensten')
 const isPortfolio = computed(() => route.path === '/portfolio')
+const isShop = computed(() => route.path.startsWith('/shop'))
 const isAbout = computed(() => route.path === '/about')
 
 const navLinkClass = (active) => {
   if (active) {
-    return 'border-b-2 border-red-600 pb-1 font-headline text-sm tracking-widest text-white uppercase'
+    return 'border-b-2 border-purple-600 pb-1 font-headline text-sm tracking-widest text-white uppercase'
   }
 
   return 'font-headline text-sm tracking-widest text-stone-400 transition-colors hover:text-white uppercase'
@@ -103,9 +107,11 @@ const handleDocumentClick = (event) => {
         <img :src="logoUrl" :alt="t('common.brand')" width="1920" height="1080" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
       </RouterLink>
 
-      <div class="hidden items-center gap-8 lg:flex">
+      <div class="hidden items-center gap-5 xl:gap-8 lg:flex">
+
         <RouterLink :class="navLinkClass(isHome)" to="/">{{ t('common.nav.home') }}</RouterLink>
         <RouterLink :class="navLinkClass(isServices)" to="/diensten">{{ t('common.nav.services') }}</RouterLink>
+        <RouterLink :class="navLinkClass(isShop)" to="/shop">{{ t('shop.shop') }}</RouterLink>
         <RouterLink :class="navLinkClass(isPortfolio)" to="/portfolio">
           {{ t('common.nav.portfolio') }}
         </RouterLink>
@@ -114,7 +120,15 @@ const handleDocumentClick = (event) => {
         </RouterLink>
       </div>
 
-      <div class="hidden items-center gap-3 lg:flex">
+      <div class="flex items-center gap-2 md:gap-3">
+        <RouterLink to="/account" class="hidden h-10 w-10 items-center justify-center text-white/85 transition-colors hover:text-primary sm:flex" :aria-label="t('shop.account')" :title="t('shop.account')">
+          <span class="material-symbols-outlined" aria-hidden="true">person</span>
+        </RouterLink>
+        <RouterLink to="/winkelmand" class="relative flex h-11 w-11 items-center justify-center text-white/85 transition-colors hover:text-primary" :aria-label="`${t('shop.cart')} (${cart.count})`" :title="t('shop.cart')">
+          <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
+          <span v-if="cart.count" class="absolute -top-1 -right-1 flex min-h-5 min-w-5 items-center justify-center rounded-full bg-primary-container px-1 text-[10px] font-bold text-white" aria-live="polite">{{ cart.count }}</span>
+        </RouterLink>
+        <div class="hidden items-center gap-3 lg:flex">
         <AppLinkButton class="scale-95 active:scale-90" size="xs" to="/offerte">
           {{ t('common.nav.quote') }}
         </AppLinkButton>
@@ -144,9 +158,10 @@ const handleDocumentClick = (event) => {
         </div>
       </div>
 
-      <button class="flex items-center justify-center p-2 text-white lg:hidden" @click="mobileMenuOpen = true">
+      <button :aria-label="t('common.nav.home') + ' menu'" class="flex items-center justify-center p-2 text-white lg:hidden" @click="mobileMenuOpen = true">
         <span class="material-symbols-outlined text-3xl">menu</span>
       </button>
+      </div>
     </div>
   </nav>
 
@@ -190,7 +205,9 @@ const handleDocumentClick = (event) => {
         </div>
       </div>
 
-      <div class="flex flex-1 flex-col items-center justify-center gap-6 text-center md:gap-8">
+      <div class="flex flex-1 flex-col items-center justify-center gap-5 overflow-y-auto text-center md:gap-6">
+        <RouterLink :class="mobileNavClass(isShop)" to="/shop" @click="mobileMenuOpen = false">{{ t('shop.shop') }}</RouterLink>
+        <RouterLink :class="mobileNavClass(route.path === '/account')" to="/account" @click="mobileMenuOpen = false">{{ t('shop.account') }}</RouterLink>
         <RouterLink :class="mobileNavClass(isHome)" to="/" @click="mobileMenuOpen = false">{{ t('common.nav.home') }}</RouterLink>
         <RouterLink :class="mobileNavClass(isServices)" to="/diensten" @click="mobileMenuOpen = false">{{ t('common.nav.services') }}</RouterLink>
         <RouterLink :class="mobileNavClass(isPortfolio)" to="/portfolio" @click="mobileMenuOpen = false">

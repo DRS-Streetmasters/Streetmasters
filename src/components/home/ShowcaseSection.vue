@@ -15,6 +15,7 @@ function moveSlider(event) {
   const bounds = event.currentTarget.getBoundingClientRect()
   position.value = Math.round(Math.max(0, Math.min(100, ((event.clientX - bounds.left) / bounds.width) * 100)))
 }
+const publicBase = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -32,7 +33,7 @@ function moveSlider(event) {
         <img
           :alt="t('home.showcase.after')"
           class="absolute inset-0 h-full w-full object-cover"
-          src="/image00013.jpeg"
+          :src="`${publicBase}image00013.jpeg`"
           loading="lazy"
           draggable="false"
         />
@@ -40,7 +41,7 @@ function moveSlider(event) {
           <img
             :alt="t('home.showcase.before')"
             class="h-full w-full object-cover"
-            src="/image00011.jpeg"
+            :src="`${publicBase}image00011.jpeg`"
             loading="lazy"
             draggable="false"
           />

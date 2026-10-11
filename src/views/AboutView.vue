@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
+import PageHero from '../components/layout/PageHero.vue'
 import MainHeader from '../components/layout/MainHeader.vue'
 import MainFooter from '../components/layout/MainFooter.vue'
 import AppLinkButton from '../components/ui/AppLinkButton.vue'
@@ -45,16 +46,10 @@ const values = computed(() => valuesByLocale[locale.value] ?? valuesByLocale.nl)
   <div class="overflow-x-hidden bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
     <MainHeader />
 
-    <main class="px-6 pt-24 pb-20 md:px-8 md:pt-32 md:pb-32">
-      <section class="mx-auto mb-14 max-w-screen-2xl md:mb-20">
-        <p class="mb-3 font-label text-[10px] tracking-[0.3em] text-primary uppercase md:mb-4 md:text-xs">{{ t('aboutPage.label') }}</p>
-        <h1 class="mb-6 font-headline text-4xl font-bold tracking-tighter text-white uppercase md:mb-8 md:text-8xl">{{ t('aboutPage.title') }}</h1>
-        <p class="max-w-3xl text-base leading-relaxed text-on-surface-variant md:text-xl">
-          {{ t('aboutPage.subtitle') }}
-        </p>
-      </section>
-
-      <section class="mx-auto max-w-screen-2xl">
+    <main>
+      <PageHero :label="t('aboutPage.label')" :title="t('aboutPage.title')" :description="t('aboutPage.subtitle')" target="#about-values" />
+      <div class="px-6 pt-10 pb-20 md:px-8 md:pt-14 md:pb-32">
+      <section id="about-values" class="mx-auto max-w-screen-2xl scroll-mt-28">
         <div class="mb-10 flex items-center gap-4 md:mb-12 md:gap-6">
           <h2 class="font-headline text-2xl font-bold tracking-tight whitespace-nowrap md:text-4xl">{{ t('aboutPage.valuesTitle') }}</h2>
           <div class="h-px flex-1 bg-white/10"></div>
@@ -81,6 +76,7 @@ const values = computed(() => valuesByLocale[locale.value] ?? valuesByLocale.nl)
           <AppLinkButton size="md" to="/offerte">{{ t('common.cta.requestQuote') }}</AppLinkButton>
         </div>
       </section>
+      </div>
     </main>
 
     <MainFooter />

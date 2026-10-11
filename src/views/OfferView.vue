@@ -3,13 +3,13 @@ import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import MainHeader from '../components/layout/MainHeader.vue'
 import MainFooter from '../components/layout/MainFooter.vue'
-import OfferPageHeader from '../components/offer/OfferPageHeader.vue'
+import PageHero from '../components/layout/PageHero.vue'
 import OfferRequestForm from '../components/offer/OfferRequestForm.vue'
 import OfferSidebar from '../components/offer/OfferSidebar.vue'
 import { getOfferServiceCategories } from '../data/servicesCatalog'
 import { getOfferBenefits } from '../data/offerContent'
 
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 const offerServiceCategories = computed(() => getOfferServiceCategories(locale.value))
 const offerBenefits = computed(() => getOfferBenefits(locale.value))
@@ -25,8 +25,9 @@ const offerBenefits = computed(() => getOfferBenefits(locale.value))
 
     <MainHeader />
 
-    <main class="relative mx-auto min-h-screen max-w-screen-2xl px-4 pt-24 pb-16 md:px-12 md:pt-32 md:pb-24">
-      <OfferPageHeader />
+    <main class="relative">
+      <PageHero :label="t('common.brand')" :title="t('offerPage.header.title')" :description="t('offerPage.header.subtitle')" target="#offer-form" />
+      <div id="offer-form" class="mx-auto max-w-screen-2xl scroll-mt-28 px-4 pt-10 pb-16 md:px-12 md:pt-16 md:pb-24">
 
       <div class="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
         <div class="space-y-8 md:space-y-12 lg:col-span-8">
@@ -34,6 +35,7 @@ const offerBenefits = computed(() => getOfferBenefits(locale.value))
         </div>
 
         <OfferSidebar :benefits="offerBenefits" />
+      </div>
       </div>
     </main>
 

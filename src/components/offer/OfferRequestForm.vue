@@ -24,23 +24,10 @@ const recipientEmail = 'dries@streetmasters.be'
 const form = reactive({
   brandModel: '',
   year: '',
-  preferredDate: '',
-  preferredTime: 'morning',
   name: '',
   email: '',
   message: '',
 })
-
-const preferredTimeOptions = computed(() => [
-  {
-    value: 'morning',
-    label: t('offerPage.form.morning'),
-  },
-  {
-    value: 'afternoon',
-    label: t('offerPage.form.afternoon'),
-  },
-])
 
 const filteredCategories = computed(() => {
   const query = serviceSearch.value.trim().toLowerCase()
@@ -65,17 +52,9 @@ const filteredCategories = computed(() => {
 })
 
 const hasActiveSearch = computed(() => serviceSearch.value.trim().length > 0)
-const tomorrowDate = computed(() => {
-  const date = new Date()
-  date.setDate(date.getDate() + 1)
-  return date.toISOString().split('T')[0]
-})
-
 const resetForm = () => {
   form.brandModel = ''
   form.year = ''
-  form.preferredDate = ''
-  form.preferredTime = 'morning'
   form.name = ''
   form.email = ''
   form.message = ''
@@ -99,17 +78,6 @@ const submitForm = async () => {
     return
   }
 
-  if (form.preferredDate) {
-    const selectedDate = new Date(`${form.preferredDate}T00:00:00`)
-    const today = new Date()
-    today.setHours(0, 0, 0, 0)
-
-    if (selectedDate <= today) {
-      submitError.value = t('offerPage.form.errors.futureDate')
-      return
-    }
-  }
-
   isSubmitting.value = true
 
   try {
@@ -126,8 +94,6 @@ const submitForm = async () => {
         _replyto: form.email,
         brand_model: form.brandModel,
         year: form.year,
-        preferred_date: form.preferredDate,
-        preferred_time: preferredTimeOptions.value.find((option) => option.value === form.preferredTime)?.label,
         services: selectedServices.value,
         message: form.message,
         _subject: `${t('offerPage.form.subject')} ${recipientEmail} - ${form.brandModel}`,
@@ -261,49 +227,10 @@ const submitForm = async () => {
 
     <section class="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface-container-low/85 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:rounded-[2rem] md:p-10">
       <div class="pointer-events-none absolute top-0 right-0 p-8 opacity-5 transition-opacity group-hover:opacity-20 md:opacity-10">
-        <span class="material-symbols-outlined text-7xl md:text-8xl">calendar_today</span>
-      </div>
-      <div class="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
-        <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">03</span>
-        <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step3') }}</h2>
-      </div>
-      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-        <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.date') }}</label>
-          <input
-            v-model="form.preferredDate"
-            :min="tomorrowDate"
-            class="date-input w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm text-white transition-colors focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
-            name="preferred_date"
-            type="date"
-          />
-        </div>
-        <div class="space-y-2">
-          <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.time') }}</label>
-          <select
-            v-model="form.preferredTime"
-            class="w-full appearance-none border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
-            name="preferred_time"
-          >
-            <option
-              v-for="option in preferredTimeOptions"
-              :key="option.value"
-              :value="option.value"
-              class="bg-surface text-on-surface"
-            >
-              {{ option.label }}
-            </option>
-          </select>
-        </div>
-      </div>
-    </section>
-
-    <section class="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface-container-low/85 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:rounded-[2rem] md:p-10">
-      <div class="pointer-events-none absolute top-0 right-0 p-8 opacity-5 transition-opacity group-hover:opacity-20 md:opacity-10">
         <span class="material-symbols-outlined text-7xl md:text-8xl">contact_mail</span>
       </div>
       <div class="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
-        <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">04</span>
+        <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">03</span>
         <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step4') }}</h2>
       </div>
       <div class="mb-8 grid grid-cols-1 gap-6 md:mb-12 md:grid-cols-2 md:gap-8">
@@ -351,9 +278,3 @@ const submitForm = async () => {
     </section>
   </form>
 </template>
-
-<style scoped>
-.date-input::-webkit-calendar-picker-indicator {
-  filter: invert(1);
-}
-</style>

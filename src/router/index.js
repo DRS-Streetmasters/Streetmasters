@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import AboutView from '../views/AboutView.vue'
 import HomeView from '../views/HomeView.vue'
+import NotFoundView from '../views/NotFoundView.vue'
 import OfferView from '../views/OfferView.vue'
 import PortfolioView from '../views/PortfolioView.vue'
 import ServicesView from '../views/ServicesView.vue'
@@ -20,9 +21,17 @@ const router = createRouter({
       return { el: to.hash }
     }
 
+    // Filtering should keep the catalog in view instead of jumping to the hero.
+    if (to.path === from.path && !to.hash && !from.hash) return false
+
     return { left: 0, top: 0 }
   },
   routes: [
+    { path: '/shop', name: 'shop', component: () => import('../views/ShopView.vue') },
+    { path: '/shop/:handle', name: 'product', component: () => import('../views/ProductView.vue') },
+    { path: '/winkelmand', name: 'cart', component: () => import('../views/CartView.vue') },
+    { path: '/account', name: 'account', component: () => import('../views/AccountView.vue') },
+    { path: '/account/callback', name: 'account-callback', component: () => import('../views/AccountCallbackView.vue') },
     {
       path: '/',
       name: 'home',
@@ -50,7 +59,8 @@ const router = createRouter({
     },
     {
       path: '/:pathMatch(.*)*',
-      redirect: '/',
+      name: 'not-found',
+      component: NotFoundView,
     },
   ],
 })

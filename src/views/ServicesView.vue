@@ -22,7 +22,7 @@ const interiorFeatures = computed(() => getInteriorFeatures(locale.value))
   <div class="overflow-x-hidden bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
     <MainHeader />
 
-    <main class="pt-24 md:pt-32">
+    <main>
       <ServicesPageHeader />
       <ExteriorSection :services="exteriorServices" />
       <InteriorSection :features="interiorFeatures" />

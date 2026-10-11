@@ -23,7 +23,7 @@ const offerBenefits = computed(() => getOfferBenefits(locale.value))
 
     <main>
       <HeroSection />
-      <ServicesSection :services="services" :offer-benefits="offerBenefits" />
+      <ServicesSection id="home-services" class="scroll-mt-28" :services="services" :offer-benefits="offerBenefits" />
       <ShowcaseSection />
       <BookingSection :service-types="serviceTypes" />
     </main>

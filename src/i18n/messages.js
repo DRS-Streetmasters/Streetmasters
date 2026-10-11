@@ -1,5 +1,14 @@
+import { shopMessages } from './shop'
+
 export const messages = {
   nl: {
+    shop: shopMessages.nl,
+    notFound: {
+      heading: 'Verkeerde afslag genomen?',
+      title: 'Pagina niet gevonden.',
+      description: 'Deze pagina is uit de bocht gevlogen. We helpen je weer op weg.',
+      backHome: 'Terug naar de startgrid',
+    },
     common: {
       brand: 'Streetmasters',
       nav: {
@@ -168,6 +177,13 @@ export const messages = {
     },
   },
   en: {
+    shop: shopMessages.en,
+    notFound: {
+      heading: 'Took a wrong turn?',
+      title: 'Page not found.',
+      description: 'This page has spun off the track. Let’s get you back on the road.',
+      backHome: 'Back to the starting grid',
+    },
     common: {
       brand: 'Streetmasters',
       nav: {

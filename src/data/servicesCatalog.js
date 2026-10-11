@@ -75,7 +75,7 @@ const serviceCategories = [
         id: 'glass-coating',
         name: localized('Glass Coating', 'Glass Coating'),
         cardDescription: localized('Hydrofobe coating voor verbeterd zicht en langdurige bescherming.', 'Hydrophobic coating for better visibility and long-term protection.'),
-        offerDescription: localized('Optimale regenasvoer', 'Optimized rain runoff'),
+        offerDescription: localized('Optimale regenafvoer', 'Optimized rain runoff'),
         image: servicePhotos['glass-coating'],
         icon: 'visibility',
         keywords: localized('glass coating ruiten coating zicht regen', 'glass coating windows visibility rain'),
