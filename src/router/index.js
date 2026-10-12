@@ -13,12 +13,14 @@ const router = createRouter({
       return savedPosition
     }
 
-    if (to.path !== from.path) {
-      return { left: 0, top: 0 }
+    // Category links must reach their anchor even when coming from another page.
+    if (to.hash) {
+      const target = document.querySelector(to.hash)
+      return { el: to.hash, top: target ? parseFloat(getComputedStyle(target).scrollMarginTop) || 0 : 0 }
     }
 
-    if (to.hash) {
-      return { el: to.hash }
+    if (to.path !== from.path) {
+      return { left: 0, top: 0 }
     }
 
     // Filtering should keep the catalog in view instead of jumping to the hero.
