@@ -66,6 +66,28 @@ export async function getCollections(language = 'NL') {
   return data.collections.nodes
 }
 
+const homeCollectionsCache = new Map()
+export function getHomeCollections(language = 'NL') {
+  const cached = homeCollectionsCache.get(language)
+  if (cached && Date.now() - cached.created < 60000) return cached.promise
+  const promise = loadHomeCollections(language).catch(error => {
+    homeCollectionsCache.delete(language)
+    throw error
+  })
+  homeCollectionsCache.set(language, { promise, created: Date.now() })
+  return promise
+}
+
+async function loadHomeCollections(language) {
+  const data = await storefront(`query HomeCollections($language: LanguageCode!) @inContext(language: $language) {
+    collections(first: 100) { nodes {
+      id handle title image { url altText }
+      products(first: 1) { nodes { featuredImage { url altText } } }
+    } }
+  }`, { language })
+  return data.collections.nodes.filter(collection => collection.products.nodes.length).slice(0, 6)
+}
+
 export async function getProduct(handle, language = 'NL') {
   const data = await storefront(`query Product($handle: String!, $language: LanguageCode!) @inContext(language: $language, country: BE) {
     product(handle: $handle) {

@@ -1,5 +1,6 @@
 export const shopMessages = {
   nl: {
+    popularCategories: 'Populaire categorieën', categoriesIntro: 'Vind jouw favoriet voor onderweg.', viewShop: 'Bekijk de shop', categoriesError: 'De categorieën konden niet worden geladen.',
     filters: 'Filters', resetFilters: 'Wis filters', showProducts: 'Toon producten', closeFilters: 'Filters sluiten', browse: 'Ontdek de collectie', searchHint: 'Vind jouw finishing touch',
     label: 'Streetmasters shop', title: 'Geef je wagen karakter.', intro: 'De finishing touch voor jouw wagen. Ontdek de collectie van Streetmasters.',
     shop: 'Shop', cart: 'Winkelmand', account: 'Mijn account', search: 'Zoek een product', searchAction: 'Zoeken', all: 'Alle producten', collection: 'Collectie', sort: 'Sorteren',
@@ -15,6 +16,7 @@ export const shopMessages = {
     errors: { connection: 'De verbinding met de shop is even onderbroken. Probeer het opnieuw.', cart: 'Je winkelmand kon niet worden bijgewerkt.', expiredCart: 'Deze winkelmand is verlopen. Vernieuw de pagina en voeg je producten opnieuw toe.', account: 'Je accountgegevens konden niet worden geladen.', login: 'Inloggen is niet gelukt. Probeer opnieuw.', profile: 'Je gegevens konden niet worden opgeslagen.' },
   },
   en: {
+    popularCategories: 'Popular categories', categoriesIntro: 'Find your favourite for the road.', viewShop: 'Explore the shop', categoriesError: 'The categories could not be loaded.',
     filters: 'Filters', resetFilters: 'Reset filters', showProducts: 'Show products', closeFilters: 'Close filters', browse: 'Explore the collection', searchHint: 'Find your finishing touch',
     label: 'Streetmasters shop', title: 'Give your car character.', intro: 'The finishing touch for your car. Explore the Streetmasters collection.',
     shop: 'Shop', cart: 'Cart', account: 'My account', search: 'Search for a product', searchAction: 'Search', all: 'All products', collection: 'Collection', sort: 'Sort by',

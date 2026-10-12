@@ -4,6 +4,7 @@ import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { syncLocale } from '../../i18n'
 import { useCartStore } from '../../stores/cart'
+import ShopNavMenu from './ShopNavMenu.vue'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
 const logoUrl = `${import.meta.env.BASE_URL}logo.png`
@@ -111,7 +112,7 @@ const handleDocumentClick = (event) => {
 
         <RouterLink :class="navLinkClass(isHome)" to="/">{{ t('common.nav.home') }}</RouterLink>
         <RouterLink :class="navLinkClass(isServices)" to="/diensten">{{ t('common.nav.services') }}</RouterLink>
-        <RouterLink :class="navLinkClass(isShop)" to="/shop">{{ t('shop.shop') }}</RouterLink>
+        <ShopNavMenu :active="isShop" />
         <RouterLink :class="navLinkClass(isPortfolio)" to="/portfolio">
           {{ t('common.nav.portfolio') }}
         </RouterLink>
@@ -205,10 +206,10 @@ const handleDocumentClick = (event) => {
         </div>
       </div>
 
-      <div class="flex flex-1 flex-col items-center justify-center gap-5 overflow-y-auto text-center md:gap-6">
+      <div class="flex min-h-0 flex-1 flex-col items-center gap-5 overflow-y-auto py-4 text-center md:gap-6">
         <RouterLink :class="mobileNavClass(isHome)" to="/" @click="mobileMenuOpen = false">{{ t('common.nav.home') }}</RouterLink>
         <RouterLink :class="mobileNavClass(isServices)" to="/diensten" @click="mobileMenuOpen = false">{{ t('common.nav.services') }}</RouterLink>
-        <RouterLink :class="mobileNavClass(isShop)" to="/shop" @click="mobileMenuOpen = false">{{ t('shop.shop') }}</RouterLink>
+        <ShopNavMenu mobile :active="isShop" @navigate="mobileMenuOpen = false" />
         <RouterLink :class="mobileNavClass(isPortfolio)" to="/portfolio" @click="mobileMenuOpen = false">
           {{ t('common.nav.portfolio') }}
         </RouterLink>

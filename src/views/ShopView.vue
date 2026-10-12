@@ -2,6 +2,7 @@
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute, useRouter } from 'vue-router'
+import PopularCategories from '../components/home/PopularCategories.vue'
 import ShopLayout from '../components/shop/ShopLayout.vue'
 import ProductCard from '../components/shop/ProductCard.vue'
 import PageHero from '../components/layout/PageHero.vue'
@@ -92,6 +93,7 @@ onUnmounted(() => {
 <template>
   <ShopLayout>
     <template #hero><PageHero :label="t('shop.label')" :title="t('shop.title')" :description="t('shop.intro')" target="#shop-products" /></template>
+    <PopularCategories embedded />
     <section id="shop-products" class="scroll-mt-28">
       <div class="mb-8 flex flex-col justify-between gap-5 xl:flex-row xl:items-center">
         <div><p class="text-xs font-bold tracking-[.2em] text-primary uppercase">{{ t('shop.shop') }}</p><h2 class="mt-2 font-headline text-2xl font-bold md:text-3xl">{{ t('shop.browse') }}</h2></div>

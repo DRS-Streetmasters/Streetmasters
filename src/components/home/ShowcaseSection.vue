@@ -19,17 +19,17 @@ const publicBase = import.meta.env.BASE_URL
 </script>
 
 <template>
-  <section id="showcase" class="bg-surface-container-low py-16 md:py-24">
+  <section id="showcase" class="bg-surface-container-low py-10 md:py-12">
     <div class="mx-auto max-w-[1920px] px-6 md:px-24">
-      <div class="mb-10 text-center md:mb-16">
+      <div class="mb-6 text-center md:mb-8">
         <span class="mb-3 block font-label text-[10px] font-bold tracking-[0.3em] text-secondary italic uppercase md:mb-4 md:text-xs md:tracking-[0.4em]">
           {{ t('home.showcase.label') }}
         </span>
-        <h2 class="font-headline text-3xl leading-tight font-black tracking-tighter text-white italic uppercase sm:text-4xl md:text-7xl">
+        <h2 class="font-headline text-3xl leading-tight font-black tracking-tighter text-white italic uppercase sm:text-4xl md:text-5xl">
           {{ t('home.showcase.title') }}
         </h2>
       </div>
-      <div class="comparison relative mx-auto aspect-[4/3] w-full max-w-5xl overflow-hidden rounded-xl bg-surface-container shadow-2xl">
+      <div class="comparison relative mx-auto aspect-[4/3] overflow-hidden rounded-xl bg-surface-container shadow-2xl">
         <img
           :alt="t('home.showcase.after')"
           class="absolute inset-0 h-full w-full object-cover"
@@ -76,6 +76,11 @@ const publicBase = import.meta.env.BASE_URL
 </template>
 
 <style scoped>
+/* Preserve the comparison framing while fitting shorter laptop screens. */
+.comparison {
+  width: min(100%, 64rem, 73.333svh);
+}
+
 .comparison:focus-within {
   outline: 3px solid var(--color-primary);
   outline-offset: 4px;
