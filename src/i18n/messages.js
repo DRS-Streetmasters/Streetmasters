@@ -12,7 +12,7 @@ export const messages = {
       hours: 'Uren',
       minutes: 'Minuten',
       seconds: 'Seconden',
-      date: 'Zaterdag 24 oktober · 12:00 CEST (UTC+2)',
+      date: 'Zondag 1 november · 12:00 CET (UTC+1)',
       tagline: 'Streetmasters · Driven by passion',
     },
     images: {
@@ -221,7 +221,7 @@ export const messages = {
       hours: 'Hours',
       minutes: 'Minutes',
       seconds: 'Seconds',
-      date: 'Saturday 24 October · 12:00 CEST (UTC+2)',
+      date: 'Sunday 1 November · 12:00 CET (UTC+1)',
       tagline: 'Streetmasters · Driven by passion',
     },
     images: {

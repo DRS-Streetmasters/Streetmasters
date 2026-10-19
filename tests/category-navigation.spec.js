@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 
 // Existing site behavior is tested once the public launch gate has opened.
 test.beforeEach(async ({ page }) => {
-  await page.clock.setFixedTime(new Date('2026-10-24T12:00:00+02:00'))
+  await page.clock.setFixedTime(new Date('2026-11-01T12:00:00+01:00'))
 })
 
 for (const origin of ['/', '/diensten']) {

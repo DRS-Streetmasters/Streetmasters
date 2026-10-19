@@ -1,5 +1,5 @@
-// Launch: 24 October 2026 at noon in Belgium (CEST, UTC+2).
-export const launchAt = Date.parse('2026-10-24T12:00:00+02:00')
+// Launch: 1 November 2026 at noon in Belgium (CET, UTC+1).
+export const launchAt = Date.parse('2026-11-01T12:00:00+01:00')
 const base = import.meta.env.BASE_URL
 const previewBase = `${base}dikkeseppe`
 const path = window.location.pathname

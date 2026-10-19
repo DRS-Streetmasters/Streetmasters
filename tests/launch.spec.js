@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
-const before = new Date('2026-10-24T11:59:50+02:00')
-const after = new Date('2026-10-24T12:00:00+02:00')
+const before = new Date('2026-11-01T11:59:50+01:00')
+const after = new Date('2026-11-01T12:00:00+01:00')
 
 test('public deep links show the countdown without navigation, also on mobile', async ({ page }) => {
   await page.clock.setFixedTime(before)

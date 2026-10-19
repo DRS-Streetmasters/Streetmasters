@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
 test.beforeEach(async ({ page }) => {
-  await page.clock.setFixedTime(new Date('2026-10-24T12:00:00+02:00'))
+  await page.clock.setFixedTime(new Date('2026-11-01T12:00:00+01:00'))
   // Never send test events to the production analytics endpoint.
   await page.route('https://plausible.driesbielen.be/**', route => route.fulfill({ contentType: 'application/javascript', body: '' }))
   await page.addInitScript(() => {

@@ -46,7 +46,7 @@ onUnmounted(() => clearInterval(timer))
           <dd class="font-headline text-4xl leading-none font-bold tracking-tight text-white tabular-nums sm:text-6xl">{{ String(unit.value).padStart(2, '0') }}</dd>
         </div>
       </dl>
-      <p class="launch-date mt-7 text-sm font-medium text-purple-200"><time datetime="2026-10-24T12:00:00+02:00">{{ t('launch.date') }}</time></p>
+      <p class="launch-date mt-7 text-sm font-medium text-purple-200"><time datetime="2026-11-01T12:00:00+01:00">{{ t('launch.date') }}</time></p>
     </div>
     <div class="launch-footer mt-12 sm:mt-16">
     <p class="text-[10px] tracking-[.24em] text-stone-500 uppercase">{{ t('launch.tagline') }}</p>
