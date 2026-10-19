@@ -19,6 +19,7 @@ const onImageError = (event) => {
   const image = event.target
   if (image.dataset.fallbackApplied) return
   image.dataset.fallbackApplied = 'true'
+  image.alt = t('images.custom')
   image.src = servicePhotos.custom
 }
 </script>
@@ -59,7 +60,7 @@ const onImageError = (event) => {
         >
           <img
             :src="service.image"
-            :alt="service.title"
+            :alt="t(`images.${service.id}`)"
             class="absolute inset-0 h-full w-full object-cover opacity-50 transition-all duration-700 group-hover:scale-110 group-hover:opacity-70"
             loading="lazy"
             @error="onImageError"
@@ -78,7 +79,7 @@ const onImageError = (event) => {
         >
           <img
             :src="servicePhotos.custom"
-            alt="Streetmasters maatwerk"
+            :alt="t('images.custom')"
             class="absolute inset-0 h-full w-full object-cover opacity-40 transition-all duration-700 group-hover:scale-105 group-hover:opacity-55"
             loading="lazy"
             @error="onImageError"

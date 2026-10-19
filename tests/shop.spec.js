@@ -1,5 +1,10 @@
 import { test, expect } from '@playwright/test'
 
+// Existing site behavior is tested once the public launch gate has opened.
+test.beforeEach(async ({ page }) => {
+  await page.clock.setFixedTime(new Date('2026-10-24T12:00:00+02:00'))
+})
+
 // Public catalog reads and temporary carts only. These tests never place orders.
 test('live catalog, product, persistent cart, quantities, discounts and checkout handoff', async ({ page }) => {
   const errors = []
@@ -70,7 +75,7 @@ test('connection failures and invalid login callbacks show recoverable errors', 
   await page.route('**/api/2026-07/graphql.json', route => route.fulfill({ status: 503, contentType: 'application/json', body: '{}' }))
   await page.goto('/shop')
   await expect(page.getByRole('alert')).toContainText('verbinding')
-  await expect(page.getByRole('button', { name: 'Opnieuw proberen' })).toBeVisible()
+  await expect(page.locator('#shop-products').getByRole('button', { name: 'Opnieuw proberen' })).toBeVisible()
   await page.goto('/account/callback?code=untrusted&state=invalid')
   await expect(page.getByRole('alert')).toContainText('Inloggen is niet gelukt')
   await expect(page).toHaveURL(/\/account\/callback$/)
@@ -106,7 +111,7 @@ test('signed login callback validates nonce and loads editable account data (moc
   const { publicKey, privateKey } = await generateKeyPair('RS256')
   const publicJwk = { ...await exportJWK(publicKey), kid: 'integration-test', alg: 'RS256', use: 'sig' }
   const issuer = 'https://shopify.com/authentication/72686928211'
-  const idToken = await new SignJWT({ nonce: 'expected-nonce' }).setProtectedHeader({ alg: 'RS256', kid: 'integration-test' }).setIssuer(issuer).setAudience('fb377542-94bd-4f07-bf58-590b11075cbd').setSubject('test-customer').setIssuedAt().setExpirationTime('5m').sign(privateKey)
+  const idToken = await new SignJWT({ nonce: 'expected-nonce' }).setProtectedHeader({ alg: 'RS256', kid: 'integration-test' }).setIssuer(issuer).setAudience('fb377542-94bd-4f07-bf58-590b11075cbd').setSubject('test-customer').setIssuedAt(Date.parse('2026-10-24T12:00:00+02:00') / 1000).setExpirationTime(Date.parse('2026-10-24T12:05:00+02:00') / 1000).sign(privateKey)
   await page.route('**/.well-known/openid-configuration', route => route.fulfill({ json: { issuer, authorization_endpoint: `${issuer}/oauth/authorize`, token_endpoint: `${issuer}/oauth/token`, jwks_uri: `${issuer}/.well-known/jwks.json` } }))
   await page.route('**/.well-known/customer-account-api', route => route.fulfill({ json: { graphql_api: 'https://shopify.com/72686928211/account/customer/api/2026-07/graphql' } }))
   await page.route('**/.well-known/jwks.json', route => route.fulfill({ json: { keys: [publicJwk] } }))

@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { beforeLaunch, isPreview, routerBase } from '../lib/launch'
+import LaunchView from '../views/LaunchView.vue'
 import AboutView from '../views/AboutView.vue'
 import HomeView from '../views/HomeView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
@@ -7,7 +9,7 @@ import PortfolioView from '../views/PortfolioView.vue'
 import ServicesView from '../views/ServicesView.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(routerBase),
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
       return savedPosition
@@ -28,7 +30,7 @@ const router = createRouter({
 
     return { left: 0, top: 0 }
   },
-  routes: [
+  routes: beforeLaunch && !isPreview ? [{ path: '/:pathMatch(.*)*', component: LaunchView }] : [
     { path: '/shop', name: 'shop', component: () => import('../views/ShopView.vue') },
     { path: '/shop/:handle', name: 'product', component: () => import('../views/ProductView.vue') },
     { path: '/winkelmand', name: 'cart', component: () => import('../views/CartView.vue') },

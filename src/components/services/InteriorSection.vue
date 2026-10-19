@@ -24,7 +24,7 @@ const { t } = useI18n()
       <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 md:gap-12">
         <div class="relative aspect-[4/3] overflow-hidden rounded-3xl sm:aspect-video lg:aspect-auto">
           <img
-            alt="Interieur na reiniging"
+            :alt="t('images.interiorAfter')"
             class="h-full w-full object-cover"
             :src="servicePhotos['deep-cleaning']"
           loading="lazy"

@@ -52,7 +52,7 @@ watch(locale, load, { immediate: true })
         </template>
         <RouterLink v-for="category in categories" :key="category.id" :to="{ path: '/shop', query: { collection: category.handle }, hash: '#shop-products' }" class="category-card group flex min-w-0 flex-col rounded-3xl border border-white/10 bg-surface-container-low p-4 transition-colors hover:border-primary/60 hover:bg-surface-container focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:p-5">
           <div class="category-image flex aspect-square items-center justify-center overflow-hidden rounded-2xl bg-[#f3f3f3] p-4 md:p-6">
-            <img v-if="categoryImage(category) && !failedImages.has(category.id)" :src="categoryImage(category)" alt="" loading="lazy" width="320" height="320" class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none" @error="failedImages.add(category.id)" />
+            <img v-if="categoryImage(category) && !failedImages.has(category.id)" :src="categoryImage(category)" :alt="category.image?.url ? (category.image.altText || category.title) : (category.products.nodes[0]?.featuredImage?.altText || category.products.nodes[0]?.title || category.title)" loading="lazy" width="320" height="320" class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none" @error="failedImages.add(category.id)" />
             <span v-else class="material-symbols-outlined text-5xl text-[#7104d8]" aria-hidden="true">shopping_bag</span>
           </div>
           <div class="category-label flex flex-1 items-center justify-between gap-3 px-1 pt-5 pb-1">

@@ -27,7 +27,7 @@ const { t } = useI18n()
         >
           <div class="aspect-[4/3] overflow-hidden">
             <img
-              :alt="service.title"
+              :alt="t(`images.${service.id}`)"
               :src="service.image"
               class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
             />

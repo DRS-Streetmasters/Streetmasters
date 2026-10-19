@@ -72,7 +72,7 @@ watch([() => route.params.handle, locale], load, { immediate: true })
             <img v-if="currentImage" :src="currentImage.url" :alt="currentImage.altText || product.title" class="h-full w-full object-contain" />
           </div>
           <div v-if="product.images.nodes.length > 1" class="mt-4 flex gap-3 overflow-x-auto p-1">
-            <button v-for="(item, index) in product.images.nodes" :key="item.url" class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border" :class="index === imageIndex ? 'border-primary' : 'border-white/10'" :aria-label="`${product.title} — ${index + 1}`" :aria-pressed="index === imageIndex" @click="imageIndex = index"><img :src="item.url" alt="" class="h-full w-full object-contain" loading="lazy" /></button>
+            <button v-for="(item, index) in product.images.nodes" :key="item.url" class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border" :class="index === imageIndex ? 'border-primary' : 'border-white/10'" :aria-label="t('images.productImage', { product: product.title, number: index + 1 })" :aria-pressed="index === imageIndex" @click="imageIndex = index"><img :src="item.url" alt="" class="h-full w-full object-contain" loading="lazy" /></button>
           </div>
         </div>
         <div>

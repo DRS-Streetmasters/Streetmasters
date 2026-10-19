@@ -11,7 +11,7 @@ const logoUrl = `${import.meta.env.BASE_URL}logo.png`
     <div class="mx-auto flex max-w-screen-2xl flex-col items-center justify-between gap-10 md:flex-row md:gap-6">
       <div class="flex flex-col items-center gap-2 md:items-start">
         <RouterLink to="/" class="relative block h-12 w-48 overflow-hidden md:h-14 md:w-60">
-          <img :src="logoUrl" :alt="t('common.brand')" width="1920" height="1080" loading="lazy" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
+          <img :src="logoUrl" :alt="t('images.logoHome')" width="1920" height="1080" loading="lazy" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
         </RouterLink>
         <p class="text-center font-body text-xs leading-relaxed text-stone-500 md:text-left md:text-sm">{{ t('common.footer.tagline') }}</p>
         <p class="text-center font-body text-[10px] leading-relaxed tracking-wide text-stone-500 md:text-left md:text-xs">{{ t('common.footer.vat') }}</p>

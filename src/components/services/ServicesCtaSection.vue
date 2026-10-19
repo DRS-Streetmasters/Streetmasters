@@ -12,7 +12,7 @@ const { t } = useI18n()
       <div class="absolute inset-0 z-0">
         <div class="absolute inset-0 z-10 bg-gradient-to-b from-stone-900 via-stone-900/80 to-transparent md:bg-gradient-to-r"></div>
         <img
-          alt="Auto in de werkplaats"
+          :alt="t('images.workshop')"
           class="h-full w-full object-cover opacity-30 md:opacity-20"
           :src="servicePhotos['workshop']"
           loading="lazy"

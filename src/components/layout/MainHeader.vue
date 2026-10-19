@@ -105,7 +105,7 @@ const handleDocumentClick = (event) => {
   <nav class="fixed top-0 z-[100] w-full border-b border-white/5 bg-stone-950/60 backdrop-blur-xl">
     <div class="mx-auto flex max-w-screen-2xl items-center justify-between px-4 py-4 md:px-8 md:py-6">
       <RouterLink to="/" class="relative block h-12 w-48 shrink-0 overflow-hidden md:h-14 md:w-60">
-        <img :src="logoUrl" :alt="t('common.brand')" width="1920" height="1080" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
+        <img :src="logoUrl" :alt="t('images.logoHome')" width="1920" height="1080" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
       </RouterLink>
 
       <div class="hidden items-center gap-5 xl:gap-8 lg:flex">
@@ -174,7 +174,7 @@ const handleDocumentClick = (event) => {
     <div class="flex h-full flex-col px-6 py-6 md:px-8">
       <div class="mb-8 flex items-center justify-between md:mb-12">
         <RouterLink to="/" class="relative block h-12 w-48 shrink-0 overflow-hidden md:h-14 md:w-60" @click="mobileMenuOpen = false">
-          <img :src="logoUrl" :alt="t('common.brand')" width="1920" height="1080" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
+          <img :src="logoUrl" :alt="t('images.logoHome')" width="1920" height="1080" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
         </RouterLink>
         <button class="p-2 text-white" @click="mobileMenuOpen = false">
           <span class="material-symbols-outlined text-3xl">close</span>

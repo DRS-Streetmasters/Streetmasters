@@ -28,7 +28,7 @@ const { t } = useI18n()
           :class="index === 2 ? 'sm:col-span-2 md:col-span-1' : ''"
         >
           <img
-            :alt="service.title"
+            :alt="t(`images.${service.id}`)"
             :src="service.image"
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"
           />

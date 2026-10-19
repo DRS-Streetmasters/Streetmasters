@@ -249,6 +249,7 @@ const servicesForCards = (categoryId, locale) => {
   return category.services
     .filter((service) => service.showOnServicesPage)
     .map((service) => ({
+      id: service.id,
       title: service.name,
       description: service.cardDescription,
       image: service.image,

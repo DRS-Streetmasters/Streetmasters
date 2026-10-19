@@ -31,7 +31,7 @@ const publicBase = import.meta.env.BASE_URL
       </div>
       <div class="comparison relative mx-auto aspect-[4/3] overflow-hidden rounded-xl bg-surface-container shadow-2xl">
         <img
-          :alt="t('home.showcase.after')"
+          :alt="t('images.interiorAfter')"
           class="absolute inset-0 h-full w-full object-cover"
           :src="`${publicBase}image00013.jpeg`"
           loading="lazy"
@@ -39,7 +39,7 @@ const publicBase = import.meta.env.BASE_URL
         />
         <div class="absolute inset-0" :style="{ clipPath: `inset(0 ${100 - position}% 0 0)` }">
           <img
-            :alt="t('home.showcase.before')"
+            :alt="t('images.interiorBefore')"
             class="h-full w-full object-cover"
             :src="`${publicBase}image00011.jpeg`"
             loading="lazy"
