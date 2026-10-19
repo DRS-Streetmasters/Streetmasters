@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { beforeLaunch, isPreview, routerBase } from '../lib/launch'
-import LaunchView from '../views/LaunchView.vue'
+import { routerBase } from '../lib/launch'
 import AboutView from '../views/AboutView.vue'
 import HomeView from '../views/HomeView.vue'
 import NotFoundView from '../views/NotFoundView.vue'
@@ -30,7 +29,7 @@ const router = createRouter({
 
     return { left: 0, top: 0 }
   },
-  routes: beforeLaunch && !isPreview ? [{ path: '/:pathMatch(.*)*', component: LaunchView }] : [
+  routes: [
     { path: '/shop', name: 'shop', component: () => import('../views/ShopView.vue') },
     { path: '/shop/:handle', name: 'product', component: () => import('../views/ProductView.vue') },
     { path: '/winkelmand', name: 'cart', component: () => import('../views/CartView.vue') },

@@ -1,10 +1,17 @@
 <script setup>
-import { onMounted, onUnmounted } from 'vue'
-import { beforeLaunch, launchAt, openLaunchedSite } from './lib/launch'
+import { onMounted, onUnmounted, ref } from 'vue'
+import { beforeLaunch, isPreview, launchAt, openLaunchedSite } from './lib/launch'
+import LaunchView from './views/LaunchView.vue'
 
+const waitingForLaunch = ref(beforeLaunch && !isPreview)
 let timer
 function checkLaunch() {
-  if (Date.now() >= launchAt) openLaunchedSite()
+  if (Date.now() < launchAt) return
+  clearInterval(timer)
+  document.removeEventListener('visibilitychange', checkLaunch)
+  // Preview URLs need a fresh router base; public visitors stay on the same page.
+  if (isPreview) openLaunchedSite()
+  else waitingForLaunch.value = false
 }
 onMounted(() => {
   if (!beforeLaunch) return
@@ -18,5 +25,18 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <RouterView />
+  <Transition name="launch" mode="out-in">
+    <LaunchView v-if="waitingForLaunch" />
+    <div v-else><RouterView /></div>
+  </Transition>
 </template>
+
+<style>
+.launch-leave-active { transition: opacity 800ms ease-in, filter 800ms ease-in; }
+.launch-enter-active { transition: opacity 1000ms ease-out, filter 1000ms ease-out; }
+.launch-leave-to, .launch-enter-from { opacity: 0; filter: blur(6px); }
+@media (prefers-reduced-motion: reduce) {
+  .launch-leave-active, .launch-enter-active { transition: opacity 150ms linear; }
+  .launch-leave-to, .launch-enter-from { filter: none; }
+}
+</style>

@@ -1,4 +1,4 @@
-// Belgium is still on summer time (UTC+2) on 24 October 2026.
+// Launch: 24 October 2026 at noon in Belgium (CEST, UTC+2).
 export const launchAt = Date.parse('2026-10-24T12:00:00+02:00')
 const base = import.meta.env.BASE_URL
 const previewBase = `${base}dikkeseppe`

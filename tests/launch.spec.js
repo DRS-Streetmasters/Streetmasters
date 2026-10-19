@@ -45,8 +45,13 @@ for (const path of ['/about', '/dikkeseppe/about']) {
   test(`an open ${path} switches automatically at launch`, async ({ page }) => {
     await page.clock.install({ time: before })
     await page.goto(path)
+    await page.evaluate(() => { window.launchDocument = true })
     await page.clock.fastForward(11000)
     await expect(page).toHaveURL('/about')
     await expect(page.locator('nav a[href="/diensten"]')).toBeVisible()
+    if (path === '/about') {
+      expect(await page.evaluate(() => window.launchDocument)).toBe(true)
+      await expect(page.locator('.launch-screen')).toHaveCount(0)
+    }
   })
 }
