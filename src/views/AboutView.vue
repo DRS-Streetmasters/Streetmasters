@@ -73,7 +73,7 @@ const values = computed(() => valuesByLocale[locale.value] ?? valuesByLocale.nl)
           <p class="mb-8 max-w-2xl text-base text-on-surface-variant md:text-lg">
             {{ t('aboutPage.ctaText') }}
           </p>
-          <AppLinkButton size="md" to="/offerte">{{ t('common.cta.requestQuote') }}</AppLinkButton>
+          <AppLinkButton data-analytics-click="About: Request Quote" size="md" to="/offerte">{{ t('common.cta.requestQuote') }}</AppLinkButton>
         </div>
       </section>
       </div>

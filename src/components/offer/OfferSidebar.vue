@@ -29,7 +29,7 @@ const { t } = useI18n()
     <div class="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface-container/85 p-6 text-center shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:rounded-[2rem] md:p-8">
       <div class="absolute inset-0 bg-primary/5 opacity-0 transition-opacity group-hover:opacity-100"></div>
       <p class="relative mb-3 font-label text-xs tracking-[0.2em] text-on-surface-variant uppercase md:mb-4 md:text-sm">{{ t('offerPage.sidebar.directQuestions') }}</p>
-      <a class="relative block font-headline text-xl font-bold text-primary transition-transform hover:scale-105 md:text-2xl" href="tel:+32469438702">
+      <a data-analytics-click="Offer Sidebar: Call" class="relative block font-headline text-xl font-bold text-primary transition-transform hover:scale-105 md:text-2xl" href="tel:+32469438702">
         +32 469 43 87 02
       </a>
       <p class="relative mt-3 text-xs text-stone-500 md:mt-4 md:text-sm">{{ t('offerPage.sidebar.availability') }}</p>

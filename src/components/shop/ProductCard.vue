@@ -9,7 +9,7 @@ const onSale = computed(() => Number(props.product.compareAtPriceRange.minVarian
 </script>
 
 <template>
-  <RouterLink :to="`/shop/${product.handle}`" class="group block overflow-hidden rounded-2xl border border-white/10 bg-surface-container-low transition-colors hover:border-primary/50">
+  <RouterLink data-analytics-click="Product Card: Open Product" :data-analytics-item="product.handle" :to="`/shop/${product.handle}`" class="group block overflow-hidden rounded-2xl border border-white/10 bg-surface-container-low transition-colors hover:border-primary/50">
     <div class="relative aspect-square overflow-hidden bg-white/5">
       <img v-if="product.featuredImage" :src="product.featuredImage.url" :alt="product.featuredImage.altText || product.title" class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" />
       <div v-else class="flex h-full items-center justify-center text-outline"><span aria-hidden="true" class="material-symbols-outlined text-6xl">shopping_bag</span></div>

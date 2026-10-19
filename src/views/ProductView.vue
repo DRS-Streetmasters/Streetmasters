@@ -1,4 +1,5 @@
 <script setup>
+import { trackEvent } from '../lib/analytics'
 import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
@@ -55,15 +56,16 @@ async function add() {
   added.value = false
   if (!variant.value?.availableForSale || !Number.isInteger(quantity.value) || quantity.value < 1 || quantity.value > 99) return
   added.value = await cart.add(variant.value.id, quantity.value)
+  if (added.value) trackEvent('Product: Added To Cart', { item: product.value.handle, quantity: quantity.value })
 }
 watch([() => route.params.handle, locale], load, { immediate: true })
 </script>
 
 <template>
   <ShopLayout>
-    <RouterLink class="mb-8 inline-flex items-center gap-2 text-sm text-primary" to="/shop"><span aria-hidden="true">←</span>{{ t('shop.backShop') }}</RouterLink>
+    <RouterLink data-analytics-click="Product: Back Shop" class="mb-8 inline-flex items-center gap-2 text-sm text-primary" to="/shop"><span aria-hidden="true">←</span>{{ t('shop.backShop') }}</RouterLink>
     <p v-if="loading" role="status">{{ t('shop.loading') }}</p>
-    <div v-else-if="error" role="alert"><p>{{ t('shop.errors.connection') }}</p><AppButton class="mt-4" @click="load">{{ t('shop.retry') }}</AppButton></div>
+    <div v-else-if="error" role="alert"><p>{{ t('shop.errors.connection') }}</p><AppButton data-analytics-click="Product: Retry" class="mt-4" @click="load">{{ t('shop.retry') }}</AppButton></div>
     <h1 v-else-if="!product" class="text-3xl font-bold">{{ t('shop.productMissing') }}</h1>
     <template v-else>
       <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
@@ -72,19 +74,19 @@ watch([() => route.params.handle, locale], load, { immediate: true })
             <img v-if="currentImage" :src="currentImage.url" :alt="currentImage.altText || product.title" class="h-full w-full object-contain" />
           </div>
           <div v-if="product.images.nodes.length > 1" class="mt-4 flex gap-3 overflow-x-auto p-1">
-            <button v-for="(item, index) in product.images.nodes" :key="item.url" class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border" :class="index === imageIndex ? 'border-primary' : 'border-white/10'" :aria-label="t('images.productImage', { product: product.title, number: index + 1 })" :aria-pressed="index === imageIndex" @click="imageIndex = index"><img :src="item.url" alt="" class="h-full w-full object-contain" loading="lazy" /></button>
+            <button data-analytics-click="Product: Select Image" v-for="(item, index) in product.images.nodes" :key="item.url" class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border" :class="index === imageIndex ? 'border-primary' : 'border-white/10'" :aria-label="t('images.productImage', { product: product.title, number: index + 1 })" :aria-pressed="index === imageIndex" @click="imageIndex = index"><img :src="item.url" alt="" class="h-full w-full object-contain" loading="lazy" /></button>
           </div>
         </div>
         <div>
           <p class="text-xs font-bold tracking-widest text-primary uppercase">{{ product.vendor }}</p>
           <h1 class="mt-4 font-headline text-4xl leading-tight font-bold text-white md:text-5xl">{{ product.title }}</h1>
           <div class="mt-6 flex items-center gap-4"><p class="text-3xl font-bold text-white">{{ money(variant?.price, locale) }}</p><del v-if="Number(variant?.compareAtPrice?.amount) > Number(variant?.price?.amount)" class="text-lg text-outline"><span class="sr-only">{{ t('shop.originalPrice') }} </span>{{ money(variant.compareAtPrice, locale) }}</del></div>
-          <form class="mt-8 space-y-5 border-t border-white/10 pt-7" @submit.prevent="add">
+          <form data-analytics-submit="Product: Add To Cart Submitted" class="mt-8 space-y-5 border-t border-white/10 pt-7" @submit.prevent="add">
             <AppSelect v-if="product.variants.nodes.length > 1" id="product-variant" v-model="variantId" :label="t('shop.variant')" :options="variantOptions" @change="changeVariant" />
-            <div class="max-w-28"><label class="mb-2" for="product-quantity">{{ t('shop.quantity') }}</label><input id="product-quantity" v-model.number="quantity" type="number" min="1" max="99" step="1" required /></div>
-            <AppButton type="submit" full-width :disabled="cart.busy || !variant?.availableForSale">{{ !variant?.availableForSale ? t('shop.soldOut') : cart.busy ? t('shop.loading') : t('shop.add') }}</AppButton>
+            <div class="max-w-28"><label class="mb-2" for="product-quantity">{{ t('shop.quantity') }}</label><input data-analytics-focus="Product: Product Quantity Focused" id="product-quantity" v-model.number="quantity" type="number" min="1" max="99" step="1" required /></div>
+            <AppButton data-analytics-click="Product: Add To Cart" type="submit" full-width :disabled="cart.busy || !variant?.availableForSale">{{ !variant?.availableForSale ? t('shop.soldOut') : cart.busy ? t('shop.loading') : t('shop.add') }}</AppButton>
             <p v-if="cart.error" role="alert" class="text-error">{{ t(cart.error) }} {{ cart.details }}</p>
-            <div v-if="added" role="status" class="rounded-xl border border-primary/30 bg-primary/5 p-4"><p>{{ t('shop.added') }}</p><AppLinkButton class="mt-3" to="/winkelmand" size="xs">{{ t('shop.viewCart') }}</AppLinkButton></div>
+            <div v-if="added" role="status" class="rounded-xl border border-primary/30 bg-primary/5 p-4"><p>{{ t('shop.added') }}</p><AppLinkButton data-analytics-click="Product: View Cart" class="mt-3" to="/winkelmand" size="xs">{{ t('shop.viewCart') }}</AppLinkButton></div>
             <p class="text-xs leading-relaxed text-on-surface-variant">{{ t('shop.checkoutHint') }}</p>
           </form>
           <section class="mt-10 border-t border-white/10 pt-7"><h2 class="mb-4 font-headline text-xl font-bold">{{ t('shop.details') }}</h2><div class="shop-product-description" v-html="description"></div></section>

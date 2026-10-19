@@ -30,7 +30,7 @@ const publicBase = import.meta.env.BASE_URL
         </div>
         <p class="mt-6 font-headline text-2xl font-bold text-white md:text-4xl">{{ t('notFound.title') }}</p>
         <p class="mx-auto mt-4 max-w-lg text-base leading-relaxed text-stone-300 md:text-lg">{{ t('notFound.description') }}</p>
-        <AppLinkButton class="mt-8 w-full sm:w-auto" size="md" to="/">
+        <AppLinkButton data-analytics-click="Not Found: Back Home" class="mt-8 w-full sm:w-auto" size="md" to="/">
           {{ t('notFound.backHome') }}
         </AppLinkButton>
       </div>

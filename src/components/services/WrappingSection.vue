@@ -35,7 +35,7 @@ const { t } = useI18n()
           <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent p-6 md:p-10">
             <h3 class="mb-2 font-headline text-2xl font-bold md:text-3xl">{{ service.title }}</h3>
             <p class="mb-6 max-w-xs text-xs text-stone-300 md:text-sm">{{ service.description }}</p>
-            <AppLinkButton size="sm" to="/offerte" variant="white">
+            <AppLinkButton :data-analytics-item="service.id" data-analytics-click="Wrapping: Request Quote" size="sm" to="/offerte" variant="white">
               {{ t('common.cta.requestQuote') }}
             </AppLinkButton>
           </div>

@@ -45,7 +45,7 @@ const onImageError = (event) => {
             </span>
           </div>
         </div>
-        <RouterLink class="group mb-0 flex items-center gap-2 font-headline text-xs font-bold tracking-widest text-primary uppercase md:mb-2" to="/diensten">
+        <RouterLink data-analytics-click="Services: View All" class="group mb-0 flex items-center gap-2 font-headline text-xs font-bold tracking-widest text-primary uppercase md:mb-2" to="/diensten">
           {{ t('home.services.viewAll') }}
           <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
         </RouterLink>
@@ -91,7 +91,7 @@ const onImageError = (event) => {
             <p class="mb-5 text-xs text-on-surface-variant md:mb-6 md:text-sm">
               {{ t('home.services.customText') }}
             </p>
-            <RouterLink
+            <RouterLink data-analytics-click="Services: Custom Link"
               class="border-b border-primary pb-1 font-headline text-[10px] font-black tracking-widest text-primary transition-all hover:border-white hover:text-white md:text-xs uppercase"
               to="/offerte"
             >

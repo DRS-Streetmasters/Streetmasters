@@ -97,38 +97,38 @@ onUnmounted(() => {
     <section id="shop-products" class="scroll-mt-28">
       <div class="mb-8 flex flex-col justify-between gap-5 xl:flex-row xl:items-center">
         <div><p class="text-xs font-bold tracking-[.2em] text-primary uppercase">{{ t('shop.shop') }}</p><h2 class="mt-2 font-headline text-2xl font-bold md:text-3xl">{{ t('shop.browse') }}</h2></div>
-        <form class="shop-search flex w-full items-center gap-2 rounded-2xl border border-white/15 bg-surface-container-low p-2 transition-colors focus-within:border-primary/70 focus-within:shadow-[0_0_0_3px_rgba(213,179,255,0.08)] xl:max-w-xl" role="search" @submit.prevent="searchProducts">
+        <form data-analytics-submit="Shop: Search Products Submitted" class="shop-search flex w-full items-center gap-2 rounded-2xl border border-white/15 bg-surface-container-low p-2 transition-colors focus-within:border-primary/70 focus-within:shadow-[0_0_0_3px_rgba(213,179,255,0.08)] xl:max-w-xl" role="search" @submit.prevent="searchProducts">
           <span class="material-symbols-outlined ml-2 hidden text-primary sm:block" aria-hidden="true">search</span>
           <label for="shop-search" class="sr-only">{{ t('shop.search') }}</label>
-          <input id="shop-search" v-model="search" type="search" :placeholder="t('shop.search')" />
-          <button type="submit" class="flex min-h-11 shrink-0 items-center gap-2 rounded-xl bg-primary-container px-4 text-xs font-bold tracking-wide text-white transition-colors hover:bg-inverse-primary/80 sm:px-5"><span class="material-symbols-outlined text-lg sm:hidden" aria-hidden="true">search</span><span>{{ t('shop.searchAction') }}</span></button>
+          <input data-analytics-focus="Shop: Shop Search Focused" id="shop-search" v-model="search" type="search" :placeholder="t('shop.search')" />
+          <button data-analytics-click="Shop: Search Action" type="submit" class="flex min-h-11 shrink-0 items-center gap-2 rounded-xl bg-primary-container px-4 text-xs font-bold tracking-wide text-white transition-colors hover:bg-inverse-primary/80 sm:px-5"><span class="material-symbols-outlined text-lg sm:hidden" aria-hidden="true">search</span><span>{{ t('shop.searchAction') }}</span></button>
         </form>
       </div>
-      <button type="button" class="mb-6 flex min-h-12 w-full items-center justify-between rounded-2xl border border-white/15 bg-surface-container-low px-5 text-sm font-semibold lg:hidden" aria-haspopup="dialog" :aria-expanded="filtersOpen" aria-controls="shop-filter-sheet" @click="openFilters"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" aria-hidden="true">tune</span>{{ t('shop.filters') }}</span><span v-if="activeFilters" class="rounded-full bg-primary-container px-2 py-0.5 text-xs text-white">{{ activeFilters }}</span><span v-else class="material-symbols-outlined text-lg text-on-surface-variant" aria-hidden="true">expand_more</span></button>
+      <button data-analytics-click="Shop: Filters" type="button" class="mb-6 flex min-h-12 w-full items-center justify-between rounded-2xl border border-white/15 bg-surface-container-low px-5 text-sm font-semibold lg:hidden" aria-haspopup="dialog" :aria-expanded="filtersOpen" aria-controls="shop-filter-sheet" @click="openFilters"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-primary" aria-hidden="true">tune</span>{{ t('shop.filters') }}</span><span v-if="activeFilters" class="rounded-full bg-primary-container px-2 py-0.5 text-xs text-white">{{ activeFilters }}</span><span v-else class="material-symbols-outlined text-lg text-on-surface-variant" aria-hidden="true">expand_more</span></button>
       <div class="grid items-start gap-8 lg:grid-cols-[260px_minmax(0,1fr)] xl:gap-10">
         <aside class="sticky top-32 hidden rounded-2xl border border-white/10 bg-surface-container-low/60 p-5 lg:block" :aria-label="t('shop.filters')">
           <div class="mb-7 flex items-center gap-3"><span class="material-symbols-outlined text-primary" aria-hidden="true">tune</span><h3 class="font-headline text-lg font-bold">{{ t('shop.filters') }}</h3><span v-if="activeFilters" class="ml-auto rounded-full bg-primary/10 px-2 py-0.5 text-xs text-primary">{{ activeFilters }}</span></div>
           <ShopFilters prefix="desktop" :collection="collection" :sort="sort" :available="available" :collection-options="collectionOptions" :sort-options="sortOptions" @collection="setCollection" @sort="setSort" @available="setAvailable" @reset="resetFilters" />
         </aside>
         <div class="min-w-0">
-          <div v-if="error" role="alert" class="rounded-2xl border border-error/30 p-8 text-center"><p>{{ t('shop.errors.connection') }}</p><AppButton class="mt-4" @click="load()">{{ t('shop.retry') }}</AppButton></div>
+          <div v-if="error" role="alert" class="rounded-2xl border border-error/30 p-8 text-center"><p>{{ t('shop.errors.connection') }}</p><AppButton data-analytics-click="Shop: Retry" class="mt-4" @click="load()">{{ t('shop.retry') }}</AppButton></div>
           <p v-if="loading" role="status" class="mb-5 text-primary">{{ t('shop.loading') }}</p>
           <div v-if="!error" class="grid grid-cols-1 gap-5 min-[400px]:grid-cols-2 xl:grid-cols-3" :aria-busy="loading">
             <ProductCard v-for="product in sortedProducts" :key="product.id" :product="product" />
           </div>
           <div v-if="!loading && !error && !products.length" class="py-16 text-center"><h3 class="text-2xl font-bold">{{ t('shop.empty') }}</h3><p class="mt-3 text-on-surface-variant">{{ t('shop.emptyHint') }}</p></div>
-          <div v-if="pageInfo.hasNextPage && !error" class="mt-10 text-center"><AppButton :disabled="loading" variant="glass" @click="load(true)">{{ t('shop.more') }}</AppButton></div>
+          <div v-if="pageInfo.hasNextPage && !error" class="mt-10 text-center"><AppButton data-analytics-click="Shop: More" :disabled="loading" variant="glass" @click="load(true)">{{ t('shop.more') }}</AppButton></div>
         </div>
       </div>
     </section>
     <dialog id="shop-filter-sheet" ref="filterDialog" aria-labelledby="filter-sheet-title" class="shop-filter-sheet" @close="onFiltersClosed" @click="event => { if (event.target === filterDialog) closeFilters() }">
       <div class="filter-sheet-card">
         <div class="mx-auto mt-3 h-1 w-10 shrink-0 rounded-full bg-white/20" aria-hidden="true"></div>
-        <header class="flex shrink-0 items-center justify-between px-6 py-5"><h2 id="filter-sheet-title" class="font-headline text-xl font-bold">{{ t('shop.filters') }}</h2><button type="button" autofocus class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-on-surface-variant" :aria-label="t('shop.closeFilters')" @click="closeFilters"><span class="material-symbols-outlined" aria-hidden="true">close</span></button></header>
+        <header class="flex shrink-0 items-center justify-between px-6 py-5"><h2 id="filter-sheet-title" class="font-headline text-xl font-bold">{{ t('shop.filters') }}</h2><button data-analytics-click="Shop: Close Filters" type="button" autofocus class="flex h-10 w-10 items-center justify-center rounded-full bg-white/5 text-on-surface-variant" :aria-label="t('shop.closeFilters')" @click="closeFilters"><span class="material-symbols-outlined" aria-hidden="true">close</span></button></header>
         <div class="min-h-0 overflow-y-auto overscroll-contain px-6 pb-8">
           <ShopFilters v-if="filtersOpen" prefix="mobile" inline :collection="collection" :sort="sort" :available="available" :collection-options="collectionOptions" :sort-options="sortOptions" @collection="setCollection" @sort="setSort" @available="setAvailable" @reset="resetFilters" />
         </div>
-        <footer class="shrink-0 border-t border-white/10 p-5"><AppButton full-width @click="closeFilters">{{ t('shop.showProducts') }}</AppButton></footer>
+        <footer class="shrink-0 border-t border-white/10 p-5"><AppButton data-analytics-click="Shop: Show Products" full-width @click="closeFilters">{{ t('shop.showProducts') }}</AppButton></footer>
       </div>
     </dialog>
   </ShopLayout>

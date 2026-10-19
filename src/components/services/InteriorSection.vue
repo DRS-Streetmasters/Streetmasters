@@ -51,10 +51,10 @@ const { t } = useI18n()
               {{ t('servicesPage.interior.cardText') }}
             </p>
             <div class="flex flex-col gap-3 sm:flex-row md:gap-4">
-              <AppLinkButton class="flex-1 active:scale-[0.98]" size="sm" to="/offerte">
+              <AppLinkButton data-analytics-click="Interior: Request Quote" class="flex-1 active:scale-[0.98]" size="sm" to="/offerte">
                 {{ t('common.cta.requestQuote') }}
               </AppLinkButton>
-              <AppLinkButton class="flex-1 active:scale-[0.98]" size="sm" to="/offerte" variant="glass">
+              <AppLinkButton data-analytics-click="Interior: View Packages" class="flex-1 active:scale-[0.98]" size="sm" to="/offerte" variant="glass">
                 {{ t('servicesPage.interior.viewPackages') }}
               </AppLinkButton>
             </div>

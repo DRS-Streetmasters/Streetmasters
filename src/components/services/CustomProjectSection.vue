@@ -17,7 +17,7 @@ const { t } = useI18n()
           </p>
         </div>
         <div class="relative z-10 w-full shrink-0 md:w-auto">
-          <AppLinkButton class="w-full hover:scale-105 md:w-auto" size="md" to="/offerte">
+          <AppLinkButton data-analytics-click="Custom Project: Request Quote" class="w-full hover:scale-105 md:w-auto" size="md" to="/offerte">
             {{ t('common.cta.requestQuote') }}
           </AppLinkButton>
         </div>

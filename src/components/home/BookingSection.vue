@@ -40,7 +40,7 @@ const { t } = useI18n()
               <label class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
                 {{ t('home.booking.model') }}
               </label>
-              <input
+              <input data-analytics-focus="Booking: Car Model Focused"
                 class="w-full border-b border-outline-variant/30 bg-transparent pb-2 font-headline text-base text-white outline-none focus:border-primary md:pb-1 md:text-lg"
                 :placeholder="t('home.booking.modelPlaceholder')"
                 type="text"
@@ -50,7 +50,7 @@ const { t } = useI18n()
               <label class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
                 {{ t('home.booking.serviceType') }}
               </label>
-              <select
+              <select data-analytics-change="Booking: Service Changed"
                 class="w-full appearance-none border-b border-outline-variant/30 bg-transparent pb-2 font-headline text-base text-white outline-none focus:border-primary md:pb-1 md:text-lg"
               >
                 <option
@@ -62,7 +62,7 @@ const { t } = useI18n()
                 </option>
               </select>
             </div>
-            <AppLinkButton class="text-base md:text-lg" full-width size="lg" to="/offerte">
+            <AppLinkButton data-analytics-click="Booking: Submit" class="text-base md:text-lg" full-width size="lg" to="/offerte">
               {{ t('home.booking.submit') }}
             </AppLinkButton>
           </form>

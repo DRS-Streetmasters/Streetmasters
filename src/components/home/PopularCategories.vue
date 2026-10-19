@@ -37,20 +37,20 @@ watch(locale, load, { immediate: true })
           <h2 id="popular-categories-title" class="font-headline text-2xl font-bold tracking-tight text-white md:text-3xl">{{ t('shop.popularCategories') }}</h2>
           <p class="mt-2 text-sm text-on-surface-variant">{{ t('shop.categoriesIntro') }}</p>
         </div>
-        <RouterLink v-if="!embedded" to="/shop" class="flex min-h-11 items-center gap-2 text-sm font-bold text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
+        <RouterLink data-analytics-click="Categories: View Shop" v-if="!embedded" to="/shop" class="flex min-h-11 items-center gap-2 text-sm font-bold text-primary hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary">
           {{ t('shop.viewShop') }}<span class="material-symbols-outlined text-lg" aria-hidden="true">arrow_forward</span>
         </RouterLink>
       </div>
       <p v-if="loading" class="sr-only" role="status">{{ t('shop.loading') }}</p>
       <div v-if="error" role="status" class="flex flex-wrap items-center gap-4 rounded-2xl bg-surface-container-low p-6 text-sm text-on-surface-variant">
         {{ t('shop.categoriesError') }}
-        <button class="min-h-11 font-bold text-primary underline" @click="load">{{ t('shop.retry') }}</button>
+        <button data-analytics-click="Categories: Retry" class="min-h-11 font-bold text-primary underline" @click="load">{{ t('shop.retry') }}</button>
       </div>
       <div v-else class="category-grid" :aria-busy="loading">
         <template v-if="loading && !categories.length">
           <div v-for="index in 4" :key="index" class="aspect-[1/1.12] rounded-3xl bg-surface-container-low" aria-hidden="true"></div>
         </template>
-        <RouterLink v-for="category in categories" :key="category.id" :to="{ path: '/shop', query: { collection: category.handle }, hash: '#shop-products' }" class="category-card group flex min-w-0 flex-col rounded-3xl border border-white/10 bg-surface-container-low p-4 transition-colors hover:border-primary/60 hover:bg-surface-container focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:p-5">
+        <RouterLink data-analytics-click="Categories: Open Category" :data-analytics-item="category.handle" v-for="category in categories" :key="category.id" :to="{ path: '/shop', query: { collection: category.handle }, hash: '#shop-products' }" class="category-card group flex min-w-0 flex-col rounded-3xl border border-white/10 bg-surface-container-low p-4 transition-colors hover:border-primary/60 hover:bg-surface-container focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary md:p-5">
           <div class="category-image flex aspect-square items-center justify-center overflow-hidden rounded-2xl bg-[#f3f3f3] p-4 md:p-6">
             <img v-if="categoryImage(category) && !failedImages.has(category.id)" :src="categoryImage(category)" :alt="category.image?.url ? (category.image.altText || category.title) : (category.products.nodes[0]?.featuredImage?.altText || category.products.nodes[0]?.title || category.title)" loading="lazy" width="320" height="320" class="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105 motion-reduce:transform-none motion-reduce:transition-none" @error="failedImages.add(category.id)" />
             <span v-else class="material-symbols-outlined text-5xl text-[#7104d8]" aria-hidden="true">shopping_bag</span>

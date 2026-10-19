@@ -1,4 +1,5 @@
 <script setup>
+import { trackEvent } from '../../lib/analytics'
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -58,7 +59,7 @@ const publicBase = import.meta.env.BASE_URL
             <span class="material-symbols-outlined" aria-hidden="true">chevron_right</span>
           </div>
         </div>
-        <input
+        <input data-analytics-change="Before After: Position Changed"
           v-model.number="position"
           type="range"
           min="0"
@@ -68,6 +69,7 @@ const publicBase = import.meta.env.BASE_URL
           style="touch-action: pan-y"
           @pointerdown.prevent="moveSlider"
           @pointermove="moveSlider"
+          @pointerup="trackEvent('Before After: Position Changed')"
         />
       </div>
       <p class="mt-4 text-center text-sm text-on-surface-variant">{{ t('home.showcase.sliderHint') }}</p>

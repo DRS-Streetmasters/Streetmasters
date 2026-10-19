@@ -35,7 +35,7 @@ const { t } = useI18n()
           <div class="flex flex-1 flex-col p-6 md:p-8">
             <h3 class="mb-3 font-headline text-xl font-bold md:text-2xl">{{ service.title }}</h3>
             <p class="mb-6 flex-1 text-sm leading-relaxed text-on-surface-variant md:mb-8">{{ service.description }}</p>
-            <AppLinkButton full-width size="sm" to="/offerte" variant="surface">
+            <AppLinkButton :data-analytics-item="service.id" data-analytics-click="Exterior: Request Quote" full-width size="sm" to="/offerte" variant="surface">
               {{ t('common.cta.requestQuote') }}
             </AppLinkButton>
           </div>

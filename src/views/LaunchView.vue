@@ -52,7 +52,7 @@ onUnmounted(() => clearInterval(timer))
     <p class="text-[10px] tracking-[.24em] text-stone-500 uppercase">{{ t('launch.tagline') }}</p>
     <p class="mt-3 text-[10px] leading-relaxed tracking-wide text-stone-500">
       Designed and developed by
-      <a class="text-primary transition-colors hover:text-white" href="https://driesbielen.be" target="_blank" rel="noopener noreferrer">
+      <a data-analytics-click="Launch: Developer Website" class="text-primary transition-colors hover:text-white" href="https://driesbielen.be" target="_blank" rel="noopener noreferrer">
         Dries Bielen
       </a>
     </p>

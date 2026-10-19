@@ -17,5 +17,5 @@ onMounted(async () => {
 })
 </script>
 <template>
-  <ShopLayout><div class="py-16 text-center"><h1 class="font-headline text-3xl font-bold" :role="failed ? 'alert' : 'status'">{{ t(failed ? 'shop.errors.login' : 'shop.loginProgress') }}</h1><AppLinkButton v-if="failed" class="mt-8" to="/account">{{ t('shop.retry') }}</AppLinkButton></div></ShopLayout>
+  <ShopLayout><div class="py-16 text-center"><h1 class="font-headline text-3xl font-bold" :role="failed ? 'alert' : 'status'">{{ t(failed ? 'shop.errors.login' : 'shop.loginProgress') }}</h1><AppLinkButton data-analytics-click="Account Callback: Retry" v-if="failed" class="mt-8" to="/account">{{ t('shop.retry') }}</AppLinkButton></div></ShopLayout>
 </template>

@@ -1,4 +1,5 @@
 <script setup>
+import { trackEvent } from '../../lib/analytics'
 import { computed, nextTick, reactive, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppButton from '../ui/AppButton.vue'
@@ -106,6 +107,7 @@ const submitForm = async () => {
       throw new Error(firstError || t('offerPage.form.errors.sendFailed'))
     }
 
+    trackEvent('Quote: Request Sent')
     submitted.value = true
     resetForm()
     await nextTick()
@@ -136,9 +138,9 @@ const submitForm = async () => {
     <p class="mx-auto mt-5 max-w-lg text-base leading-relaxed text-on-surface-variant md:text-lg">
       {{ t('offerPage.form.success') }}
     </p>
-    <AppLinkButton class="mt-8" to="/">{{ t('offerPage.form.backHome') }}</AppLinkButton>
+    <AppLinkButton data-analytics-click="Quote: Back Home" class="mt-8" to="/">{{ t('offerPage.form.backHome') }}</AppLinkButton>
   </section>
-  <form v-else class="space-y-6 md:space-y-10" @submit.prevent="submitForm">
+  <form data-analytics-submit="Quote: Form Submitted" v-else class="space-y-6 md:space-y-10" @submit.prevent="submitForm">
     <section class="group relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-surface-container-low/85 p-5 shadow-[0_10px_40px_rgba(0,0,0,0.25)] backdrop-blur-sm md:rounded-[2rem] md:p-10">
       <div class="pointer-events-none absolute top-0 right-0 p-8 opacity-5 transition-opacity group-hover:opacity-20 md:opacity-10">
         <span class="material-symbols-outlined text-7xl md:text-8xl">directions_car</span>
@@ -150,7 +152,7 @@ const submitForm = async () => {
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
         <div class="space-y-2">
           <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.brandModel') }}</label>
-          <input
+          <input data-analytics-focus="Quote: Brand Model Focused"
             v-model="form.brandModel"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="brand_model"
@@ -161,7 +163,7 @@ const submitForm = async () => {
         </div>
         <div class="space-y-2">
           <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.buildYear') }}</label>
-          <input
+          <input data-analytics-focus="Quote: Year Focused"
             v-model="form.year"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="year"
@@ -185,7 +187,7 @@ const submitForm = async () => {
 
         <div class="relative w-full md:max-w-sm">
           <span class="material-symbols-outlined absolute top-1/2 left-3 -translate-y-1/2 text-lg text-on-surface-variant">search</span>
-          <input
+          <input data-analytics-focus="Quote: Service Search Focused"
             id="service-search"
             v-model="serviceSearch"
             class="w-full rounded-xl border border-outline-variant bg-surface-container-highest/50 py-2 pr-4 pl-9 text-xs transition-all placeholder:text-stone-600 focus:border-primary focus:ring-1 focus:ring-primary md:text-sm"
@@ -208,7 +210,7 @@ const submitForm = async () => {
                 :key="service.id"
                 class="cursor-pointer"
               >
-                <input v-model="selectedServices" :value="service.name" class="peer hidden" name="services" type="checkbox" />
+                <input data-analytics-change="Quote: Services Changed" :data-analytics-item="service.id" v-model="selectedServices" :value="service.name" class="peer hidden" name="services" type="checkbox" />
                 <div
                   class="h-full rounded-xl border border-transparent bg-surface-container-highest p-3 transition-all active:scale-[0.98] peer-checked:border-primary peer-checked:bg-primary/10"
                   :class="hasActiveSearch ? 'border-primary/30 bg-primary/10' : ''"
@@ -236,7 +238,7 @@ const submitForm = async () => {
       <div class="mb-8 grid grid-cols-1 gap-6 md:mb-12 md:grid-cols-2 md:gap-8">
         <div class="space-y-2">
           <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.name') }}</label>
-          <input
+          <input data-analytics-focus="Quote: Name Focused"
             v-model="form.name"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="name"
@@ -247,7 +249,7 @@ const submitForm = async () => {
         </div>
         <div class="space-y-2">
           <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.email') }}</label>
-          <input
+          <input data-analytics-focus="Quote: Email Focused"
             v-model="form.email"
             class="w-full border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="email"
@@ -258,7 +260,7 @@ const submitForm = async () => {
         </div>
         <div class="space-y-2 md:col-span-2">
           <label class="font-label text-xs tracking-widest text-on-surface-variant uppercase md:text-sm">{{ t('offerPage.form.message') }}</label>
-          <textarea
+          <textarea data-analytics-focus="Quote: Message Focused"
             v-model="form.message"
             class="w-full resize-none border-0 border-b border-outline-variant bg-transparent py-2 text-sm transition-colors placeholder:text-stone-700 focus:border-secondary focus:ring-0 md:py-2.5 md:text-base"
             name="message"
@@ -269,7 +271,7 @@ const submitForm = async () => {
       </div>
 
       <div class="flex flex-col gap-4">
-        <AppButton class="w-full md:w-auto md:px-12 md:text-lg hover:shadow-[0_0_30px_rgba(255,179,178,0.3)] active:scale-[0.97]" :disabled="isSubmitting" size="lg" type="submit">
+        <AppButton data-analytics-click="Quote: Send Request" class="w-full md:w-auto md:px-12 md:text-lg hover:shadow-[0_0_30px_rgba(255,179,178,0.3)] active:scale-[0.97]" :disabled="isSubmitting" size="lg" type="submit">
           {{ isSubmitting ? t('offerPage.form.submitting') : t('offerPage.form.submit') }}
         </AppButton>
 

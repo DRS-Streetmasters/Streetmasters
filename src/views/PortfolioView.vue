@@ -56,7 +56,7 @@ const placeholderSlots = [
                 {{ t('portfolioPage.ctaText') }}
               </p>
             </div>
-            <AppLinkButton class="w-full md:w-auto" size="md" to="/offerte">{{ t('common.cta.contactUs') }}</AppLinkButton>
+            <AppLinkButton data-analytics-click="Portfolio: Contact Us" class="w-full md:w-auto" size="md" to="/offerte">{{ t('common.cta.contactUs') }}</AppLinkButton>
           </div>
         </div>
       </section>

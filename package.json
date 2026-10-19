@@ -10,7 +10,8 @@
     "predeploy": "npm run build:pages",
     "deploy": "gh-pages -d dist",
     "test": "playwright test",
-    "build:pages": "vite build --base=/Streetmasters/ && node scripts/prepare-pages.mjs"
+    "build:pages": "vite build --base=/Streetmasters/ && node scripts/prepare-pages.mjs",
+    "analytics:goals": "node --env-file-if-exists=.env.plausible scripts/sync-plausible-goals.mjs"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",

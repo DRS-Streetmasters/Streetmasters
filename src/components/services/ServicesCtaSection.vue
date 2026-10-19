@@ -23,10 +23,10 @@ const { t } = useI18n()
         <h2 class="mb-6 font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:mb-8 md:text-7xl">{{ t('servicesPage.cta.title') }}</h2>
         <p class="mb-10 text-base text-on-surface-variant md:mb-12 md:text-xl">{{ t('servicesPage.cta.text') }}</p>
         <div class="flex flex-col justify-center gap-4 sm:flex-row md:justify-start md:gap-6">
-          <AppLinkButton class="shadow-xl shadow-primary/30" size="md" to="/offerte">
+          <AppLinkButton data-analytics-click="Services Cta: Ask Advice" class="shadow-xl shadow-primary/30" size="md" to="/offerte">
             {{ t('servicesPage.cta.askAdvice') }}
           </AppLinkButton>
-          <AppLinkButton size="md" to="/portfolio" variant="glass">
+          <AppLinkButton data-analytics-click="Services Cta: View Portfolio" size="md" to="/portfolio" variant="glass">
             {{ t('servicesPage.cta.viewPortfolio') }}
           </AppLinkButton>
         </div>

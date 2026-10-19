@@ -8,8 +8,8 @@ const { t } = useI18n()
 
 <template>
   <PageHero class="mb-12 md:mb-16" :label="t('servicesPage.header.label')" :title="t('servicesPage.header.title')" :description="t('servicesPage.header.subtitle')" target="#exterior">
-    <AppLinkButton class="w-full text-base hover:scale-105 sm:w-auto md:text-lg" href="#exterior" size="lg">{{ t('servicesPage.header.exterior') }}</AppLinkButton>
-    <AppLinkButton class="w-full text-base sm:w-auto md:text-lg" href="#interior" size="lg" variant="glass">{{ t('servicesPage.header.interior') }}</AppLinkButton>
-    <AppLinkButton class="w-full text-base sm:w-auto md:text-lg" href="#wrapping" size="lg" variant="glass">{{ t('servicesPage.header.wrapping') }}</AppLinkButton>
+    <AppLinkButton data-analytics-click="Services Page Header: Exterior" class="w-full text-base hover:scale-105 sm:w-auto md:text-lg" href="#exterior" size="lg">{{ t('servicesPage.header.exterior') }}</AppLinkButton>
+    <AppLinkButton data-analytics-click="Services Page Header: Interior" class="w-full text-base sm:w-auto md:text-lg" href="#interior" size="lg" variant="glass">{{ t('servicesPage.header.interior') }}</AppLinkButton>
+    <AppLinkButton data-analytics-click="Services Page Header: Wrapping" class="w-full text-base sm:w-auto md:text-lg" href="#wrapping" size="lg" variant="glass">{{ t('servicesPage.header.wrapping') }}</AppLinkButton>
   </PageHero>
 </template>
