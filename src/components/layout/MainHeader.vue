@@ -111,8 +111,8 @@ const handleDocumentClick = (event) => {
       <div class="hidden items-center gap-5 xl:gap-8 lg:flex">
 
         <RouterLink data-analytics-click="Navigation: Home" :class="navLinkClass(isHome)" to="/">{{ t('common.nav.home') }}</RouterLink>
-        <RouterLink data-analytics-click="Navigation: Services" :class="navLinkClass(isServices)" to="/diensten">{{ t('common.nav.services') }}</RouterLink>
         <ShopNavMenu :active="isShop" />
+        <RouterLink data-analytics-click="Navigation: Services" :class="navLinkClass(isServices)" to="/diensten">{{ t('common.nav.services') }}</RouterLink>
         <RouterLink data-analytics-click="Navigation: Portfolio" :class="navLinkClass(isPortfolio)" to="/portfolio">
           {{ t('common.nav.portfolio') }}
         </RouterLink>
@@ -208,8 +208,8 @@ const handleDocumentClick = (event) => {
 
       <div class="flex min-h-0 flex-1 flex-col items-center gap-5 overflow-y-auto py-4 text-center md:gap-6">
         <RouterLink data-analytics-click="Navigation: Home" :class="mobileNavClass(isHome)" to="/" @click="mobileMenuOpen = false">{{ t('common.nav.home') }}</RouterLink>
-        <RouterLink data-analytics-click="Navigation: Services" :class="mobileNavClass(isServices)" to="/diensten" @click="mobileMenuOpen = false">{{ t('common.nav.services') }}</RouterLink>
         <ShopNavMenu mobile :active="isShop" @navigate="mobileMenuOpen = false" />
+        <RouterLink data-analytics-click="Navigation: Services" :class="mobileNavClass(isServices)" to="/diensten" @click="mobileMenuOpen = false">{{ t('common.nav.services') }}</RouterLink>
         <RouterLink data-analytics-click="Navigation: Portfolio" :class="mobileNavClass(isPortfolio)" to="/portfolio" @click="mobileMenuOpen = false">
           {{ t('common.nav.portfolio') }}
         </RouterLink>
