@@ -1,4 +1,4 @@
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 import { cartMutation, getCart } from '../lib/shopify'
 
@@ -68,7 +68,18 @@ export const useCartStore = defineStore('cart', () => {
   }
 
   async function setDiscount(code) {
-    return run(async () => save(await cartMutation('cartDiscountCodesUpdate', '$cartId: ID!, $codes: [String!]!', 'cartId: $cartId, discountCodes: $codes', { cartId: cart.value.id, codes: code.trim() ? [code.trim()] : [] })))
+    await initialize()
+    if (busy.value) await new Promise(resolve => {
+      const stop = watch(busy, value => { if (!value) { stop(); resolve() } }, { flush: 'sync' })
+    })
+    return run(async () => {
+      const id = readId()
+      if (id && !cart.value) save(await getCart(id))
+      const codes = code.trim() ? [code.trim()] : []
+      save(cart.value
+        ? await cartMutation('cartDiscountCodesUpdate', '$cartId: ID!, $codes: [String!]!', 'cartId: $cartId, discountCodes: $codes', { cartId: cart.value.id, codes })
+        : await cartMutation('cartCreate', '$input: CartInput!', 'input: $input', { input: { discountCodes: codes, buyerIdentity: { countryCode: 'BE' } } }))
+    })
   }
 
   async function setNote(note) {

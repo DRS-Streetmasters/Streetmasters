@@ -75,16 +75,16 @@
 }
 
 .ghost-border {
-  border: 1px solid rgb(158 140 172 / 15%);
+  border: 1px solid color-mix(in srgb, var(--color-outline) 15%, transparent);
 }
 
 .glass-panel {
-  background: rgb(33 27 40 / 60%);
+  background: color-mix(in srgb, var(--color-surface-container) 60%, transparent);
   backdrop-filter: blur(20px);
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, rgb(113 4 216 / 10%) 0%, rgb(20 17 23 / 0%) 100%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary-container) 10%, transparent) 0%, transparent 100%);
 }
 
 .scroll-mt-section {
@@ -110,12 +110,12 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgb(213 179 255 / 20%);
+  background: color-mix(in srgb, var(--color-primary) 20%, transparent);
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgb(213 179 255 / 40%);
+  background: color-mix(in srgb, var(--color-primary) 40%, transparent);
 }
 
 #mobile-menu-overlay {
@@ -141,16 +141,16 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f0c12;
+  background: var(--color-surface-container-lowest);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #37303f;
+  background: var(--color-surface-container-highest);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #7104d8;
+  background: var(--color-primary-container);
 }
 
 @media (max-width: 768px) {

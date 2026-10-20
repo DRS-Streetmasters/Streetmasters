@@ -31,7 +31,8 @@ export function safeShopifyUrl(value) {
 }
 
 export const productCardFields = `
-  id handle title vendor availableForSale category { name }
+  id handle title vendor description availableForSale category { name }
+  quickVariants: variants(first: 2) { nodes { id availableForSale price { amount currencyCode } } }
   featuredImage { url altText width height }
   priceRange { minVariantPrice { amount currencyCode } }
   compareAtPriceRange { minVariantPrice { amount currencyCode } }

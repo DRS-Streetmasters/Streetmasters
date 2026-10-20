@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useCartStore } from '../stores/cart'
 import { routerBase } from '../lib/launch'
 import AboutView from '../views/AboutView.vue'
 import HomeView from '../views/HomeView.vue'
@@ -66,6 +67,16 @@ const router = createRouter({
       component: NotFoundView,
     },
   ],
+})
+
+// Apply before mounting the page so catalog filters cannot discard the code.
+router.beforeResolve(async to => {
+  const code = to.query.discount
+  if (typeof code !== 'string' || !code.trim()) return
+  if (await useCartStore().setDiscount(code)) {
+    const { discount, ...query } = to.query
+    return { path: to.path, query, hash: to.hash, replace: true }
+  }
 })
 
 export default router

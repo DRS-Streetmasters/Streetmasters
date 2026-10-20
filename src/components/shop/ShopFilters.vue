@@ -1,15 +1,15 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import AppSelect from '../ui/AppSelect.vue'
-defineProps({ prefix: { type: String, required: true }, collection: String, sort: String, available: Boolean, collectionOptions: Array, sortOptions: Array, inline: Boolean })
+defineProps({ prefix: { type: String, required: true }, collection: String, sort: String, available: Boolean, collectionOptions: Array, sortOptions: Array, inline: Boolean, horizontal: Boolean })
 const emit = defineEmits(['collection', 'sort', 'available', 'reset'])
 const { t } = useI18n()
 </script>
 <template>
-  <div class="space-y-7">
+  <div :class="horizontal ? 'grid grid-cols-[1fr_1fr_auto_auto] items-end gap-6' : 'space-y-7'">
     <AppSelect :id="`${prefix}-collection`" :model-value="collection" :label="t('shop.collection')" :options="collectionOptions" :inline="inline" @update:model-value="emit('collection', $event)" />
     <AppSelect :id="`${prefix}-sort`" :model-value="sort" :label="t('shop.sort')" :options="sortOptions" :inline="inline" @update:model-value="emit('sort', $event)" />
-    <div class="border-t border-white/10 pt-6">
+    <div :class="horizontal ? 'py-3' : 'border-t border-white/10 pt-6'">
       <label class="flex! cursor-pointer items-center justify-between gap-3 text-sm text-on-surface-variant">
         <span>{{ t('shop.availableOnly') }}</span>
         <span class="relative inline-flex shrink-0">

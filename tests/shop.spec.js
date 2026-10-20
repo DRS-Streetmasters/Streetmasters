@@ -161,7 +161,7 @@ test('heroes fill the viewport and mobile filter sheet preserves catalog positio
     }
   }
   await page.goto('/shop')
-  await page.getByRole('link', { name: 'Scroll en ontdek meer' }).click()
+  await page.locator('#shop-products').scrollIntoViewIfNeeded()
   const trigger = page.getByRole('button', { name: 'Filters', exact: true })
   await trigger.click()
   const dialog = page.getByRole('dialog', { name: 'Filters', exact: true })

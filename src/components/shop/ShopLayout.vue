@@ -1,6 +1,13 @@
 <script setup>
+import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { useCartStore } from '../../stores/cart'
 import MainHeader from '../layout/MainHeader.vue'
 import MainFooter from '../layout/MainFooter.vue'
+const route = useRoute()
+const { t } = useI18n()
+const cart = useCartStore()
+defineProps({ storefront: Boolean })
 </script>
 
 <template>
@@ -8,7 +15,8 @@ import MainFooter from '../layout/MainFooter.vue'
     <MainHeader />
     <main class="shop-content min-h-[80svh]">
       <slot name="hero" />
-      <div :class="$slots.hero ? 'pt-8 md:pt-12' : 'pt-28 md:pt-40'" class="mx-auto max-w-screen-2xl px-5 pb-20 md:px-12">
+      <div :class="[storefront ? 'max-w-[1720px]' : 'max-w-screen-2xl', $slots.hero ? 'pt-8 md:pt-12' : 'pt-28 md:pt-40']" class="mx-auto px-5 pb-20 md:px-12">
+        <p v-if="route.query.discount && cart.error" role="alert" class="mb-6 rounded-xl border border-error/30 p-4 text-error">{{ t('shop.discountLinkError') }}</p>
         <slot />
       </div>
     </main>
@@ -17,6 +25,7 @@ import MainFooter from '../layout/MainFooter.vue'
 </template>
 
 <style>
+
 .shop-content input:not([type='checkbox']), .shop-content select, .shop-content textarea {
   width: 100%; border: 1px solid var(--color-outline-variant); border-radius: .75rem;
   background: var(--color-surface-container-low); padding: .8rem 1rem; color: white;

@@ -15,7 +15,8 @@ const discount = ref('')
 const note = ref('')
 const saved = ref(false)
 const checkoutBusy = ref(false)
-watch(() => cart.cart?.id, () => { note.value = cart.cart?.note || ''; discount.value = cart.cart?.discountCodes[0]?.code || '' })
+watch(() => cart.cart?.id, () => { note.value = cart.cart?.note || '' }, { immediate: true })
+watch(() => cart.cart?.discountCodes[0]?.code, code => { discount.value = code || '' }, { immediate: true })
 onMounted(() => cart.refresh())
 async function saveNote() { saved.value = await cart.setNote(note.value) }
 async function checkout() {

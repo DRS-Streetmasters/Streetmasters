@@ -17,6 +17,7 @@ const imageUrl = `${import.meta.env.BASE_URL}image00001.jpeg`
         <p v-if="description" class="max-w-2xl text-base leading-relaxed text-white/80 md:text-lg">{{ description }}</p>
         <div v-if="$slots.default" class="flex flex-col gap-4 pt-4 sm:flex-row md:gap-6"><slot /></div>
       </div>
+      <div v-if="$slots.badges" class="mt-10 md:mt-12"><slot name="badges" /></div>
     </div>
     <ScrollCue class="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 md:bottom-8" :target="target" />
   </section>
