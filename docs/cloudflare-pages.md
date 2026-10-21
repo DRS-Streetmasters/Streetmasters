@@ -12,7 +12,9 @@ legacy preview bookmarks and Shopify callback redirect together.
 | Existing GitHub Pages build | `npm run build:pages` | On (unchanged) |
 
 `VITE_LAUNCH_GATE=true` explicitly enables the gate; `false` disables it.
-When unset, only Vite mode `production` enables it. These are strings,
+When unset, Cloudflare branches `dev` and `staging` automatically disable it
+using the build-time `CF_PAGES_BRANCH` variable, even with `npm run build`.
+Otherwise only Vite mode `production` enables it. These are strings,
 and the value is baked into the build, so changes require a new deployment.
 An optimized preview build still has `import.meta.env.PROD=true`; do not
 use that value to distinguish staging from production.
@@ -40,9 +42,12 @@ Set these build environment variables separately in the Pages dashboard:
 | `NODE_VERSION` | `24` | `24` |
 
 This lets both scopes use `npm run build`; Preview explicitly overrides the
-production-mode default. For a separate staging Pages project, also set
+production-mode default. The `dev` and `staging` branches also work without
+this explicit override, using Cloudflare's injected branch name. An explicit
+`VITE_LAUNCH_GATE=true` still takes priority; remove it from Preview or set it
+to `false`. For a separate staging Pages project, also set
 `VITE_LAUNCH_GATE=false` in that project's **Production** scope, or use
-`npm run build:staging`. A branch called staging does not change Vite mode.
+`npm run build:staging` if its branch has a different name.
 
 Copy the required public Formspree/Shopify settings from `.env.example` to
 both scopes as appropriate. Never put private Shopify credentials or
@@ -61,6 +66,7 @@ are unchanged. Do not merge or deploy this change to production just to test sta
 Run `npm ci`, `npm run test:environments` and `npm test -- tests/launch.spec.js`.
 The environment suite builds development, staging and production artifacts,
 plus a production-mode build with `VITE_LAUNCH_GATE=false` for Cloudflare Preview,
+and production-mode builds with `CF_PAGES_BRANCH=staging` and `dev`,
 and serves each with Vite preview. It checks ordinary deep links, refresh,
 navigation/history, legacy bookmarks, not-found routes and the callback path.
 The existing launch suite runs against production mode and checks countdown,

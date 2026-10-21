@@ -5,8 +5,7 @@ const previewBase = `${base}dikkeseppe`
 const path = window.location.pathname
 export const isPreview = path === previewBase || path.startsWith(`${previewBase}/`)
 // Preview builds are also optimized builds: PROD alone cannot identify staging.
-export const launchGateEnabled = import.meta.env.VITE_LAUNCH_GATE === 'true' ||
-  (import.meta.env.VITE_LAUNCH_GATE !== 'false' && import.meta.env.MODE === 'production')
+export const launchGateEnabled = import.meta.env.VITE_LAUNCH_GATE === 'true'
 export const beforeLaunch = launchGateEnabled && Date.now() < launchAt
 export const routerBase = beforeLaunch && isPreview ? `${previewBase}/` : base
 
