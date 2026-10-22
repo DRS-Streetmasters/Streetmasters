@@ -29,7 +29,7 @@ URLs, preserving query strings and fragments.
 
 Connect `DRS-Streetmasters/Streetmasters`, with the repository root as root
 directory, `main` as production branch, build command `npm run build`, and
-output directory `dist`. Use Node.js 24 (`NODE_VERSION=24`). Enable preview
+output directory `dist`. Use Node.js 26.12.1 (`NODE_VERSION=26.12.1`). Enable preview
 deployments for `staging` (and `dev` if desired).
 
 Set these build environment variables separately in the Pages dashboard:
@@ -38,7 +38,7 @@ Set these build environment variables separately in the Pages dashboard:
 | --- | --- | --- |
 | `VITE_LAUNCH_GATE` | `true` | `false` |
 | `VITE_BASE_PATH` | `/` | `/` |
-| `NODE_VERSION` | `24` | `24` |
+| `NODE_VERSION` | `26.12.1` | `26.12.1` |
 
 This lets both scopes use `npm run build`; Preview explicitly overrides the
 production-mode default. The `dev` and `staging` branches also work without
