@@ -1,0 +1,257 @@
+{
+  "data": {
+    "products": {
+      "nodes": [
+        {
+          "handle": "nos-autogeur-blauw"
+        },
+        {
+          "handle": "nos-autogeur-rood"
+        },
+        {
+          "handle": "nos-autogeur-paars"
+        },
+        {
+          "handle": "nos-autogeur-zwart"
+        },
+        {
+          "handle": "nos-autogeur-goud"
+        },
+        {
+          "handle": "nos-autogeur-zilver"
+        },
+        {
+          "handle": "zena-car-air-freshener-vanilla"
+        },
+        {
+          "handle": "zena-car-air-freshener-cedar-wood"
+        },
+        {
+          "handle": "zena-car-air-freshener-fruit"
+        },
+        {
+          "handle": "zena-car-air-freshener-gold-digger"
+        },
+        {
+          "handle": "zena-car-air-freshener-new-car"
+        },
+        {
+          "handle": "hervulling-nos-autogeurtje"
+        },
+        {
+          "handle": "nos-autogeur-roze"
+        },
+        {
+          "handle": "little-joe-car-air-freshner-paper-black-velvet"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-paper-cherry"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-paper-citrus"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-paper-flower"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-paper-green-tea"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-paper-new-car"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-paper-ocean"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-paper-vanilla"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-liquid-membrane-black-velvet"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-liquid-membrane-cherry"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-liquid-membrane-fresh-mint"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-liquid-membrane-fruits"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-liquid-membrane-new-car"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-liquid-membrane-strawberry"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-liquid-membrane-vanilla"
+        },
+        {
+          "handle": "little-joe-scented-card-cherry"
+        },
+        {
+          "handle": "little-joe-scented-card-fresh-mint"
+        },
+        {
+          "handle": "little-joe-scented-card-fruit"
+        },
+        {
+          "handle": "little-joe-scented-card-lavender"
+        },
+        {
+          "handle": "little-joe-scented-card-new-car"
+        },
+        {
+          "handle": "little-joe-scented-card-odour-neutraliser"
+        },
+        {
+          "handle": "little-joe-scented-card-vanilla"
+        },
+        {
+          "handle": "sphere-car-air-freshener-fruit-blast"
+        },
+        {
+          "handle": "sphere-car-air-freshener-jungle-rain"
+        },
+        {
+          "handle": "sphere-car-air-freshener-lemon-storm"
+        },
+        {
+          "handle": "sphere-car-air-freshener-ocean-splash"
+        },
+        {
+          "handle": "sphere-car-air-freshener-spice-rush"
+        },
+        {
+          "handle": "nos-waterfles-500ml"
+        },
+        {
+          "handle": "nos-waterfles-500ml-diamond-grey"
+        },
+        {
+          "handle": "nos-waterfles-500ml-emerald-green"
+        },
+        {
+          "handle": "nos-waterfles-500ml-fuel-yellow"
+        },
+        {
+          "handle": "nos-waterfles-500ml-furious-red"
+        },
+        {
+          "handle": "nos-waterfles-500ml-hot-pink"
+        },
+        {
+          "handle": "nos-waterfles-500ml-ice-white"
+        },
+        {
+          "handle": "nos-waterfles-500ml-jet-black"
+        },
+        {
+          "handle": "nos-waterfles-500ml-magnetic-purple"
+        },
+        {
+          "handle": "nos-waterfles-500ml-salmon-pink"
+        },
+        {
+          "handle": "nos-waterfles-500ml-sunset-orange"
+        },
+        {
+          "handle": "nos-waterfles-500ml-midnight-to-purple-fade"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-amber"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-apple"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-black-velvet"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-bubble-gum"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-cherry"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-flower"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-fresh-mint"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-leather"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-new-car"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-ocean-splash"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-odour-neutraliser"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-passion"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-pina-colada"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-strawberry"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-sweet"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-tonic"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-vanilla"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-fruit"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-cashmere"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-cappuccino"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-glass-bottle-vanilla"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-glass-bottle-new-car"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-glass-bottle-bamboo"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-glass-bottle-flower"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-metallic-cinnamon"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-metallic-ginger"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-metallic-cedarwood"
+        },
+        {
+          "handle": "little-joe-car-air-freshener-metallic-musk"
+        }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "endCursor": "eyJsYXN0X2lkIjoxMDI4MTc2MzExMTI1MSwibGFzdF92YWx1ZSI6MTAyODE3NjMxMTEyNTEsIm9mZnNldCI6Nzl9"
+      }
+    }
+  },
+  "extensions": {
+    "cost": {
+      "requestedQueryCost": 23
+    }
+  }
+}

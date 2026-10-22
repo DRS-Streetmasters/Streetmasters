@@ -1,9 +1,33 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { onMounted, onUnmounted, ref, watchEffect } from 'vue'
 import { beforeLaunch, isPreview, launchAt, openLaunchedSite } from './lib/launch'
+import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { setPageMeta } from './lib/seo'
 import LaunchView from './views/LaunchView.vue'
 
 const waitingForLaunch = ref(beforeLaunch && !isPreview)
+const route = useRoute()
+const { t } = useI18n()
+const pageCopy = {
+  home: ['home.hero.title', 'home.services.subtitle'],
+  diensten: ['servicesPage.header.title', 'servicesPage.header.subtitle'],
+  portfolio: ['portfolioPage.title', 'portfolioPage.subtitle'],
+  offerte: ['offerPage.header.title', 'offerPage.header.subtitle'],
+  about: ['aboutPage.title', 'aboutPage.subtitle'],
+  shop: ['shop.title', 'shop.design.intro'],
+  product: ['shop.label', 'shop.design.intro'],
+  cart: ['shop.cart', 'shop.emptyCartHint'],
+  account: ['shop.loginTitle', 'shop.loginText'],
+  'account-callback': ['shop.loginTitle', 'shop.loginText'],
+  'not-found': ['notFound.title', 'notFound.description'],
+}
+watchEffect(() => {
+  const keys = waitingForLaunch.value ? ['launch.heading', 'launch.description'] : pageCopy[route.name] || pageCopy.home
+  setPageMeta(t(keys[0]), t(keys[1]))
+  document.querySelector('link[rel="canonical"]').href = `https://streetmasters.be${waitingForLaunch.value ? '/' : route.path}`
+  document.querySelector('meta[name="robots"]').content = (isPreview && beforeLaunch) || ['cart', 'account', 'account-callback', 'not-found'].includes(route.name) ? 'noindex,follow' : 'index,follow'
+})
 let timer
 function checkLaunch() {
   if (Date.now() < launchAt) return

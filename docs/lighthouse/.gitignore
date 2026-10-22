@@ -1,0 +1,7 @@
+# Raw reports remain available locally; commit the compact report and inventory.
+before/
+after/
+intermediate/
+post-launch/
+*.log
+local-before/

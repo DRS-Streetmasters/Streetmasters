@@ -1,0 +1,5124 @@
+{
+  "date": "2026-10-22",
+  "scope": "90 mobiele Lighthouse-audits per volledige meetronde: launch, 6 hoofdpagina’s, 80 producten, winkelmand, account, callback. Queryvarianten zijn geen afzonderlijke canonieke pagina’s.",
+  "rows": [
+    {
+      "path": "/",
+      "name": "launch",
+      "before": {
+        "url": "https://streetmasters.be/",
+        "finalUrl": "https://streetmasters.be/",
+        "time": "2026-10-22T07:26:26.688Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 57,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 16307.582500000004,
+        "cls": 0.010954308150925553,
+        "bytes": 2764698,
+        "failures": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/",
+        "finalUrl": "http://127.0.0.1:4173/",
+        "time": "2026-10-22T07:32:43.294Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 100
+        },
+        "lcp": 3758.5775999999996,
+        "cls": 0.02032495632437561,
+        "bytes": 470083,
+        "failures": [
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/",
+      "name": "home",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/",
+        "time": "2026-10-22T07:25:31.205Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 55,
+          "accessibility": 86,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 15616.476000000002,
+        "cls": 0.0766853800680563,
+        "bytes": 15785613,
+        "failures": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "select-name",
+          "meta-description",
+          "agent-accessibility-tree",
+          "llms-txt",
+          "ard-schema",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/",
+        "time": "2026-10-22T07:32:54.031Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 81,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 4580.3253,
+        "cls": 0.07643347146824735,
+        "bytes": 2425084,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/diensten",
+      "name": "diensten",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/diensten",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/diensten",
+        "time": "2026-10-22T07:26:37.625Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 96,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 2283.766,
+        "cls": 0.025105041155947118,
+        "bytes": 14109647,
+        "failures": [
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/diensten",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/diensten",
+        "time": "2026-10-22T07:45:31.235Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 79,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 4803.6433,
+        "cls": 0.09350883910626845,
+        "bytes": 1855609,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/portfolio",
+      "name": "portfolio",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/portfolio",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/portfolio",
+        "time": "2026-10-22T07:26:50.087Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 95,
+          "accessibility": 90,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 2327.696,
+        "cls": 0.002246388824509957,
+        "bytes": 2765874,
+        "failures": [
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/portfolio",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/portfolio",
+        "time": "2026-10-22T07:33:16.597Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3677.8254,
+        "cls": 0.002246388824509957,
+        "bytes": 464413,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/offerte",
+      "name": "offerte",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/offerte",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/offerte",
+        "time": "2026-10-22T07:27:01.357Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 56,
+          "accessibility": 96,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 16626.148500000014,
+        "cls": 0.06635712747588912,
+        "bytes": 2765831,
+        "failures": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "color-contrast",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/offerte",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/offerte",
+        "time": "2026-10-22T07:33:27.450Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3903.5216,
+        "cls": 0.06635712747588912,
+        "bytes": 472567,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/about",
+      "name": "about",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/about",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/about",
+        "time": "2026-10-22T07:27:12.975Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 96,
+          "accessibility": 90,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 2274.765,
+        "cls": 0.002246388824509957,
+        "bytes": 2765839,
+        "failures": [
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/about",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/about",
+        "time": "2026-10-22T07:33:38.320Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 93,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3003.3818,
+        "cls": 0.002246388824509957,
+        "bytes": 464536,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop",
+      "name": "shop",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop",
+        "time": "2026-10-22T07:27:24.189Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 67,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10425.082999999997,
+        "cls": 0.07627792402215172,
+        "bytes": 3070164,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop",
+        "time": "2026-10-22T07:33:49.002Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 90,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3304.698900000001,
+        "cls": 0.03541394684692888,
+        "bytes": 766841,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/winkelmand",
+      "name": "winkelmand",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/winkelmand",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/winkelmand",
+        "time": "2026-10-22T07:27:39.536Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 90,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 3575.3525,
+        "cls": 0.021493211011722847,
+        "bytes": 1447891,
+        "failures": [
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/winkelmand",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/winkelmand",
+        "time": "2026-10-22T07:34:03.295Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 97,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 2283.27225,
+        "cls": 0.02096038521856991,
+        "bytes": 321350,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/account",
+      "name": "account",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/account",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/account",
+        "time": "2026-10-22T07:27:50.923Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 79,
+          "accessibility": 90,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 4330.522,
+        "cls": 0.03560379264016438,
+        "bytes": 1456728,
+        "failures": [
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/account",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/account",
+        "time": "2026-10-22T07:34:14.059Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 92,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3077.9204999999997,
+        "cls": 0.03420973813983243,
+        "bytes": 329798,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/account/callback",
+      "name": "account--callback",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/account/callback",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/account/callback",
+        "time": "2026-10-22T07:28:02.443Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 3388.2140000000004,
+        "cls": 0.0032670312000935373,
+        "bytes": 1454940,
+        "failures": [
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/account/callback",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/account/callback",
+        "time": "2026-10-22T07:34:24.772Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 97,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 2285.993,
+        "cls": 0.01706741906569705,
+        "bytes": 327355,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-autogeur-blauw",
+      "name": "shop--nos-autogeur-blauw",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-blauw",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-blauw",
+        "time": "2026-10-22T07:28:13.607Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 65,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10060.4825,
+        "cls": 0.15235588601863576,
+        "bytes": 1753067,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-blauw",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-blauw",
+        "time": "2026-10-22T07:34:35.413Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3641.51843,
+        "cls": 0.002246388824509957,
+        "bytes": 626027,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-autogeur-rood",
+      "name": "shop--nos-autogeur-rood",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-rood",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-rood",
+        "time": "2026-10-22T07:28:25.010Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 56,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 12781.735499999999,
+        "cls": 0,
+        "bytes": 1763635,
+        "failures": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "lcp-breakdown-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-rood",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-rood",
+        "time": "2026-10-22T07:34:46.360Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3758.0076,
+        "cls": 0.002246388824509957,
+        "bytes": 637023,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-autogeur-paars",
+      "name": "shop--nos-autogeur-paars",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-paars",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-paars",
+        "time": "2026-10-22T07:28:38.369Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 65,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10042.3825,
+        "cls": 0.15235588601863576,
+        "bytes": 1767243,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-paars",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-paars",
+        "time": "2026-10-22T07:34:57.342Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3671.3298400000003,
+        "cls": 0.002246388824509957,
+        "bytes": 639693,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-autogeur-zwart",
+      "name": "shop--nos-autogeur-zwart",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-zwart",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-zwart",
+        "time": "2026-10-22T07:28:49.955Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 65,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10216.117,
+        "cls": 0.15235588601863576,
+        "bytes": 1805666,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-zwart",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-zwart",
+        "time": "2026-10-22T07:35:08.471Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3655.8459500000004,
+        "cls": 0.002246388824509957,
+        "bytes": 679046,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-autogeur-goud",
+      "name": "shop--nos-autogeur-goud",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-goud",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-goud",
+        "time": "2026-10-22T07:29:01.458Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 65,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10227.5435,
+        "cls": 0.15235588601863576,
+        "bytes": 1805648,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-goud",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-goud",
+        "time": "2026-10-22T07:35:19.887Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3754.8947000000003,
+        "cls": 0.002246388824509957,
+        "bytes": 679102,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-autogeur-zilver",
+      "name": "shop--nos-autogeur-zilver",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-zilver",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-zilver",
+        "time": "2026-10-22T07:29:13.008Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 64,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10070.241,
+        "cls": 0.1663349250461769,
+        "bytes": 1805683,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-zilver",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-zilver",
+        "time": "2026-10-22T07:35:32.706Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3652.0527000000006,
+        "cls": 0.002246388824509957,
+        "bytes": 679024,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/zena-car-air-freshener-vanilla",
+      "name": "shop--zena-car-air-freshener-vanilla",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-vanilla",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-vanilla",
+        "time": "2026-10-22T07:29:25.037Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10040.914499999999,
+        "cls": 0.20273241555598015,
+        "bytes": 1669308,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-vanilla",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-vanilla",
+        "time": "2026-10-22T07:35:44.521Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3803.6880199999996,
+        "cls": 0.002246388824509957,
+        "bytes": 542237,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/zena-car-air-freshener-cedar-wood",
+      "name": "shop--zena-car-air-freshener-cedar-wood",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-cedar-wood",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-cedar-wood",
+        "time": "2026-10-22T07:29:36.543Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9920.737000000001,
+        "cls": 0.20273241555598015,
+        "bytes": 1669419,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-cedar-wood",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-cedar-wood",
+        "time": "2026-10-22T07:35:56.153Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3800.3059300000004,
+        "cls": 0.002246388824509957,
+        "bytes": 542209,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/zena-car-air-freshener-fruit",
+      "name": "shop--zena-car-air-freshener-fruit",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-fruit",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-fruit",
+        "time": "2026-10-22T07:29:48.101Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 56,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10246.646,
+        "cls": 0.002246388824509957,
+        "bytes": 1669392,
+        "failures": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "lcp-breakdown-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-fruit",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-fruit",
+        "time": "2026-10-22T07:36:07.713Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3686.4330099999997,
+        "cls": 0.002246388824509957,
+        "bytes": 541796,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/zena-car-air-freshener-gold-digger",
+      "name": "shop--zena-car-air-freshener-gold-digger",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-gold-digger",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-gold-digger",
+        "time": "2026-10-22T07:30:01.477Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10083.6195,
+        "cls": 0.20273241555598015,
+        "bytes": 1669355,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-gold-digger",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-gold-digger",
+        "time": "2026-10-22T07:36:18.938Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3790.5451,
+        "cls": 0.002246388824509957,
+        "bytes": 541490,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/zena-car-air-freshener-new-car",
+      "name": "shop--zena-car-air-freshener-new-car",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-new-car",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/zena-car-air-freshener-new-car",
+        "time": "2026-10-22T07:30:13.025Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10095.027999999998,
+        "cls": 0.20273241555598015,
+        "bytes": 1669333,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-new-car",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/zena-car-air-freshener-new-car",
+        "time": "2026-10-22T07:36:29.991Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3818.6753400000002,
+        "cls": 0.002246388824509957,
+        "bytes": 541756,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/hervulling-nos-autogeurtje",
+      "name": "shop--hervulling-nos-autogeurtje",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/hervulling-nos-autogeurtje",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/hervulling-nos-autogeurtje",
+        "time": "2026-10-22T07:30:24.225Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 65,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10017.4855,
+        "cls": 0.16331806244988256,
+        "bytes": 1730110,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/hervulling-nos-autogeurtje",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/hervulling-nos-autogeurtje",
+        "time": "2026-10-22T07:36:41.097Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3695.2330549999997,
+        "cls": 0.002246388824509957,
+        "bytes": 602514,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-autogeur-roze",
+      "name": "shop--nos-autogeur-roze",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-roze",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-autogeur-roze",
+        "time": "2026-10-22T07:30:35.514Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 65,
+          "accessibility": 92,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9877.9425,
+        "cls": 0.15235588601863576,
+        "bytes": 1777399,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-roze",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-autogeur-roze",
+        "time": "2026-10-22T07:36:51.996Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3518.9437099999996,
+        "cls": 0.002246388824509957,
+        "bytes": 649853,
+        "failures": [
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshner-paper-black-velvet",
+      "name": "shop--little-joe-car-air-freshner-paper-black-velvet",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshner-paper-black-velvet",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshner-paper-black-velvet",
+        "time": "2026-10-22T07:30:47.084Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9969.654,
+        "cls": 0.20273241555598015,
+        "bytes": 1713367,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshner-paper-black-velvet",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshner-paper-black-velvet",
+        "time": "2026-10-22T07:37:02.967Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3695.54107,
+        "cls": 0.002246388824509957,
+        "bytes": 586712,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-paper-cherry",
+      "name": "shop--little-joe-car-air-freshener-paper-cherry",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-cherry",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-cherry",
+        "time": "2026-10-22T07:30:58.403Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9900.662499999999,
+        "cls": 0.20273241555598015,
+        "bytes": 1715576,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-cherry",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-cherry",
+        "time": "2026-10-22T07:37:14.462Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3705.40046,
+        "cls": 0,
+        "bytes": 588032,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-paper-citrus",
+      "name": "shop--little-joe-car-air-freshener-paper-citrus",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-citrus",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-citrus",
+        "time": "2026-10-22T07:31:09.910Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10040.894499999999,
+        "cls": 0.20273241555598015,
+        "bytes": 1724229,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-citrus",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-citrus",
+        "time": "2026-10-22T07:37:26.340Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3672.0823500000006,
+        "cls": 0.002246388824509957,
+        "bytes": 595741,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-paper-flower",
+      "name": "shop--little-joe-car-air-freshener-paper-flower",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-flower",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-flower",
+        "time": "2026-10-22T07:31:21.355Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10164.9235,
+        "cls": 0.20273241555598015,
+        "bytes": 1712424,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-flower",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-flower",
+        "time": "2026-10-22T07:37:37.263Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3788.5318500000003,
+        "cls": 0.002246388824509957,
+        "bytes": 585176,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-paper-green-tea",
+      "name": "shop--little-joe-car-air-freshener-paper-green-tea",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-green-tea",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-green-tea",
+        "time": "2026-10-22T07:31:32.690Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10031.7245,
+        "cls": 0.20273241555598015,
+        "bytes": 1722833,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-green-tea",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-green-tea",
+        "time": "2026-10-22T07:37:48.124Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3787.4055499999995,
+        "cls": 0.002246388824509957,
+        "bytes": 596155,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-paper-new-car",
+      "name": "shop--little-joe-car-air-freshener-paper-new-car",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-new-car",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-new-car",
+        "time": "2026-10-22T07:31:44.243Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10072.648000000001,
+        "cls": 0.20273241555598015,
+        "bytes": 1702623,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-new-car",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-new-car",
+        "time": "2026-10-22T07:37:59.077Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3634.71677,
+        "cls": 0.002246388824509957,
+        "bytes": 575077,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-paper-ocean",
+      "name": "shop--little-joe-car-air-freshener-paper-ocean",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-ocean",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-ocean",
+        "time": "2026-10-22T07:31:55.770Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10111.189999999999,
+        "cls": 0.20273241555598015,
+        "bytes": 1723377,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-ocean",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-ocean",
+        "time": "2026-10-22T07:38:10.177Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3684.9316200000003,
+        "cls": 0.002246388824509957,
+        "bytes": 595751,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-paper-vanilla",
+      "name": "shop--little-joe-car-air-freshener-paper-vanilla",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-vanilla",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-paper-vanilla",
+        "time": "2026-10-22T07:32:07.262Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10034.2395,
+        "cls": 0.20273241555598015,
+        "bytes": 1705863,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-vanilla",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-paper-vanilla",
+        "time": "2026-10-22T07:38:25.847Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3911.1683299999995,
+        "cls": 0.002246388824509957,
+        "bytes": 578305,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-black-velvet",
+      "name": "shop--little-joe-car-air-freshener-liquid-membrane-black-velvet",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-black-velvet",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-black-velvet",
+        "time": "2026-10-22T07:32:18.508Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10034.632000000001,
+        "cls": 0.20273241555598015,
+        "bytes": 1663357,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-black-velvet",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-black-velvet",
+        "time": "2026-10-22T07:38:40.079Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3809.437,
+        "cls": 0.002246388824509957,
+        "bytes": 535780,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-cherry",
+      "name": "shop--little-joe-car-air-freshener-liquid-membrane-cherry",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-cherry",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-cherry",
+        "time": "2026-10-22T07:32:30.044Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9884.836,
+        "cls": 0.20273241555598015,
+        "bytes": 1657447,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-cherry",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-cherry",
+        "time": "2026-10-22T07:38:51.332Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3792.1317299999996,
+        "cls": 0.002246388824509957,
+        "bytes": 529884,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fresh-mint",
+      "name": "shop--little-joe-car-air-freshener-liquid-membrane-fresh-mint",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fresh-mint",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fresh-mint",
+        "time": "2026-10-22T07:32:41.557Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 60,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10035.2575,
+        "cls": 0.20273241555598015,
+        "bytes": 1672206,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fresh-mint",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fresh-mint",
+        "time": "2026-10-22T07:39:02.319Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3683.40187,
+        "cls": 0.002246388824509957,
+        "bytes": 544073,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fruits",
+      "name": "shop--little-joe-car-air-freshener-liquid-membrane-fruits",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fruits",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fruits",
+        "time": "2026-10-22T07:32:53.082Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10419.8,
+        "cls": 0.20273241555598015,
+        "bytes": 1665598,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fruits",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-fruits",
+        "time": "2026-10-22T07:39:14.125Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3714.00868,
+        "cls": 0.002246388824509957,
+        "bytes": 538525,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-new-car",
+      "name": "shop--little-joe-car-air-freshener-liquid-membrane-new-car",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-new-car",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-new-car",
+        "time": "2026-10-22T07:33:04.479Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10017.733499999998,
+        "cls": 0.20273241555598015,
+        "bytes": 1670161,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-new-car",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-new-car",
+        "time": "2026-10-22T07:39:25.324Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3709.0416099999993,
+        "cls": 0.002246388824509957,
+        "bytes": 542630,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-strawberry",
+      "name": "shop--little-joe-car-air-freshener-liquid-membrane-strawberry",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-strawberry",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-strawberry",
+        "time": "2026-10-22T07:33:15.814Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10169.73,
+        "cls": 0.20273241555598015,
+        "bytes": 1651869,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-strawberry",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-strawberry",
+        "time": "2026-10-22T07:39:36.542Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3641.11697,
+        "cls": 0.002246388824509957,
+        "bytes": 524448,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-vanilla",
+      "name": "shop--little-joe-car-air-freshener-liquid-membrane-vanilla",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-vanilla",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-vanilla",
+        "time": "2026-10-22T07:33:27.312Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9882.457,
+        "cls": 0.20273241555598015,
+        "bytes": 1653602,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-vanilla",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-liquid-membrane-vanilla",
+        "time": "2026-10-22T07:39:47.389Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3795.15077,
+        "cls": 0.002246388824509957,
+        "bytes": 526092,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-scented-card-cherry",
+      "name": "shop--little-joe-scented-card-cherry",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-cherry",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-cherry",
+        "time": "2026-10-22T07:33:38.808Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10024.557999999999,
+        "cls": 0.20273241555598015,
+        "bytes": 1622806,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-cherry",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-cherry",
+        "time": "2026-10-22T07:39:58.622Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3643.1795899999997,
+        "cls": 0.002246388824509957,
+        "bytes": 495286,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-scented-card-fresh-mint",
+      "name": "shop--little-joe-scented-card-fresh-mint",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-fresh-mint",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-fresh-mint",
+        "time": "2026-10-22T07:33:50.192Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9726.905999999999,
+        "cls": 0.20273241555598015,
+        "bytes": 1613203,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-fresh-mint",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-fresh-mint",
+        "time": "2026-10-22T07:40:09.628Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3519.67393,
+        "cls": 0.002246388824509957,
+        "bytes": 485697,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-scented-card-fruit",
+      "name": "shop--little-joe-scented-card-fruit",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-fruit",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-fruit",
+        "time": "2026-10-22T07:34:01.611Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 64,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9643.574499999999,
+        "cls": 0.20273241555598015,
+        "bytes": 1621732,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-fruit",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-fruit",
+        "time": "2026-10-22T07:40:20.499Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3637.2994999999996,
+        "cls": 0.002246388824509957,
+        "bytes": 494453,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-scented-card-lavender",
+      "name": "shop--little-joe-scented-card-lavender",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-lavender",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-lavender",
+        "time": "2026-10-22T07:34:13.142Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9874.685000000001,
+        "cls": 0.20273241555598015,
+        "bytes": 1612429,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-lavender",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-lavender",
+        "time": "2026-10-22T07:40:31.260Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3711.5812299999993,
+        "cls": 0.002246388824509957,
+        "bytes": 485721,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-scented-card-new-car",
+      "name": "shop--little-joe-scented-card-new-car",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-new-car",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-new-car",
+        "time": "2026-10-22T07:34:24.772Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9735.639,
+        "cls": 0.20273241555598015,
+        "bytes": 1606141,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-new-car",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-new-car",
+        "time": "2026-10-22T07:40:42.086Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3515.8875599999997,
+        "cls": 0.002246388824509957,
+        "bytes": 479109,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-scented-card-odour-neutraliser",
+      "name": "shop--little-joe-scented-card-odour-neutraliser",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-odour-neutraliser",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-odour-neutraliser",
+        "time": "2026-10-22T07:34:36.439Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10025.748,
+        "cls": 0.20273241555598015,
+        "bytes": 1607416,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-odour-neutraliser",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-odour-neutraliser",
+        "time": "2026-10-22T07:40:52.997Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3514.20653,
+        "cls": 0.002246388824509957,
+        "bytes": 480385,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-scented-card-vanilla",
+      "name": "shop--little-joe-scented-card-vanilla",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-vanilla",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-scented-card-vanilla",
+        "time": "2026-10-22T07:34:48.084Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9879.7795,
+        "cls": 0.20273241555598015,
+        "bytes": 1612776,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-vanilla",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-scented-card-vanilla",
+        "time": "2026-10-22T07:41:04.125Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3524.4507,
+        "cls": 0.002246388824509957,
+        "bytes": 486068,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/sphere-car-air-freshener-fruit-blast",
+      "name": "shop--sphere-car-air-freshener-fruit-blast",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-fruit-blast",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-fruit-blast",
+        "time": "2026-10-22T07:34:59.426Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10047.7715,
+        "cls": 0.20273241555598015,
+        "bytes": 1715334,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-fruit-blast",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-fruit-blast",
+        "time": "2026-10-22T07:41:15.635Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3673.8558999999996,
+        "cls": 0.002246388824509957,
+        "bytes": 588682,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/sphere-car-air-freshener-jungle-rain",
+      "name": "shop--sphere-car-air-freshener-jungle-rain",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-jungle-rain",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-jungle-rain",
+        "time": "2026-10-22T07:35:11.466Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10642.159499999998,
+        "cls": 0.20273241555598015,
+        "bytes": 1716121,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-jungle-rain",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-jungle-rain",
+        "time": "2026-10-22T07:41:27.705Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3805.402249999999,
+        "cls": 0.002246388824509957,
+        "bytes": 588547,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/sphere-car-air-freshener-lemon-storm",
+      "name": "shop--sphere-car-air-freshener-lemon-storm",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-lemon-storm",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-lemon-storm",
+        "time": "2026-10-22T07:35:23.147Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10217.6965,
+        "cls": 0.20273241555598015,
+        "bytes": 1715893,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-lemon-storm",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-lemon-storm",
+        "time": "2026-10-22T07:41:39.581Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3683.4396100000004,
+        "cls": 0.002246388824509957,
+        "bytes": 588676,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/sphere-car-air-freshener-ocean-splash",
+      "name": "shop--sphere-car-air-freshener-ocean-splash",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-ocean-splash",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-ocean-splash",
+        "time": "2026-10-22T07:35:35.585Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9909.17,
+        "cls": 0.20273241555598015,
+        "bytes": 1716141,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-ocean-splash",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-ocean-splash",
+        "time": "2026-10-22T07:41:51.157Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3652.823610000001,
+        "cls": 0.002246388824509957,
+        "bytes": 588561,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/sphere-car-air-freshener-spice-rush",
+      "name": "shop--sphere-car-air-freshener-spice-rush",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-spice-rush",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/sphere-car-air-freshener-spice-rush",
+        "time": "2026-10-22T07:35:48.105Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10056.0305,
+        "cls": 0.20273241555598015,
+        "bytes": 1716088,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-spice-rush",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/sphere-car-air-freshener-spice-rush",
+        "time": "2026-10-22T07:42:04.953Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3727.54956,
+        "cls": 0.002246388824509957,
+        "bytes": 588488,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml",
+      "name": "shop--nos-waterfles-500ml",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml",
+        "time": "2026-10-22T07:35:59.757Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10362.739,
+        "cls": 0.20273241555598015,
+        "bytes": 2077234,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml",
+        "time": "2026-10-22T07:42:17.318Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3958.932,
+        "cls": 0.002246388824509957,
+        "bytes": 949666,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-diamond-grey",
+      "name": "shop--nos-waterfles-500ml-diamond-grey",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-diamond-grey",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-diamond-grey",
+        "time": "2026-10-22T07:36:11.373Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10343.560000000001,
+        "cls": 0.20273241555598015,
+        "bytes": 2108471,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-diamond-grey",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-diamond-grey",
+        "time": "2026-10-22T07:42:29.723Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 84,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 4141.781,
+        "cls": 0.002246388824509957,
+        "bytes": 980926,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-emerald-green",
+      "name": "shop--nos-waterfles-500ml-emerald-green",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-emerald-green",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-emerald-green",
+        "time": "2026-10-22T07:36:22.833Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10475.013500000001,
+        "cls": 0.20273241555598015,
+        "bytes": 2076574,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-emerald-green",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-emerald-green",
+        "time": "2026-10-22T07:42:41.307Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 4081.5885000000003,
+        "cls": 0.002246388824509957,
+        "bytes": 949437,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-fuel-yellow",
+      "name": "shop--nos-waterfles-500ml-fuel-yellow",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-fuel-yellow",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-fuel-yellow",
+        "time": "2026-10-22T07:36:34.374Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 56,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 11736.456,
+        "cls": 0,
+        "bytes": 2077021,
+        "failures": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "lcp-breakdown-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-fuel-yellow",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-fuel-yellow",
+        "time": "2026-10-22T07:42:52.424Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3819.20349,
+        "cls": 0.002246388824509957,
+        "bytes": 949413,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-furious-red",
+      "name": "shop--nos-waterfles-500ml-furious-red",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-furious-red",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-furious-red",
+        "time": "2026-10-22T07:36:47.862Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10639.645499999999,
+        "cls": 0.20273241555598015,
+        "bytes": 2105087,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-furious-red",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-furious-red",
+        "time": "2026-10-22T07:43:03.560Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3982.6285,
+        "cls": 0.002246388824509957,
+        "bytes": 976419,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-hot-pink",
+      "name": "shop--nos-waterfles-500ml-hot-pink",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-hot-pink",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-hot-pink",
+        "time": "2026-10-22T07:36:59.340Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10691.186,
+        "cls": 0.20273241555598015,
+        "bytes": 2099406,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-hot-pink",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-hot-pink",
+        "time": "2026-10-22T07:43:14.597Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3966.8935000000006,
+        "cls": 0.002246388824509957,
+        "bytes": 971110,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-ice-white",
+      "name": "shop--nos-waterfles-500ml-ice-white",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-ice-white",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-ice-white",
+        "time": "2026-10-22T07:37:11.041Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10334.401,
+        "cls": 0.20273241555598015,
+        "bytes": 2099961,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-ice-white",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-ice-white",
+        "time": "2026-10-22T07:43:26.056Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3779.76225,
+        "cls": 0.002246388824509957,
+        "bytes": 972075,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-jet-black",
+      "name": "shop--nos-waterfles-500ml-jet-black",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-jet-black",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-jet-black",
+        "time": "2026-10-22T07:37:22.894Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10275.783,
+        "cls": 0.20273241555598015,
+        "bytes": 2075900,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-jet-black",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-jet-black",
+        "time": "2026-10-22T07:43:37.162Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3957.3745,
+        "cls": 0.002246388824509957,
+        "bytes": 948324,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-magnetic-purple",
+      "name": "shop--nos-waterfles-500ml-magnetic-purple",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-magnetic-purple",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-magnetic-purple",
+        "time": "2026-10-22T07:37:34.359Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10626.1445,
+        "cls": 0.20273241555598015,
+        "bytes": 2112547,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-magnetic-purple",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-magnetic-purple",
+        "time": "2026-10-22T07:43:48.238Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3972.1905000000006,
+        "cls": 0.002246388824509957,
+        "bytes": 983540,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-salmon-pink",
+      "name": "shop--nos-waterfles-500ml-salmon-pink",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-salmon-pink",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-salmon-pink",
+        "time": "2026-10-22T07:37:45.705Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 59,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10796.524500000001,
+        "cls": 0.20273241555598015,
+        "bytes": 2098307,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-salmon-pink",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-salmon-pink",
+        "time": "2026-10-22T07:43:59.066Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3945.6049999999996,
+        "cls": 0.002246388824509957,
+        "bytes": 970737,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-sunset-orange",
+      "name": "shop--nos-waterfles-500ml-sunset-orange",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-sunset-orange",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-sunset-orange",
+        "time": "2026-10-22T07:37:56.976Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10377.458999999999,
+        "cls": 0.20273241555598015,
+        "bytes": 2089611,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-sunset-orange",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-sunset-orange",
+        "time": "2026-10-22T07:44:09.875Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 4026.6749999999997,
+        "cls": 0.002246388824509957,
+        "bytes": 962062,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/nos-waterfles-500ml-midnight-to-purple-fade",
+      "name": "shop--nos-waterfles-500ml-midnight-to-purple-fade",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-midnight-to-purple-fade",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/nos-waterfles-500ml-midnight-to-purple-fade",
+        "time": "2026-10-22T07:38:08.327Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10490.4785,
+        "cls": 0.20273241555598015,
+        "bytes": 2097259,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-midnight-to-purple-fade",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/nos-waterfles-500ml-midnight-to-purple-fade",
+        "time": "2026-10-22T07:44:20.886Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 85,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 4098.5470000000005,
+        "cls": 0.002246388824509957,
+        "bytes": 970860,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-amber",
+      "name": "shop--little-joe-car-air-freshener-amber",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-amber",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-amber",
+        "time": "2026-10-22T07:38:25.100Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10061.891499999998,
+        "cls": 0.20273241555598015,
+        "bytes": 1633331,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "forced-reflow-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-amber",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-amber",
+        "time": "2026-10-22T07:44:31.955Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3787.6446499999993,
+        "cls": 0.002246388824509957,
+        "bytes": 506205,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-apple",
+      "name": "shop--little-joe-car-air-freshener-apple",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-apple",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-apple",
+        "time": "2026-10-22T07:38:38.913Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9890.2085,
+        "cls": 0.20273241555598015,
+        "bytes": 1639420,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-apple",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-apple",
+        "time": "2026-10-22T07:44:43.145Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3517.39621,
+        "cls": 0.002246388824509957,
+        "bytes": 511853,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-black-velvet",
+      "name": "shop--little-joe-car-air-freshener-black-velvet",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-black-velvet",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-black-velvet",
+        "time": "2026-10-22T07:38:50.767Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10038.035,
+        "cls": 0.20273241555598015,
+        "bytes": 1641685,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-black-velvet",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-black-velvet",
+        "time": "2026-10-22T07:44:54.070Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3513.76447,
+        "cls": 0.002246388824509957,
+        "bytes": 514115,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-bubble-gum",
+      "name": "shop--little-joe-car-air-freshener-bubble-gum",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-bubble-gum",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-bubble-gum",
+        "time": "2026-10-22T07:39:02.306Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9728.57,
+        "cls": 0.20273241555598015,
+        "bytes": 1613874,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-bubble-gum",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-bubble-gum",
+        "time": "2026-10-22T07:45:05.105Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3517.91893,
+        "cls": 0.002246388824509957,
+        "bytes": 486632,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-cherry",
+      "name": "shop--little-joe-car-air-freshener-cherry",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-cherry",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-cherry",
+        "time": "2026-10-22T07:39:14.342Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9877.5365,
+        "cls": 0.20273241555598015,
+        "bytes": 1655358,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-cherry",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-cherry",
+        "time": "2026-10-22T07:45:16.194Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3516.17217,
+        "cls": 0.002246388824509957,
+        "bytes": 527286,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-flower",
+      "name": "shop--little-joe-car-air-freshener-flower",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-flower",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-flower",
+        "time": "2026-10-22T07:39:26.195Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9924.748500000002,
+        "cls": 0.20273241555598015,
+        "bytes": 1634230,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-flower",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-flower",
+        "time": "2026-10-22T07:45:27.110Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3665.685,
+        "cls": 0.002246388824509957,
+        "bytes": 506645,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-fresh-mint",
+      "name": "shop--little-joe-car-air-freshener-fresh-mint",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-fresh-mint",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-fresh-mint",
+        "time": "2026-10-22T07:39:37.626Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10169.143,
+        "cls": 0.20273241555598015,
+        "bytes": 1637650,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-fresh-mint",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-fresh-mint",
+        "time": "2026-10-22T07:45:38.160Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3667.8778899999998,
+        "cls": 0.002246388824509957,
+        "bytes": 509490,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-leather",
+      "name": "shop--little-joe-car-air-freshener-leather",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-leather",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-leather",
+        "time": "2026-10-22T07:39:48.925Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9888.752,
+        "cls": 0.20273241555598015,
+        "bytes": 1620006,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-leather",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-leather",
+        "time": "2026-10-22T07:45:49.173Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 86,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3820.3611499999997,
+        "cls": 0.002246388824509957,
+        "bytes": 491982,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-new-car",
+      "name": "shop--little-joe-car-air-freshener-new-car",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-new-car",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-new-car",
+        "time": "2026-10-22T07:40:00.226Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10052.6525,
+        "cls": 0.20273241555598015,
+        "bytes": 1621230,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-new-car",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-new-car",
+        "time": "2026-10-22T07:45:59.976Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3637.7546599999996,
+        "cls": 0.002246388824509957,
+        "bytes": 494250,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-ocean-splash",
+      "name": "shop--little-joe-car-air-freshener-ocean-splash",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-ocean-splash",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-ocean-splash",
+        "time": "2026-10-22T07:40:11.590Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10033.735,
+        "cls": 0.20273241555598015,
+        "bytes": 1637070,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-ocean-splash",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-ocean-splash",
+        "time": "2026-10-22T07:46:10.991Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3713.47803,
+        "cls": 0.002246388824509957,
+        "bytes": 509201,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-odour-neutraliser",
+      "name": "shop--little-joe-car-air-freshener-odour-neutraliser",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-odour-neutraliser",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-odour-neutraliser",
+        "time": "2026-10-22T07:40:22.859Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10021.0245,
+        "cls": 0.20273241555598015,
+        "bytes": 1607611,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-odour-neutraliser",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-odour-neutraliser",
+        "time": "2026-10-22T07:46:22.035Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3636.6195200000006,
+        "cls": 0.002246388824509957,
+        "bytes": 479550,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-passion",
+      "name": "shop--little-joe-car-air-freshener-passion",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-passion",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-passion",
+        "time": "2026-10-22T07:40:34.044Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10213.3025,
+        "cls": 0.20273241555598015,
+        "bytes": 1619558,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-passion",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-passion",
+        "time": "2026-10-22T07:46:32.819Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3664.6533200000003,
+        "cls": 0.002246388824509957,
+        "bytes": 491419,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-pina-colada",
+      "name": "shop--little-joe-car-air-freshener-pina-colada",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-pina-colada",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-pina-colada",
+        "time": "2026-10-22T07:40:45.421Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 60,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9874.1555,
+        "cls": 0.2221566846370725,
+        "bytes": 1639602,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-pina-colada",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-pina-colada",
+        "time": "2026-10-22T07:46:43.720Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3514.1318400000005,
+        "cls": 0.002246388824509957,
+        "bytes": 511952,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-strawberry",
+      "name": "shop--little-joe-car-air-freshener-strawberry",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-strawberry",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-strawberry",
+        "time": "2026-10-22T07:40:56.558Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9963.182500000003,
+        "cls": 0.20273241555598015,
+        "bytes": 1638550,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-strawberry",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-strawberry",
+        "time": "2026-10-22T07:46:54.683Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3664.4472800000003,
+        "cls": 0.002246388824509957,
+        "bytes": 510174,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-sweet",
+      "name": "shop--little-joe-car-air-freshener-sweet",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-sweet",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-sweet",
+        "time": "2026-10-22T07:41:08.163Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 47,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9913.2463,
+        "cls": 0.20273241555598015,
+        "bytes": 1619567,
+        "failures": [
+          "first-contentful-paint",
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-sweet",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-sweet",
+        "time": "2026-10-22T07:47:05.581Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3515.73231,
+        "cls": 0.002246388824509957,
+        "bytes": 490008,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-tonic",
+      "name": "shop--little-joe-car-air-freshener-tonic",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-tonic",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-tonic",
+        "time": "2026-10-22T07:41:20.522Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10029.4575,
+        "cls": 0.20273241555598015,
+        "bytes": 1628672,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-tonic",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-tonic",
+        "time": "2026-10-22T07:47:16.533Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3788.72385,
+        "cls": 0.002246388824509957,
+        "bytes": 500240,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-vanilla",
+      "name": "shop--little-joe-car-air-freshener-vanilla",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-vanilla",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-vanilla",
+        "time": "2026-10-22T07:41:32.418Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10017.318,
+        "cls": 0.20273241555598015,
+        "bytes": 1639708,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-vanilla",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-vanilla",
+        "time": "2026-10-22T07:47:27.526Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3515.35037,
+        "cls": 0.002246388824509957,
+        "bytes": 511658,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-fruit",
+      "name": "shop--little-joe-car-air-freshener-fruit",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-fruit",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-fruit",
+        "time": "2026-10-22T07:41:43.986Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9874.739999999998,
+        "cls": 0.20273241555598015,
+        "bytes": 1646846,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-fruit",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-fruit",
+        "time": "2026-10-22T07:47:38.718Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3664.98812,
+        "cls": 0.002246388824509957,
+        "bytes": 518830,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-cashmere",
+      "name": "shop--little-joe-car-air-freshener-cashmere",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-cashmere",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-cashmere",
+        "time": "2026-10-22T07:41:55.903Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 60,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10580.090499999998,
+        "cls": 0.20273241555598015,
+        "bytes": 1607694,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-cashmere",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-cashmere",
+        "time": "2026-10-22T07:47:49.686Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3712.3463599999995,
+        "cls": 0.002246388824509957,
+        "bytes": 479623,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-cappuccino",
+      "name": "shop--little-joe-car-air-freshener-cappuccino",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-cappuccino",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-cappuccino",
+        "time": "2026-10-22T07:42:09.150Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9723.813999999998,
+        "cls": 0.20273241555598015,
+        "bytes": 1596204,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-cappuccino",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-cappuccino",
+        "time": "2026-10-22T07:48:00.588Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3517.5993199999994,
+        "cls": 0.002246388824509957,
+        "bytes": 468116,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-vanilla",
+      "name": "shop--little-joe-car-air-freshener-glass-bottle-vanilla",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-vanilla",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-vanilla",
+        "time": "2026-10-22T07:42:22.328Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 60,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9876.896,
+        "cls": 0.20273241555598015,
+        "bytes": 1629788,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-vanilla",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-vanilla",
+        "time": "2026-10-22T07:48:11.598Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3711.6490399999993,
+        "cls": 0.002246388824509957,
+        "bytes": 501724,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-new-car",
+      "name": "shop--little-joe-car-air-freshener-glass-bottle-new-car",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-new-car",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-new-car",
+        "time": "2026-10-22T07:42:33.844Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9872.2085,
+        "cls": 0.20273241555598015,
+        "bytes": 1626920,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-new-car",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-new-car",
+        "time": "2026-10-22T07:48:22.527Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3636.04102,
+        "cls": 0.002246388824509957,
+        "bytes": 498886,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-bamboo",
+      "name": "shop--little-joe-car-air-freshener-glass-bottle-bamboo",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-bamboo",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-bamboo",
+        "time": "2026-10-22T07:42:45.158Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10030.6195,
+        "cls": 0.20273241555598015,
+        "bytes": 1634556,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-bamboo",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-bamboo",
+        "time": "2026-10-22T07:48:33.451Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 89,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3528.2636799999996,
+        "cls": 0.002246388824509957,
+        "bytes": 506621,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-flower",
+      "name": "shop--little-joe-car-air-freshener-glass-bottle-flower",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-flower",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-flower",
+        "time": "2026-10-22T07:42:56.507Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 9918.788599999996,
+        "cls": 0.20273241555598015,
+        "bytes": 1637025,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-flower",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-glass-bottle-flower",
+        "time": "2026-10-22T07:48:44.354Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3663.5769,
+        "cls": 0.002246388824509957,
+        "bytes": 508297,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cinnamon",
+      "name": "shop--little-joe-car-air-freshener-metallic-cinnamon",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cinnamon",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cinnamon",
+        "time": "2026-10-22T07:43:07.809Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10178.5415,
+        "cls": 0.20273241555598015,
+        "bytes": 1647803,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cinnamon",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cinnamon",
+        "time": "2026-10-22T07:48:55.433Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3665.8669700000005,
+        "cls": 0.002246388824509957,
+        "bytes": 520844,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-metallic-ginger",
+      "name": "shop--little-joe-car-air-freshener-metallic-ginger",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-ginger",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-ginger",
+        "time": "2026-10-22T07:43:19.110Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10066.728,
+        "cls": 0.20273241555598015,
+        "bytes": 1672469,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-ginger",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-ginger",
+        "time": "2026-10-22T07:49:06.475Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3788.2507400000004,
+        "cls": 0.002246388824509957,
+        "bytes": 545420,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cedarwood",
+      "name": "shop--little-joe-car-air-freshener-metallic-cedarwood",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cedarwood",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cedarwood",
+        "time": "2026-10-22T07:43:30.350Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 61,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10043.266,
+        "cls": 0.20273241555598015,
+        "bytes": 1654373,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cedarwood",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-cedarwood",
+        "time": "2026-10-22T07:49:17.225Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 87,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3790.79371,
+        "cls": 0.002246388824509957,
+        "bytes": 526803,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    },
+    {
+      "path": "/dikkeseppe/shop/little-joe-car-air-freshener-metallic-musk",
+      "name": "shop--little-joe-car-air-freshener-metallic-musk",
+      "before": {
+        "url": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-musk",
+        "finalUrl": "https://streetmasters.be/dikkeseppe/shop/little-joe-car-air-freshener-metallic-musk",
+        "time": "2026-10-22T07:43:41.811Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 62,
+          "accessibility": 91,
+          "best-practices": 100,
+          "seo": 92
+        },
+        "lcp": 10221.896,
+        "cls": 0.20273241555598015,
+        "bytes": 1685217,
+        "failures": [
+          "largest-contentful-paint",
+          "color-contrast",
+          "label-content-name-mismatch",
+          "link-in-text-block",
+          "meta-description",
+          "bf-cache",
+          "cls-culprits-insight",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      },
+      "after": {
+        "url": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-musk",
+        "finalUrl": "http://127.0.0.1:4173/dikkeseppe/shop/little-joe-car-air-freshener-metallic-musk",
+        "time": "2026-10-22T07:49:28.157Z",
+        "version": "13.5.0",
+        "scores": {
+          "performance": 88,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69
+        },
+        "lcp": 3668.02705,
+        "cls": 0.002246388824509957,
+        "bytes": 557744,
+        "failures": [
+          "label-content-name-mismatch",
+          "is-crawlable",
+          "bf-cache",
+          "lcp-discovery-insight",
+          "network-dependency-tree-insight"
+        ],
+        "error": null
+      }
+    }
+  ],
+  "localBefore": {
+    "home": {
+      "url": "http://127.0.0.1:4174/dikkeseppe/",
+      "finalUrl": "http://127.0.0.1:4174/dikkeseppe/",
+      "time": "2026-10-22T07:41:02.139Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 57,
+        "accessibility": 86,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "lcp": 34903.55729999999,
+      "cls": 0.019896392552388134,
+      "bytes": 15779904,
+      "failures": [
+        "first-contentful-paint",
+        "largest-contentful-paint",
+        "interactive",
+        "color-contrast",
+        "link-in-text-block",
+        "select-name",
+        "meta-description",
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "diensten": {
+      "url": "http://127.0.0.1:4174/dikkeseppe/diensten",
+      "finalUrl": "http://127.0.0.1:4174/dikkeseppe/diensten",
+      "time": "2026-10-22T07:41:13.489Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 90,
+        "accessibility": 91,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "lcp": 3314.5645500000005,
+      "cls": 0.023713061593577868,
+      "bytes": 14103637,
+      "failures": [
+        "color-contrast",
+        "link-in-text-block",
+        "meta-description",
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "portfolio": {
+      "url": "http://127.0.0.1:4174/dikkeseppe/portfolio",
+      "finalUrl": "http://127.0.0.1:4174/dikkeseppe/portfolio",
+      "time": "2026-10-22T07:41:24.941Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 72,
+        "accessibility": 90,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "lcp": 9455.7171,
+      "cls": 0.002246388824509957,
+      "bytes": 2763594,
+      "failures": [
+        "largest-contentful-paint",
+        "color-contrast",
+        "link-in-text-block",
+        "meta-description",
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "offerte": {
+      "url": "http://127.0.0.1:4174/dikkeseppe/offerte",
+      "finalUrl": "http://127.0.0.1:4174/dikkeseppe/offerte",
+      "time": "2026-10-22T07:41:36.248Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 57,
+        "accessibility": 96,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "lcp": 16058.832299999995,
+      "cls": 0.01712336792181718,
+      "bytes": 2763577,
+      "failures": [
+        "first-contentful-paint",
+        "largest-contentful-paint",
+        "color-contrast",
+        "meta-description",
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "about": {
+      "url": "http://127.0.0.1:4174/dikkeseppe/about",
+      "finalUrl": "http://127.0.0.1:4174/dikkeseppe/about",
+      "time": "2026-10-22T07:41:48.029Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 71,
+        "accessibility": 90,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "lcp": 9681.060600000003,
+      "cls": 0.002246388824509957,
+      "bytes": 2763596,
+      "failures": [
+        "largest-contentful-paint",
+        "color-contrast",
+        "link-in-text-block",
+        "meta-description",
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "shop": {
+      "url": "http://127.0.0.1:4174/dikkeseppe/shop",
+      "finalUrl": "http://127.0.0.1:4174/dikkeseppe/shop",
+      "time": "2026-10-22T07:42:00.927Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 57,
+        "accessibility": 92,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "lcp": 16210.866799999983,
+      "cls": 0.03609605663806206,
+      "bytes": 3067759,
+      "failures": [
+        "first-contentful-paint",
+        "largest-contentful-paint",
+        "color-contrast",
+        "label-content-name-mismatch",
+        "link-in-text-block",
+        "meta-description",
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "shop--nos-autogeur-blauw": {
+      "url": "http://127.0.0.1:4174/dikkeseppe/shop/nos-autogeur-blauw",
+      "finalUrl": "http://127.0.0.1:4174/dikkeseppe/shop/nos-autogeur-blauw",
+      "time": "2026-10-22T07:42:19.415Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 67,
+        "accessibility": 92,
+        "best-practices": 100,
+        "seo": 92
+      },
+      "lcp": 10303.28385,
+      "cls": 0.15235588601863576,
+      "bytes": 1751908,
+      "failures": [
+        "largest-contentful-paint",
+        "color-contrast",
+        "link-in-text-block",
+        "meta-description",
+        "bf-cache",
+        "cls-culprits-insight",
+        "lcp-discovery-insight",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    }
+  },
+  "postLaunch": {
+    "home": {
+      "url": "http://127.0.0.1:4173/",
+      "finalUrl": "http://127.0.0.1:4173/",
+      "time": "2026-10-22T07:37:08.495Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 79,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 5185.635975000001,
+      "cls": 0,
+      "bytes": 2424571,
+      "failures": [
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "diensten": {
+      "url": "http://127.0.0.1:4173/diensten",
+      "finalUrl": "http://127.0.0.1:4173/diensten",
+      "time": "2026-10-22T07:38:17.457Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 84,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 4505.473099999999,
+      "cls": 0.025105041155947118,
+      "bytes": 1856071,
+      "failures": [
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "portfolio": {
+      "url": "http://127.0.0.1:4173/portfolio",
+      "finalUrl": "http://127.0.0.1:4173/portfolio",
+      "time": "2026-10-22T07:38:33.474Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 94,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 2853.3561999999997,
+      "cls": 0.002246388824509957,
+      "bytes": 464284,
+      "failures": [
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "offerte": {
+      "url": "http://127.0.0.1:4173/offerte",
+      "finalUrl": "http://127.0.0.1:4173/offerte",
+      "time": "2026-10-22T07:38:44.034Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 85,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3903.0245999999997,
+      "cls": 0.06635712747588912,
+      "bytes": 472439,
+      "failures": [
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "about": {
+      "url": "http://127.0.0.1:4173/about",
+      "finalUrl": "http://127.0.0.1:4173/about",
+      "time": "2026-10-22T07:38:54.137Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3603.6246,
+      "cls": 0.002246388824509957,
+      "bytes": 464410,
+      "failures": [
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "shop": {
+      "url": "http://127.0.0.1:4173/shop",
+      "finalUrl": "http://127.0.0.1:4173/shop",
+      "time": "2026-10-22T07:39:04.478Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 84,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 4203.393099999999,
+      "cls": 0.03541394684692888,
+      "bytes": 768518,
+      "failures": [
+        "label-content-name-mismatch",
+        "bf-cache",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    },
+    "shop--nos-autogeur-blauw": {
+      "url": "http://127.0.0.1:4173/shop/nos-autogeur-blauw",
+      "finalUrl": "http://127.0.0.1:4173/shop/nos-autogeur-blauw",
+      "time": "2026-10-22T07:39:17.917Z",
+      "version": "13.5.0",
+      "scores": {
+        "performance": 89,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "lcp": 3655.0256200000003,
+      "cls": 0.002246388824509957,
+      "bytes": 627719,
+      "failures": [
+        "bf-cache",
+        "lcp-discovery-insight",
+        "network-dependency-tree-insight"
+      ],
+      "error": null
+    }
+  }
+}

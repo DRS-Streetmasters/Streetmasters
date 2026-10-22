@@ -32,7 +32,7 @@ const { t } = useI18n()
       <a data-analytics-click="Offer Sidebar: Call" class="relative block font-headline text-xl font-bold text-primary transition-transform hover:scale-105 md:text-2xl" href="tel:+32469438702">
         +32 469 43 87 02
       </a>
-      <p class="relative mt-3 text-xs text-stone-500 md:mt-4 md:text-sm">{{ t('offerPage.sidebar.availability') }}</p>
+      <p class="relative mt-3 text-xs text-stone-400 md:mt-4 md:text-sm">{{ t('offerPage.sidebar.availability') }}</p>
     </div>
   </aside>
 </template>

@@ -23,13 +23,13 @@ onUnmounted(() => clearInterval(timer))
 <template>
   <main class="launch-screen relative isolate flex min-h-dvh flex-col items-center justify-center overflow-hidden bg-surface px-5 py-10 text-center font-body text-on-surface selection:bg-primary-container sm:px-8">
     <div class="absolute inset-0 -z-10" aria-hidden="true">
-      <img class="h-full w-full object-cover brightness-[.35]" :src="`${publicBase}image00001.jpeg`" alt="" />
+      <img class="h-full w-full object-cover brightness-[.35]" :src="`${publicBase}image00001.webp`" alt="" fetchpriority="high" />
       <div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/25 to-surface/60"></div>
       <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(113,4,216,0.16),transparent_70%)]"></div>
     </div>
 
     <div class="launch-logo relative mb-12 h-16 w-64 shrink-0 sm:mb-16 sm:w-72">
-      <img :src="`${publicBase}logo.png`" :alt="t('common.brand')" width="1920" height="1080" class="absolute top-1/2 left-0 w-full -translate-y-1/2" />
+      <img :src="`${publicBase}logo.webp`" :alt="t('common.brand')" width="1920" height="1080" class="absolute top-1/2 left-0 w-full -translate-y-1/2" />
     </div>
     <div class="w-full max-w-3xl">
       <p class="launch-eyebrow mb-5 text-xs font-semibold tracking-[.3em] text-purple-200 uppercase">{{ t('launch.eyebrow') }}</p>
@@ -49,10 +49,10 @@ onUnmounted(() => clearInterval(timer))
       <p class="launch-date mt-7 text-sm font-medium text-purple-200"><time datetime="2026-11-01T12:00:00+01:00">{{ t('launch.date') }}</time></p>
     </div>
     <div class="launch-footer mt-12 sm:mt-16">
-    <p class="text-[10px] tracking-[.24em] text-stone-500 uppercase">{{ t('launch.tagline') }}</p>
-    <p class="mt-3 text-[10px] leading-relaxed tracking-wide text-stone-500">
+    <p class="text-[10px] tracking-[.24em] text-stone-400 uppercase">{{ t('launch.tagline') }}</p>
+    <p class="mt-3 text-[10px] leading-relaxed tracking-wide text-stone-400">
       Designed and developed by
-      <a data-analytics-click="Launch: Developer Website" class="text-primary transition-colors hover:text-white" href="https://driesbielen.be" target="_blank" rel="noopener noreferrer">
+      <a data-analytics-click="Launch: Developer Website" class="text-primary underline underline-offset-2 transition-colors hover:text-white" href="https://driesbielen.be" target="_blank" rel="noopener noreferrer">
         Dries Bielen
       </a>
     </p>

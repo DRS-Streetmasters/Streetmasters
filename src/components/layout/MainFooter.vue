@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-const logoUrl = `${import.meta.env.BASE_URL}logo.png`
+const logoUrl = `${import.meta.env.BASE_URL}logo.webp`
 </script>
 
 <template>
@@ -13,17 +13,17 @@ const logoUrl = `${import.meta.env.BASE_URL}logo.png`
         <RouterLink data-analytics-click="Footer: Logo Home" to="/" class="relative block h-12 w-48 overflow-hidden md:h-14 md:w-60">
           <img :src="logoUrl" :alt="t('images.logoHome')" width="1920" height="1080" loading="lazy" class="absolute top-1/2 left-0 h-auto w-full -translate-y-1/2" />
         </RouterLink>
-        <p class="text-center font-body text-xs leading-relaxed text-stone-500 md:text-left md:text-sm">{{ t('common.footer.tagline') }}</p>
-        <p class="text-center font-body text-[10px] leading-relaxed tracking-wide text-stone-500 md:text-left md:text-xs">{{ t('common.footer.vat') }}</p>
-        <p class="text-center font-body text-[10px] leading-relaxed tracking-wide text-stone-500 md:text-left md:text-xs">
+        <p class="text-center font-body text-xs leading-relaxed text-stone-400 md:text-left md:text-sm">{{ t('common.footer.tagline') }}</p>
+        <p class="text-center font-body text-[10px] leading-relaxed tracking-wide text-stone-400 md:text-left md:text-xs">{{ t('common.footer.vat') }}</p>
+        <p class="text-center font-body text-[10px] leading-relaxed tracking-wide text-stone-400 md:text-left md:text-xs">
           Designed and developed by
-          <a data-analytics-click="Footer: Developer Website" class="text-primary transition-colors hover:text-white" href="https://driesbielen.be" target="_blank" rel="noopener noreferrer">
+          <a data-analytics-click="Footer: Developer Website" class="text-primary underline underline-offset-2 transition-colors hover:text-white" href="https://driesbielen.be" target="_blank" rel="noopener noreferrer">
             Dries Bielen
           </a>
         </p>
       </div>
 
-      <div class="text-center font-body text-[10px] text-stone-500 md:text-sm">{{ t('common.footer.copyright') }}</div>
+      <div class="text-center font-body text-[10px] text-stone-400 md:text-sm">{{ t('common.footer.copyright') }}</div>
     </div>
   </footer>
 </template>

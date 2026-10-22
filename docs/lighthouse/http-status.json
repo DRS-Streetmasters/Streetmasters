@@ -1,0 +1,447 @@
+[
+  {
+    "path": "/",
+    "status": 200,
+    "url": "https://streetmasters.be/"
+  },
+  {
+    "path": "/diensten",
+    "status": 200,
+    "url": "https://streetmasters.be/diensten"
+  },
+  {
+    "path": "/portfolio",
+    "status": 200,
+    "url": "https://streetmasters.be/portfolio"
+  },
+  {
+    "path": "/offerte",
+    "status": 200,
+    "url": "https://streetmasters.be/offerte"
+  },
+  {
+    "path": "/about",
+    "status": 200,
+    "url": "https://streetmasters.be/about"
+  },
+  {
+    "path": "/shop",
+    "status": 200,
+    "url": "https://streetmasters.be/shop"
+  },
+  {
+    "path": "/winkelmand",
+    "status": 200,
+    "url": "https://streetmasters.be/winkelmand"
+  },
+  {
+    "path": "/account",
+    "status": 200,
+    "url": "https://streetmasters.be/account"
+  },
+  {
+    "path": "/account/callback",
+    "status": 200,
+    "url": "https://streetmasters.be/account/callback"
+  },
+  {
+    "path": "/shop/nos-autogeur-blauw",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-autogeur-blauw"
+  },
+  {
+    "path": "/shop/nos-autogeur-rood",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-autogeur-rood"
+  },
+  {
+    "path": "/shop/nos-autogeur-paars",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-autogeur-paars"
+  },
+  {
+    "path": "/shop/nos-autogeur-zwart",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-autogeur-zwart"
+  },
+  {
+    "path": "/shop/nos-autogeur-goud",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-autogeur-goud"
+  },
+  {
+    "path": "/shop/nos-autogeur-zilver",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-autogeur-zilver"
+  },
+  {
+    "path": "/shop/zena-car-air-freshener-vanilla",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/zena-car-air-freshener-vanilla"
+  },
+  {
+    "path": "/shop/zena-car-air-freshener-cedar-wood",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/zena-car-air-freshener-cedar-wood"
+  },
+  {
+    "path": "/shop/zena-car-air-freshener-fruit",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/zena-car-air-freshener-fruit"
+  },
+  {
+    "path": "/shop/zena-car-air-freshener-gold-digger",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/zena-car-air-freshener-gold-digger"
+  },
+  {
+    "path": "/shop/zena-car-air-freshener-new-car",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/zena-car-air-freshener-new-car"
+  },
+  {
+    "path": "/shop/hervulling-nos-autogeurtje",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/hervulling-nos-autogeurtje"
+  },
+  {
+    "path": "/shop/nos-autogeur-roze",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-autogeur-roze"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshner-paper-black-velvet",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshner-paper-black-velvet"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-paper-cherry",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-paper-cherry"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-paper-citrus",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-paper-citrus"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-paper-flower",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-paper-flower"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-paper-green-tea",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-paper-green-tea"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-paper-new-car",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-paper-new-car"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-paper-ocean",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-paper-ocean"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-paper-vanilla",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-paper-vanilla"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-liquid-membrane-black-velvet",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-liquid-membrane-black-velvet"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-liquid-membrane-cherry",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-liquid-membrane-cherry"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-liquid-membrane-fresh-mint",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-liquid-membrane-fresh-mint"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-liquid-membrane-fruits",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-liquid-membrane-fruits"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-liquid-membrane-new-car",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-liquid-membrane-new-car"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-liquid-membrane-strawberry",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-liquid-membrane-strawberry"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-liquid-membrane-vanilla",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-liquid-membrane-vanilla"
+  },
+  {
+    "path": "/shop/little-joe-scented-card-cherry",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-scented-card-cherry"
+  },
+  {
+    "path": "/shop/little-joe-scented-card-fresh-mint",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-scented-card-fresh-mint"
+  },
+  {
+    "path": "/shop/little-joe-scented-card-fruit",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-scented-card-fruit"
+  },
+  {
+    "path": "/shop/little-joe-scented-card-lavender",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-scented-card-lavender"
+  },
+  {
+    "path": "/shop/little-joe-scented-card-new-car",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-scented-card-new-car"
+  },
+  {
+    "path": "/shop/little-joe-scented-card-odour-neutraliser",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-scented-card-odour-neutraliser"
+  },
+  {
+    "path": "/shop/little-joe-scented-card-vanilla",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-scented-card-vanilla"
+  },
+  {
+    "path": "/shop/sphere-car-air-freshener-fruit-blast",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/sphere-car-air-freshener-fruit-blast"
+  },
+  {
+    "path": "/shop/sphere-car-air-freshener-jungle-rain",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/sphere-car-air-freshener-jungle-rain"
+  },
+  {
+    "path": "/shop/sphere-car-air-freshener-lemon-storm",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/sphere-car-air-freshener-lemon-storm"
+  },
+  {
+    "path": "/shop/sphere-car-air-freshener-ocean-splash",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/sphere-car-air-freshener-ocean-splash"
+  },
+  {
+    "path": "/shop/sphere-car-air-freshener-spice-rush",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/sphere-car-air-freshener-spice-rush"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-diamond-grey",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-diamond-grey"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-emerald-green",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-emerald-green"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-fuel-yellow",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-fuel-yellow"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-furious-red",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-furious-red"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-hot-pink",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-hot-pink"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-ice-white",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-ice-white"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-jet-black",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-jet-black"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-magnetic-purple",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-magnetic-purple"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-salmon-pink",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-salmon-pink"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-sunset-orange",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-sunset-orange"
+  },
+  {
+    "path": "/shop/nos-waterfles-500ml-midnight-to-purple-fade",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/nos-waterfles-500ml-midnight-to-purple-fade"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-amber",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-amber"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-apple",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-apple"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-black-velvet",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-black-velvet"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-bubble-gum",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-bubble-gum"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-cherry",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-cherry"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-flower",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-flower"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-fresh-mint",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-fresh-mint"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-leather",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-leather"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-new-car",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-new-car"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-ocean-splash",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-ocean-splash"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-odour-neutraliser",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-odour-neutraliser"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-passion",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-passion"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-pina-colada",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-pina-colada"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-strawberry",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-strawberry"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-sweet",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-sweet"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-tonic",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-tonic"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-vanilla",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-vanilla"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-fruit",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-fruit"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-cashmere",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-cashmere"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-cappuccino",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-cappuccino"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-glass-bottle-vanilla",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-glass-bottle-vanilla"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-glass-bottle-new-car",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-glass-bottle-new-car"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-glass-bottle-bamboo",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-glass-bottle-bamboo"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-glass-bottle-flower",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-glass-bottle-flower"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-metallic-cinnamon",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-metallic-cinnamon"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-metallic-ginger",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-metallic-ginger"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-metallic-cedarwood",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-metallic-cedarwood"
+  },
+  {
+    "path": "/shop/little-joe-car-air-freshener-metallic-musk",
+    "status": 200,
+    "url": "https://streetmasters.be/shop/little-joe-car-air-freshener-metallic-musk"
+  }
+]

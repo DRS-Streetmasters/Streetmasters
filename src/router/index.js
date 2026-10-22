@@ -1,12 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { useCartStore } from '../stores/cart'
 import { routerBase } from '../lib/launch'
-import AboutView from '../views/AboutView.vue'
-import HomeView from '../views/HomeView.vue'
-import NotFoundView from '../views/NotFoundView.vue'
-import OfferView from '../views/OfferView.vue'
-import PortfolioView from '../views/PortfolioView.vue'
-import ServicesView from '../views/ServicesView.vue'
 
 const router = createRouter({
   history: createWebHistory(routerBase),
@@ -39,32 +33,32 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView,
+      component: () => import('../views/HomeView.vue'),
     },
     {
       path: '/diensten',
       name: 'diensten',
-      component: ServicesView,
+      component: () => import('../views/ServicesView.vue'),
     },
     {
       path: '/portfolio',
       name: 'portfolio',
-      component: PortfolioView,
+      component: () => import('../views/PortfolioView.vue'),
     },
     {
       path: '/offerte',
       name: 'offerte',
-      component: OfferView,
+      component: () => import('../views/OfferView.vue'),
     },
     {
       path: '/about',
       name: 'about',
-      component: AboutView,
+      component: () => import('../views/AboutView.vue'),
     },
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
-      component: NotFoundView,
+      component: () => import('../views/NotFoundView.vue'),
     },
   ],
 })

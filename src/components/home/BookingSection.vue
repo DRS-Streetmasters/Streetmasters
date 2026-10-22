@@ -37,20 +37,20 @@ const { t } = useI18n()
         <div class="ghost-border relative rounded-xl bg-surface p-6 md:p-10">
           <form class="space-y-6 md:space-y-8">
             <div>
-              <label class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
+              <label for="booking-model" class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
                 {{ t('home.booking.model') }}
               </label>
-              <input data-analytics-focus="Booking: Car Model Focused"
+              <input id="booking-model" data-analytics-focus="Booking: Car Model Focused"
                 class="w-full border-b border-outline-variant/30 bg-transparent pb-2 font-headline text-base text-white outline-none focus:border-primary md:pb-1 md:text-lg"
                 :placeholder="t('home.booking.modelPlaceholder')"
                 type="text"
               />
             </div>
             <div>
-              <label class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
+              <label for="booking-service" class="mb-2 block font-label text-[9px] font-bold tracking-widest text-on-surface-variant uppercase md:text-[10px]">
                 {{ t('home.booking.serviceType') }}
               </label>
-              <select data-analytics-change="Booking: Service Changed"
+              <select id="booking-service" data-analytics-change="Booking: Service Changed"
                 class="w-full appearance-none border-b border-outline-variant/30 bg-transparent pb-2 font-headline text-base text-white outline-none focus:border-primary md:pb-1 md:text-lg"
               >
                 <option

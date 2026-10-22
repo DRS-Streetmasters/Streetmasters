@@ -1,4 +1,5 @@
 <script setup>
+import { setPageMeta } from '../lib/seo'
 import { trackEvent } from '../lib/analytics'
 import { computed, ref, watch } from 'vue'
 import { RouterLink, useRoute } from 'vue-router'
@@ -42,6 +43,7 @@ async function load() {
     const result = await getProduct(route.params.handle, locale.value.toUpperCase())
     if (current !== request) return
     product.value = result
+    if (result) setPageMeta(result.title, result.description || `${result.title} — ${t('shop.design.intro')}`)
     variantId.value = result?.variants.nodes.find(item => item.availableForSale)?.id || result?.variants.nodes[0]?.id || ''
     if (result) getRecommendations(result.id, locale.value.toUpperCase()).then(items => { if (current === request) recommendations.value = items.slice(0, 4) }).catch(() => {})
   } catch { if (current === request) error.value = true }
@@ -64,14 +66,14 @@ watch([() => route.params.handle, locale], load, { immediate: true })
 <template>
   <ShopLayout>
     <RouterLink data-analytics-click="Product: Back Shop" class="mb-8 inline-flex items-center gap-2 text-sm text-primary" to="/shop"><span aria-hidden="true">←</span>{{ t('shop.backShop') }}</RouterLink>
-    <p v-if="loading" role="status">{{ t('shop.loading') }}</p>
+    <p v-if="loading" class="min-h-screen" role="status">{{ t('shop.loading') }}</p>
     <div v-else-if="error" role="alert"><p>{{ t('shop.errors.connection') }}</p><AppButton data-analytics-click="Product: Retry" class="mt-4" @click="load">{{ t('shop.retry') }}</AppButton></div>
     <h1 v-else-if="!product" class="text-3xl font-bold">{{ t('shop.productMissing') }}</h1>
     <template v-else>
       <div class="grid gap-10 lg:grid-cols-2 lg:gap-16">
         <div>
           <div class="aspect-square overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-            <img v-if="currentImage" :src="currentImage.url" :alt="currentImage.altText || product.title" class="h-full w-full object-contain" />
+            <img v-if="currentImage" :src="currentImage.url" fetchpriority="high" :alt="currentImage.altText || product.title" class="h-full w-full object-contain" />
           </div>
           <div v-if="product.images.nodes.length > 1" class="mt-4 flex gap-3 overflow-x-auto p-1">
             <button data-analytics-click="Product: Select Image" v-for="(item, index) in product.images.nodes" :key="item.url" class="h-20 w-20 shrink-0 overflow-hidden rounded-xl border" :class="index === imageIndex ? 'border-primary' : 'border-white/10'" :aria-label="t('images.productImage', { product: product.title, number: index + 1 })" :aria-pressed="index === imageIndex" @click="imageIndex = index"><img :src="item.url" alt="" class="h-full w-full object-contain" loading="lazy" /></button>

@@ -7,7 +7,7 @@ import { useCartStore } from '../../stores/cart'
 import ShopNavMenu from './ShopNavMenu.vue'
 import AppLinkButton from '../ui/AppLinkButton.vue'
 
-const logoUrl = `${import.meta.env.BASE_URL}logo.png`
+const logoUrl = `${import.meta.env.BASE_URL}logo.webp`
 const route = useRoute()
 const cart = useCartStore()
 const mobileMenuOpen = ref(false)

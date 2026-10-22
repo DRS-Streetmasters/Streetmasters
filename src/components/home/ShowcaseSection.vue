@@ -34,7 +34,7 @@ const publicBase = import.meta.env.BASE_URL
         <img
           :alt="t('images.interiorAfter')"
           class="absolute inset-0 h-full w-full object-cover"
-          :src="`${publicBase}image00013.jpeg`"
+          :src="`${publicBase}image00013.webp`"
           loading="lazy"
           draggable="false"
         />
@@ -42,7 +42,7 @@ const publicBase = import.meta.env.BASE_URL
           <img
             :alt="t('images.interiorBefore')"
             class="h-full w-full object-cover"
-            :src="`${publicBase}image00011.jpeg`"
+            :src="`${publicBase}image00011.webp`"
             loading="lazy"
             draggable="false"
           />

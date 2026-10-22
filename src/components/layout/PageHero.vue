@@ -1,7 +1,7 @@
 <script setup>
 import ScrollCue from '../ui/ScrollCue.vue'
 defineProps({ label: String, title: { type: String, required: true }, description: String, target: { type: String, required: true } })
-const imageUrl = `${import.meta.env.BASE_URL}image00001.jpeg`
+const imageUrl = `${import.meta.env.BASE_URL}image00001.webp`
 </script>
 
 <template>

@@ -29,10 +29,12 @@ test('live catalog, product, persistent cart, quantities, discounts and checkout
   await page.getByRole('button', { name: 'Opmerking opslaan' }).click()
   await expect(page.getByText('Opgeslagen.', { exact: true })).toBeVisible()
   let checkoutUrl
-  await page.route('https://shop.streetmasters.be/**', route => { checkoutUrl = route.request().url(); route.abort() })
+  await page.route('https://shop.streetmasters.be/**', route => { checkoutUrl = route.request().url(); route.fulfill({ contentType: 'text/html', body: '<!doctype html><title>Checkout intercepted</title>' }) })
   await page.getByRole('button', { name: 'Veilig afrekenen', exact: true }).click()
   await expect.poll(() => checkoutUrl).toBeTruthy()
   expect(new URL(checkoutUrl).protocol).toBe('https:')
+  // Wait for the intercepted navigation to commit before returning to the app.
+  await expect(page).toHaveTitle('Checkout intercepted')
   // Return to the app and empty the test cart.
   await page.goto('/winkelmand')
   await page.locator('article').getByRole('button', { name: 'Verwijderen' }).click()

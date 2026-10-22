@@ -27,7 +27,7 @@ const { t } = useI18n()
           class="group relative overflow-hidden rounded-3xl border border-white/5 aspect-[4/5] sm:aspect-[3/4]"
           :class="index === 2 ? 'sm:col-span-2 md:col-span-1' : ''"
         >
-          <img
+          <img loading="lazy" decoding="async"
             :alt="t(`images.${service.id}`)"
             :src="service.image"
             class="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-110"

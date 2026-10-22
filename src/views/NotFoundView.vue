@@ -14,7 +14,7 @@ const publicBase = import.meta.env.BASE_URL
 
     <main class="relative flex min-h-[100dvh] items-center overflow-hidden">
       <div class="absolute inset-0" aria-hidden="true">
-        <img class="h-full w-full object-cover brightness-50" :src="`${publicBase}image00001.jpeg`" alt="" />
+        <img class="h-full w-full object-cover brightness-50" :src="`${publicBase}image00001.webp`" alt="" />
         <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
       </div>
 

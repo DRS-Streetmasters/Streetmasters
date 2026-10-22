@@ -96,7 +96,7 @@ onUnmounted(() => {
     <template #hero><ShopHero /><ShopCategories :collections="collections" /></template>
     <section id="shop-products" class="scroll-mt-28">
       <div class="mb-8 flex flex-col justify-between gap-5 xl:flex-row xl:items-center">
-        <div><p class="text-xs font-bold tracking-[.2em] text-primary uppercase">{{ t('shop.shop') }}</p><h2 class="mt-2 font-headline text-2xl font-bold md:text-3xl">{{ t('shop.all') }} <span class="ml-3 text-xs font-normal tracking-wide text-neutral-500">{{ t('shop.design.shown', { count: sortedProducts.length }) }}</span></h2></div>
+        <div><p class="text-xs font-bold tracking-[.2em] text-primary uppercase">{{ t('shop.shop') }}</p><h2 class="mt-2 font-headline text-2xl font-bold md:text-3xl">{{ t('shop.all') }} <span class="ml-3 text-xs font-normal tracking-wide text-neutral-400">{{ t('shop.design.shown', { count: sortedProducts.length }) }}</span></h2></div>
         <form data-analytics-submit="Shop: Search Products Submitted" class="shop-search flex w-full items-center gap-2 rounded-2xl border border-white/15 bg-surface-container-low p-2 transition-colors focus-within:border-primary/70 focus-within:ring-3 focus-within:ring-primary/10 xl:max-w-xl" role="search" @submit.prevent="searchProducts">
           <span class="material-symbols-outlined ml-2 hidden text-primary sm:block" aria-hidden="true">search</span>
           <label for="shop-search" class="sr-only">{{ t('shop.search') }}</label>

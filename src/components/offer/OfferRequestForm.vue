@@ -146,7 +146,7 @@ const submitForm = async () => {
         <span class="material-symbols-outlined text-7xl md:text-8xl">directions_car</span>
       </div>
       <div class="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
-        <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">01</span>
+        <span class="font-headline text-2xl font-bold text-primary md:text-3xl">01</span>
         <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step1') }}</h2>
       </div>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
@@ -181,7 +181,7 @@ const submitForm = async () => {
 
       <div class="sticky top-0 z-10 bg-surface-container-low/95 pb-5 backdrop-blur-sm">
         <div class="mb-5 flex items-center gap-3 md:gap-4">
-          <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">02</span>
+          <span class="font-headline text-2xl font-bold text-primary md:text-3xl">02</span>
           <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step2') }}</h2>
         </div>
 
@@ -232,7 +232,7 @@ const submitForm = async () => {
         <span class="material-symbols-outlined text-7xl md:text-8xl">contact_mail</span>
       </div>
       <div class="mb-6 flex items-center gap-3 md:mb-8 md:gap-4">
-        <span class="font-headline text-2xl font-bold text-primary/30 md:text-3xl">03</span>
+        <span class="font-headline text-2xl font-bold text-primary md:text-3xl">03</span>
         <h2 class="font-headline text-lg font-bold tracking-tight uppercase md:text-xl">{{ t('offerPage.form.step4') }}</h2>
       </div>
       <div class="mb-8 grid grid-cols-1 gap-6 md:mb-12 md:grid-cols-2 md:gap-8">
