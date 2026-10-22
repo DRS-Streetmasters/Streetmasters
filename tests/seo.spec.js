@@ -21,6 +21,6 @@ test('metadata follows launch, navigation, products and language without leaking
   await page.goto('/about')
   await expect(page).toHaveTitle('Who Is Streetmasters? | Streetmasters')
   await expect(page.locator('html')).toHaveAttribute('lang', 'en')
-  await page.goto('/account')
+  await page.goto('/winkelmand')
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex,follow')
 })

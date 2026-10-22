@@ -62,8 +62,9 @@ test('search, collection and sorting use real Shopify results', async ({ page })
 
 test('mobile navigation and all public screens fit the viewport', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 812 })
-  for (const path of ['/', '/shop', '/winkelmand', '/account', '/not-found-test']) {
+  for (const path of ['/', '/shop', '/winkelmand', '/account', '/account/callback', '/not-found-test']) {
     await page.goto(path)
+    await expect(page.locator('a[href*="/account"]')).toHaveCount(0)
     await expect(page.locator('nav a[href="/winkelmand"]')).toBeVisible()
     await expect.poll(() => page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
   }
@@ -73,15 +74,12 @@ test('mobile navigation and all public screens fit the viewport', async ({ page 
   await expect(page).toHaveURL(/\/shop$/)
 })
 
-test('connection failures and invalid login callbacks show recoverable errors', async ({ page }) => {
+test('connection failures show recoverable errors', async ({ page }) => {
   await page.route('**/api/2026-07/graphql.json', route => route.fulfill({ status: 503, contentType: 'application/json', body: '{}' }))
   await page.goto('/shop')
   await expect(page.getByRole('alert')).toContainText('verbinding')
   await expect(page.locator('#shop-products').getByRole('button', { name: 'Opnieuw proberen' })).toBeVisible()
-  await page.goto('/account/callback?code=untrusted&state=invalid')
-  await expect(page.getByRole('alert')).toContainText('Inloggen is niet gelukt')
-  await expect(page).toHaveURL(/\/account\/callback$/)
-  await expect(page.getByRole('link', { name: 'Opnieuw proberen' })).toBeVisible()
+
 })
 
 
@@ -107,48 +105,6 @@ test('shared heroes have working scroll cues and dropdown keyboard controls', as
   await page.keyboard.press('Escape')
   await expect(select).toHaveAttribute('aria-expanded', 'false')
 })
-
-test('signed login callback validates nonce and loads editable account data (mocked Shopify)', async ({ page }) => {
-  const { generateKeyPair, exportJWK, SignJWT } = await import('jose')
-  const { publicKey, privateKey } = await generateKeyPair('RS256')
-  const publicJwk = { ...await exportJWK(publicKey), kid: 'integration-test', alg: 'RS256', use: 'sig' }
-  const issuer = 'https://shopify.com/authentication/72686928211'
-  const idToken = await new SignJWT({ nonce: 'expected-nonce' }).setProtectedHeader({ alg: 'RS256', kid: 'integration-test' }).setIssuer(issuer).setAudience('fb377542-94bd-4f07-bf58-590b11075cbd').setSubject('test-customer').setIssuedAt(Date.parse('2026-11-01T12:00:00+01:00') / 1000).setExpirationTime(Date.parse('2026-11-01T12:05:00+01:00') / 1000).sign(privateKey)
-  await page.route('**/.well-known/openid-configuration', route => route.fulfill({ json: { issuer, authorization_endpoint: `${issuer}/oauth/authorize`, token_endpoint: `${issuer}/oauth/token`, jwks_uri: `${issuer}/.well-known/jwks.json` } }))
-  await page.route('**/.well-known/customer-account-api', route => route.fulfill({ json: { graphql_api: 'https://shopify.com/72686928211/account/customer/api/2026-07/graphql' } }))
-  await page.route('**/.well-known/jwks.json', route => route.fulfill({ json: { keys: [publicJwk] } }))
-  await page.route('**/oauth/token', route => {
-    expect(route.request().postData()).toContain('code_verifier=test-verifier')
-    return route.fulfill({ json: { access_token: 'test-access-token', expires_in: 300, id_token: idToken } })
-  })
-  let savedProfile
-  await page.route('**/account/customer/api/**/graphql', route => {
-    const request = route.request().postDataJSON()
-    expect(route.request().headers().authorization).toBe('test-access-token')
-    if (request.query.includes('mutation Profile')) {
-      savedProfile = request.variables.input
-      return route.fulfill({ json: { data: { customerUpdate: { customer: savedProfile, userErrors: [] } } } })
-    }
-    return route.fulfill({ json: { data: { customer: { id: 'test-customer', firstName: 'Test', lastName: 'Klant', emailAddress: { emailAddress: 'test@example.com' }, orders: { nodes: [], pageInfo: { hasNextPage: false } } } } } })
-  })
-  await page.goto('/account')
-  await page.evaluate(() => sessionStorage.setItem('streetmasters-customer-login', JSON.stringify({ verifier: 'test-verifier', state: 'expected-state', nonce: 'expected-nonce', redirectUri: `${location.origin}/account/callback`, createdAt: Date.now() })))
-  await page.goto('/account/callback?code=test-code&state=expected-state')
-  await expect(page).toHaveURL(/\/account$/)
-  await expect(page.getByLabel('Voornaam', { exact: true })).toHaveValue('Test')
-  await page.getByLabel('Voornaam', { exact: true }).fill('Nieuwe naam')
-  await page.getByRole('button', { name: 'Wijzigingen opslaan' }).click()
-  await expect(page.getByRole('status')).toContainText('Opgeslagen')
-  expect(savedProfile).toEqual({ firstName: 'Nieuwe naam', lastName: 'Klant' })
-  await page.evaluate(() => {
-    sessionStorage.removeItem('streetmasters-customer-session')
-    sessionStorage.setItem('streetmasters-customer-login', JSON.stringify({ verifier: 'test-verifier', state: 'expected-state', nonce: 'wrong-nonce', redirectUri: `${location.origin}/account/callback`, createdAt: Date.now() }))
-  })
-  await page.goto('/account/callback?code=test-code&state=expected-state')
-  await expect(page.getByRole('alert')).toContainText('Inloggen is niet gelukt')
-  expect(await page.evaluate(() => sessionStorage.getItem('streetmasters-customer-session'))).toBeNull()
-})
-
 
 test('heroes fill the viewport and mobile filter sheet preserves catalog position', async ({ page }) => {
   for (const viewport of [{ width: 1440, height: 1000 }, { width: 375, height: 812 }]) {

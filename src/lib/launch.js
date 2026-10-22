@@ -18,8 +18,3 @@ export function openLaunchedSite() {
 if (!beforeLaunch && isPreview) {
   window.history.replaceState(window.history.state, '', `${base}${path.slice(previewBase.length).replace(/^\//, '')}${window.location.search}${window.location.hash}`)
 }
-
-// Shopify returns to its registered callback URL, outside the preview base.
-if (beforeLaunch && path === `${base}account/callback` && sessionStorage.getItem('streetmasters-customer-login')) {
-  window.location.replace(`${previewBase}/account/callback${window.location.search}${window.location.hash}`)
-}

@@ -122,9 +122,6 @@ const handleDocumentClick = (event) => {
       </div>
 
       <div class="flex items-center gap-2 md:gap-3">
-        <RouterLink data-analytics-click="Navigation: Account" to="/account" class="hidden h-10 w-10 items-center justify-center text-white/85 transition-colors hover:text-primary sm:flex" :aria-label="t('shop.account')" :title="t('shop.account')">
-          <span class="material-symbols-outlined" aria-hidden="true">person</span>
-        </RouterLink>
         <RouterLink data-analytics-click="Navigation: Cart" to="/winkelmand" class="relative flex h-11 w-11 items-center justify-center text-white/85 transition-colors hover:text-primary" :aria-label="`${t('shop.cart')} (${cart.count})`" :title="t('shop.cart')">
           <span class="material-symbols-outlined" aria-hidden="true">shopping_cart</span>
           <span v-if="cart.count" class="absolute -top-1 -right-1 flex min-h-5 min-w-5 items-center justify-center rounded-full bg-primary-container px-1 text-[10px] font-bold text-white" aria-live="polite">{{ cart.count }}</span>
@@ -216,7 +213,6 @@ const handleDocumentClick = (event) => {
         <RouterLink data-analytics-click="Navigation: About" :class="mobileNavClass(isAbout)" to="/about" @click="mobileMenuOpen = false">
           {{ t('common.nav.about') }}
         </RouterLink>
-        <RouterLink data-analytics-click="Navigation: Account" :class="mobileNavClass(route.path === '/account')" to="/account" @click="mobileMenuOpen = false">{{ t('shop.account') }}</RouterLink>
       </div>
 
       <div class="mt-auto pb-8 md:pb-12">

@@ -3,7 +3,6 @@ export const shopifyConfig = {
   domain: import.meta.env.VITE_SHOPIFY_DOMAIN || 'gamerzone-5174.myshopify.com',
   token: import.meta.env.VITE_SHOPIFY_STOREFRONT_TOKEN || 'a4a75b5119e9be166b46cdbe623a7446',
   version: '2026-07',
-  customerClientId: import.meta.env.VITE_SHOPIFY_CUSTOMER_CLIENT_ID || 'fb377542-94bd-4f07-bf58-590b11075cbd',
 }
 
 export async function storefront(query, variables = {}, signal) {

@@ -18,15 +18,13 @@ const pageCopy = {
   shop: ['shop.title', 'shop.design.intro'],
   product: ['shop.label', 'shop.design.intro'],
   cart: ['shop.cart', 'shop.emptyCartHint'],
-  account: ['shop.loginTitle', 'shop.loginText'],
-  'account-callback': ['shop.loginTitle', 'shop.loginText'],
   'not-found': ['notFound.title', 'notFound.description'],
 }
 watchEffect(() => {
   const keys = waitingForLaunch.value ? ['launch.heading', 'launch.description'] : pageCopy[route.name] || pageCopy.home
   setPageMeta(t(keys[0]), t(keys[1]))
   document.querySelector('link[rel="canonical"]').href = `https://streetmasters.be${waitingForLaunch.value ? '/' : route.path}`
-  document.querySelector('meta[name="robots"]').content = (isPreview && beforeLaunch) || ['cart', 'account', 'account-callback', 'not-found'].includes(route.name) ? 'noindex,follow' : 'index,follow'
+  document.querySelector('meta[name="robots"]').content = (isPreview && beforeLaunch) || ['cart', 'not-found'].includes(route.name) ? 'noindex,follow' : 'index,follow'
 })
 let timer
 function checkLaunch() {

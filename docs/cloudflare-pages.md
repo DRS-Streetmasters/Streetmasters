@@ -1,7 +1,7 @@
 # Launch configuration and Cloudflare Pages
 
 `src/lib/launch.js` controls the launch screen, router base, launch timer,
-legacy preview bookmarks and Shopify callback redirect together.
+and legacy preview bookmarks together.
 
 | Environment | Command | Default launch gate |
 | --- | --- | --- |
@@ -22,8 +22,7 @@ use that value to distinguish staging from production.
 When enabled, production retains the countdown until 1 November 2026,
 12:00 Europe/Brussels, the `/dikkeseppe` bypass and the automatic switch
 at launch. When disabled, the full site uses ordinary routes immediately,
-no launch interval is registered, and Shopify callbacks stay at
-`/account/callback`. Old `/dikkeseppe` bookmarks normalize to ordinary
+and no launch interval is registered. Old `/dikkeseppe` bookmarks normalize to ordinary
 URLs, preserving query strings and fragments.
 
 ## Cloudflare Pages Git integration settings
@@ -52,8 +51,6 @@ to `false`. For a separate staging Pages project, also set
 Copy the required public Formspree/Shopify settings from `.env.example` to
 both scopes as appropriate. Never put private Shopify credentials or
 Cloudflare tokens into `VITE_*`: these variables are visible to visitors.
-OAuth functionality also requires the staging callback URL to be registered
-with the identity provider; disabling the launch gate does not register it.
 
 `public/_redirects` already rewrites deep links to `/index.html` with status
 200. Vite copies it to `dist`; do not run the GitHub Pages preparation script
@@ -68,7 +65,7 @@ The environment suite builds development, staging and production artifacts,
 plus a production-mode build with `VITE_LAUNCH_GATE=false` for Cloudflare Preview,
 and production-mode builds with `CF_PAGES_BRANCH=staging` and `dev`,
 and serves each with Vite preview. It checks ordinary deep links, refresh,
-navigation/history, legacy bookmarks, not-found routes and the callback path.
+navigation/history, legacy bookmarks, not-found routes, including the retired account URLs.
 The existing launch suite runs against production mode and checks countdown,
 mobile layout, bypass routing and automatic launch transitions.
 

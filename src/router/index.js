@@ -28,8 +28,6 @@ const router = createRouter({
     { path: '/shop', name: 'shop', component: () => import('../views/ShopView.vue') },
     { path: '/shop/:handle', name: 'product', component: () => import('../views/ProductView.vue') },
     { path: '/winkelmand', name: 'cart', component: () => import('../views/CartView.vue') },
-    { path: '/account', name: 'account', component: () => import('../views/AccountView.vue') },
-    { path: '/account/callback', name: 'account-callback', component: () => import('../views/AccountCallbackView.vue') },
     {
       path: '/',
       name: 'home',
