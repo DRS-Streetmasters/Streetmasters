@@ -61,7 +61,10 @@ export async function getCatalog({ search = '', sort = 'featured', collection = 
 
 export async function getCollections(language = 'NL') {
   const data = await storefront(`query Collections($language: LanguageCode!) @inContext(language: $language) {
-    collections(first: 100) { nodes { id handle title } }
+    collections(first: 100) { nodes {
+      id handle title image { url altText }
+      products(first: 1) { nodes { featuredImage { url altText } } }
+    } }
   }`, { language })
   return data.collections.nodes
 }
