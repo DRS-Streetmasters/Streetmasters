@@ -59,7 +59,7 @@ const serviceCategories = [
       },
       {
         id: 'general-detailing',
-        name: localized('General Detailing', 'General Detailing'),
+        name: localized('Detailing', 'Detailing'),
         cardDescription: localized(
           'Grondige reiniging van velgen, wielkasten en lakwerk voor een showroom resultaat.',
           'Thorough cleaning of wheels, arches and paintwork for a showroom finish.'

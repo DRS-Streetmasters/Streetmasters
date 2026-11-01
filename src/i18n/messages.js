@@ -58,7 +58,7 @@ export const messages = {
         en: 'EN',
       },
       footer: {
-        tagline: 'Performance Detailing Excellence.',
+        tagline: 'Passion meets perfection.',
         vat: 'BTW: BE0753461752',
         address: 'Rafnusstraat 43B, 3530 Houthalen-Helchteren, Limburg, België',
         privacy: 'Privacy Policy',
@@ -267,7 +267,7 @@ export const messages = {
         en: 'EN',
       },
       footer: {
-        tagline: 'Performance Detailing Excellence.',
+        tagline: 'Passion meets perfection.',
         vat: 'VAT: BE0753461752',
         address: 'Rafnusstraat 43B, 3530 Houthalen-Helchteren, Limburg, Belgium',
         privacy: 'Privacy Policy',
