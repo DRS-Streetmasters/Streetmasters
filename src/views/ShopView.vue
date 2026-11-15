@@ -17,7 +17,7 @@ const router = useRouter()
 const search = ref(String(route.query.q || ''))
 const collection = ref(String(route.query.collection || ''))
 // Collections can't be grouped by category, so they keep Shopify's featured order.
-const defaultSort = () => collection.value ? 'featured' : 'category'
+const defaultSort = () => 'newest'
 const sort = ref(String(route.query.sort || defaultSort()))
 const available = ref(route.query.stock === '1')
 const collectionOptions = computed(() => [{ value: '', label: t('shop.all') }, ...collections.value.map(item => ({ value: item.handle, label: item.title }))])
