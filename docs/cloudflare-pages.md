@@ -75,3 +75,12 @@ Stop any previously running server on port 4173 before running that suite.
 
 Sources: [Vite environment variables and modes](https://vite.dev/guide/env-and-mode),
 [Cloudflare Pages build configuration](https://developers.cloudflare.com/pages/configuration/build-configuration/).
+
+## Google Tag Manager per omgeving
+
+`vite.config.js` vult `<!--GTM-->` in `index.html` met de container die bij de
+branch hoort (`CF_PAGES_BRANCH`): `main` → `GTM-N4CNBVMS` (prod), `staging` →
+`GTM-PCFGCMD3`, alle andere branches (`dev`) en `npm run dev` → geen tag. Een
+lokale `npm run build` zonder branchnaam telt als productie. Zet
+`VITE_GTM_ID` om een container te forceren, of leeg om de tag uit te zetten.
+Container-ID's zijn publiek; er hoeft niets in het Pages-dashboard te staan.
